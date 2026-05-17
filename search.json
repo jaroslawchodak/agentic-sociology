@@ -1,0 +1,472 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Nowy warsztat socjologa",
+    "section": "",
+    "text": "Przedmowa\nTo materiały do półwarsztatu (75 minut) dla pracowników naukowych i doktorantów nauk społecznych i humanistycznych — początkujących w obszarze AI. Pokaz „od czatu do systemu agentowego” z pełną demonstracją na danych European Social Survey (ESS).",
+    "crumbs": [
+      "Przedmowa"
+    ]
+  },
+  {
+    "objectID": "index.html#o-czym-jest-ten-materiał",
+    "href": "index.html#o-czym-jest-ten-materiał",
+    "title": "Nowy warsztat socjologa",
+    "section": "O czym jest ten materiał",
+    "text": "O czym jest ten materiał\nNie musisz być programistą.\nNie musisz instalować terminala.\nNie musisz rozumieć sieci neuronowych.\nJeśli potrafisz otworzyć folder i napisać pytanie po polsku — jesteś przygotowany.",
+    "crumbs": [
+      "Przedmowa"
+    ]
+  },
+  {
+    "objectID": "index.html#czego-się-dowiesz",
+    "href": "index.html#czego-się-dowiesz",
+    "title": "Nowy warsztat socjologa",
+    "section": "Czego się dowiesz",
+    "text": "Czego się dowiesz\n\n\nCo to NIE jest\n\n❌ Kurs Pythona\n❌ Warsztat terminala\n❌ Live coding\n❌ Reklama jednego narzędzia\n\n\nCo to JEST\n\n✅ Mapa nowego krajobrazu narzędzi\n✅ Pokaz pełnego pipeline’u badawczego z agentem\n✅ Rozróżnienie czatu od systemu agentowego\n✅ Rozmowa o etyce i odpowiedzialności",
+    "crumbs": [
+      "Przedmowa"
+    ]
+  },
+  {
+    "objectID": "index.html#jak-korzystać-z-tej-książki",
+    "href": "index.html#jak-korzystać-z-tej-książki",
+    "title": "Nowy warsztat socjologa",
+    "section": "Jak korzystać z tej książki",
+    "text": "Jak korzystać z tej książki\n\nPo lewej masz spis treści całej książki — klikalna nawigacja po rozdziałach.\nPo prawej, w trakcie czytania rozdziału — spis treści tego rozdziału.\nNa dole każdej strony — przyciski „poprzedni / następny”.\nGórne pole wyszukiwania pozwala znaleźć fragment w obrębie całej książki.",
+    "crumbs": [
+      "Przedmowa"
+    ]
+  },
+  {
+    "objectID": "index.html#linki",
+    "href": "index.html#linki",
+    "title": "Nowy warsztat socjologa",
+    "section": "Linki",
+    "text": "Linki\n\nRepozytorium: github.com/jaroslawchodak/agentic-sociology\nFolder demo ESS: w katalogu ESS-demo/\nPlan warsztatu (75 min): new-plan.md",
+    "crumbs": [
+      "Przedmowa"
+    ]
+  },
+  {
+    "objectID": "01-wprowadzenie.html",
+    "href": "01-wprowadzenie.html",
+    "title": "1  Wprowadzenie",
+    "section": "",
+    "text": "1.1 Po co tu jesteśmy\nKrajobraz narzędzi AI dla badaczy społecznych zmienił się w ostatnim roku tak głęboko, że samo „korzystam z ChatGPT” przestało mówić cokolwiek o sposobie pracy. Różnica między czatem w przeglądarce a systemem agentowym nie jest różnicą stopnia — to różnica kategorii.\nCzat to rozmówca. System agentowy to pracownik, który dostaje cel, planuje kroki, używa narzędzi i zostawia po sobie ślad pracy. Granica między „pomocą językową” a „delegowaniem zadań” przesunęła się w 2025 roku do miejsca, w którym warto się zatrzymać i zorientować — zanim zaczniesz outsource’ować pracę badawczą.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Wprowadzenie</span>"
+    ]
+  },
+  {
+    "objectID": "01-wprowadzenie.html#trzy-pytania-na-które-odpowiada-ta-książka",
+    "href": "01-wprowadzenie.html#trzy-pytania-na-które-odpowiada-ta-książka",
+    "title": "1  Wprowadzenie",
+    "section": "1.2 Trzy pytania, na które odpowiada ta książka",
+    "text": "1.2 Trzy pytania, na które odpowiada ta książka\n\nCzym właściwie różni się agent od czatu? I dlaczego ta różnica zmienia sposób pracy badawczej.\nJakie są dziś główne narzędzia? Claude Code, Codex, OpenCode, edytory typu Zed i Warp, modele lokalne (Ollama) — co do czego.\nCo konkretnie agent może zrobić w warsztacie socjologa? Pokaz na danych European Social Survey: od pustego folderu do publikowalnego raportu.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Wprowadzenie</span>"
+    ]
+  },
+  {
+    "objectID": "01-wprowadzenie.html#czego-nie-znajdziesz-tutaj",
+    "href": "01-wprowadzenie.html#czego-nie-znajdziesz-tutaj",
+    "title": "1  Wprowadzenie",
+    "section": "1.3 Czego nie znajdziesz tutaj",
+    "text": "1.3 Czego nie znajdziesz tutaj\n\nKursu programowania. Nie uczymy Pythona. Skrypty pojawiają się tylko jako dowód, że agent sam je pisze.\nTutoriala instalacji. Nie pokazujemy „kliknij tu, wpisz to”. Punkt wejścia do narzędzi agentowych jest dziś tak prosty, że dokumentacja narzędzi załatwia sprawę.\nReklamy jednego dostawcy. Mapa narzędzi jest celowo wielogłosowa — Anthropic, OpenAI, otwarta społeczność, modele lokalne.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Wprowadzenie</span>"
+    ]
+  },
+  {
+    "objectID": "01-wprowadzenie.html#co-warto-wynieść-z-lektury",
+    "href": "01-wprowadzenie.html#co-warto-wynieść-z-lektury",
+    "title": "1  Wprowadzenie",
+    "section": "1.4 Co warto wynieść z lektury",
+    "text": "1.4 Co warto wynieść z lektury\nPo przeczytaniu tej książki powinieneś:\n\nRozróżniać czat, LLM i system agentowy — i rozumieć, dlaczego ta różnica zmienia sposób pracy badawczej.\nZnać główne narzędzia rodziny Agentic AI oraz wiedzieć, czym są edytory/terminale wspierające agentów.\nRozumieć nowy paradygmat: pracę na projekcie z plikami kontekstowymi (CLAUDE.md, AGENTS.md, WORKFLOW.md) zamiast „zaczynania rozmowy od zera”.\nWidzieć konkretne, namacalne zastosowanie — pełną demonstrację pracy agenta na danych ESS.\nWiedzieć, kiedy wybrać model komercyjny, a kiedy lokalny — i dlaczego ma to znaczenie dla danych wrażliwych.\nByć świadomy/-a napięć etycznych wokół AI w nauce i znać obowiązkową formułę AI Disclosure Statement.\n\nW kolejnym rozdziale zaczynamy od najbardziej podstawowego rozróżnienia: czym właściwie jest agent.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Wprowadzenie</span>"
+    ]
+  },
+  {
+    "objectID": "02-czym-jest-agent.html",
+    "href": "02-czym-jest-agent.html",
+    "title": "2  Czym jest agent",
+    "section": "",
+    "text": "2.1 Trzy pojęcia, jedna analogia\nTrzy pojęcia, które łatwo się mylą — i analogie, które pomagają je rozróżnić:\nSam LLM (jak GPT czy Claude) to zdolność generowania tekstu — nic więcej. Czat to interfejs do tej zdolności. System agentowy to organizacja pracy, w której LLM jest jednym z elementów, ale nie jedynym.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Czym jest agent</span>"
+    ]
+  },
+  {
+    "objectID": "02-czym-jest-agent.html#trzy-pojęcia-jedna-analogia",
+    "href": "02-czym-jest-agent.html#trzy-pojęcia-jedna-analogia",
+    "title": "2  Czym jest agent",
+    "section": "",
+    "text": "Pojęcie\nAnalogia\n\n\n\n\nLLM (model językowy)\nMózg językowy bez rąk\n\n\nCzat w przeglądarce\nRozmówca przez telefon\n\n\nSystem agentowy\nPracownik, który dostaje cel, planuje, działa, sprawdza",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Czym jest agent</span>"
+    ]
+  },
+  {
+    "objectID": "02-czym-jest-agent.html#agent-llm-pamięć-narzędzia-pętla",
+    "href": "02-czym-jest-agent.html#agent-llm-pamięć-narzędzia-pętla",
+    "title": "2  Czym jest agent",
+    "section": "2.2 Agent = LLM + pamięć + narzędzia + pętla",
+    "text": "2.2 Agent = LLM + pamięć + narzędzia + pętla\nSystem agentowy ma cztery komponenty, które działają razem w pętli:\n\n\n\n\n\nflowchart LR\n    A[Cel od badacza] --&gt; B[Mózg: LLM]\n    B --&gt; C{Plan}\n    C --&gt; D[Narzędzia:&lt;br/&gt;pliki, skrypty,&lt;br/&gt;wyszukiwarka]\n    D --&gt; E[Obserwacja wyniku]\n    E --&gt; F{Czy gotowe?}\n    F --&gt;|nie| C\n    F --&gt;|tak| G[Wynik + audit log]\n\n\n\n\n\n\n\nCel — zlecenie badacza („zrób przegląd literatury”, „zanonimizuj wywiady”).\nMózg (LLM) — to, co rozumie język i planuje kolejny krok.\nNarzędzia — pliki, skrypty, wyszukiwarki, bazy danych, API. To, co LLM może uruchomić.\nPętla — agent obserwuje wynik akcji i decyduje, co dalej. Jeśli skrypt się wywalił — naprawia. Jeśli wynik jest niepełny — szuka dalej.\n\nBez tej pętli mamy „LLM, który tylko gada”. Z pętlą — agent, który wykonuje.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Czym jest agent</span>"
+    ]
+  },
+  {
+    "objectID": "02-czym-jest-agent.html#czat-vs-agent-różnica-która-zmienia-wszystko",
+    "href": "02-czym-jest-agent.html#czat-vs-agent-różnica-która-zmienia-wszystko",
+    "title": "2  Czym jest agent",
+    "section": "2.3 Czat vs Agent — różnica, która zmienia wszystko",
+    "text": "2.3 Czat vs Agent — różnica, która zmienia wszystko\n\n\n\n\nCzat w przeglądarce\nSystem agentowy\n\n\n\n\nTryb pracy\nPytanie → odpowiedź\nCel → plan → pętla\n\n\nKontekst\nZnika po sesji\nPliki kontekstowe trwają\n\n\nPliki\nWklejasz fragmenty\nAgent widzi cały folder\n\n\nWynik\nTekst w okienku\nZapisane pliki + ślad pracy\n\n\nOdpowiedzialność\nTwoja\nWciąż Twoja\n\n\n\nOstatni wiersz jest kluczowy: zmienia się sposób pracy, ale odpowiedzialność — nie. Agent może pomylić się przekonująco. Bez wiedzy dziedzinowej trudno to wyłapać.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Czym jest agent</span>"
+    ]
+  },
+  {
+    "objectID": "02-czym-jest-agent.html#zmiana-paradygmatu-od-rozmowy-do-projektu",
+    "href": "02-czym-jest-agent.html#zmiana-paradygmatu-od-rozmowy-do-projektu",
+    "title": "2  Czym jest agent",
+    "section": "2.4 Zmiana paradygmatu: od rozmowy do projektu",
+    "text": "2.4 Zmiana paradygmatu: od rozmowy do projektu\n\n\nStara praca z AI\n\nOtwieram okno czatu\nWklejam fragment\nKopiuję odpowiedź\nZamykam okno\nJutro: od zera\n\n\nNowa praca z agentem\n\nOtwieram folder projektu\nAgent czyta CLAUDE.md\nWykonuje zadanie\nZostawia pliki + log\nJutro: kontynuujemy\n\n\n\nNajtrudniejsze w tej zmianie jest mentalne przesunięcie. Przestajesz myśleć „zadam pytanie i dostanę odpowiedź” — zaczynasz myśleć „mam folder badawczy, agent w nim pracuje, ja kontroluję wyniki”.\n\n\n\n\n\n\nReguła trzech rozmów\n\n\n\nJeśli wpisujesz to samo polecenie trzeci raz — to znak, że czas zrobić z tego skill. Skille omówimy w rozdziale „Jak rozmawiać z agentem”.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Czym jest agent</span>"
+    ]
+  },
+  {
+    "objectID": "03-krajobraz.html",
+    "href": "03-krajobraz.html",
+    "title": "3  Krajobraz narzędzi",
+    "section": "",
+    "text": "3.1 Główne systemy Agentic AI\nCztery narzędzia, które warto znać z nazwy — bez konieczności instalowania:\nKażde z nich to agentowe środowisko — gotowe oprogramowanie, które rozumie polecenia po polsku, czyta pliki, uruchamia skrypty i zapisuje wyniki. Nie są to biblioteki dla programistów — są to gotowe „roboty-asystenci”.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Krajobraz narzędzi</span>"
+    ]
+  },
+  {
+    "objectID": "03-krajobraz.html#główne-systemy-agentic-ai",
+    "href": "03-krajobraz.html#główne-systemy-agentic-ai",
+    "title": "3  Krajobraz narzędzi",
+    "section": "",
+    "text": "Narzędzie\nDostawca\nCo je wyróżnia\n\n\n\n\nClaude Code\nAnthropic\nDojrzały ekosystem Skills i MCP. Punkt startowy dla socjologa.\n\n\nCodex\nOpenAI\nAgent + chmura, zintegrowany z ekosystemem OpenAI.\n\n\nOpenCode\nOpen source\nAgnostyczny wobec modelu, pozwala podpiąć modele lokalne.\n\n\nAntigravity\nGoogle\nPełne środowisko z wieloma agentami równolegle.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Krajobraz narzędzi</span>"
+    ]
+  },
+  {
+    "objectID": "03-krajobraz.html#edytory-i-terminale-z-obsługą-agentów",
+    "href": "03-krajobraz.html#edytory-i-terminale-z-obsługą-agentów",
+    "title": "3  Krajobraz narzędzi",
+    "section": "3.2 Edytory i terminale z obsługą agentów",
+    "text": "3.2 Edytory i terminale z obsługą agentów\n\n\n\n\n\n\nOpenCode to pracownik. Zed to biuro.\n\n\n\nPomyśl o tym tak: OpenCode / Claude Code / Codex to pracownik. Zed / Warp to biuro, w którym ten pracownik siedzi.\n\n\n\nZed — edytor tekstu z trybem agentowym; potrafi „gościć” Claude’a / Codexa / OpenCode jako wbudowanego pomocnika.\nWarp — inteligentny terminal-środowisko z natywną integracją z agentami.\nCursor / Kiro — edytory z agentami w środku, popularne wśród programistów.\n\nTo tylko zajawka — nie musisz instalować żadnego z nich, żeby zacząć. Wystarczy okienko Claude’a w przeglądarce albo aplikacja desktopowa.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Krajobraz narzędzi</span>"
+    ]
+  },
+  {
+    "objectID": "03-krajobraz.html#modele-komercyjne-vs-lokalne",
+    "href": "03-krajobraz.html#modele-komercyjne-vs-lokalne",
+    "title": "3  Krajobraz narzędzi",
+    "section": "3.3 Modele: komercyjne vs lokalne",
+    "text": "3.3 Modele: komercyjne vs lokalne\nSystem agentowy to nie tylko interfejs — to też mózg, czyli sam LLM. Mózg można wymienić. Główny wybór: komercyjny czy lokalny?\n\n\n\n\n\nflowchart TD\n    A[Mam zadanie] --&gt; B{Dane wrażliwe?&lt;br/&gt;Wywiady, dane osobowe?}\n    B --&gt;|TAK| C[Model lokalny&lt;br/&gt;Ollama + Llama / Gemma]\n    B --&gt;|NIE| D{Zadanie złożone?&lt;br/&gt;Długi kontekst?}\n    D --&gt;|TAK| E[Model komercyjny&lt;br/&gt;Claude / GPT / Gemini]\n    D --&gt;|NIE| F[Wybór swobodny]\n    C --&gt; G[Offline, prywatne,&lt;br/&gt;darmowe, słabsze]\n    E --&gt; H[Najwyższa jakość,&lt;br/&gt;chmura, koszt za token]\n\n\n\n\n\n\nKomercyjne (Claude Opus/Sonnet, GPT-5, Gemini) — najwyższa jakość, najlepsze rozumowanie, ale dane idą do chmury i kosztują za token.\nLokalne (Llama 3.2, Qwen, Gemma, Mistral przez Ollamę) — darmowe, prywatne, działają offline, ale słabsze i wolniejsze. Niezbędne dla danych wrażliwych.\n\n\n\n\n\n\nReguła dla socjologa\n\n\n\nTranskrypcje wywiadów i dane wrażliwe → lokalnie (Ollama na własnym komputerze).\nPrzegląd literatury, draft grantu → chmura (Claude / GPT / Gemini).\nModele lokalne nie są tu luksusem, są wymogiem etycznym. RODO i procedury IRB nie znikają, gdy używasz AI.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Krajobraz narzędzi</span>"
+    ]
+  },
+  {
+    "objectID": "04-jak-rozmawiac.html",
+    "href": "04-jak-rozmawiac.html",
+    "title": "4  Jak rozmawiać z agentem",
+    "section": "",
+    "text": "4.1 Trzy poziomy „pamięci” agenta\nKluczowa różnica między czatem a agentem dotyczy tego, co i jak długo agent pamięta. Mamy trzy poziomy:\nPliki kontekstowe to gamechanger: zamiast tłumaczyć agentowi za każdym razem, kim jesteś, co badasz i czego nie wolno mu robić — wpisujesz to raz, do pliku, a agent odczytuje to sam.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Jak rozmawiać z agentem</span>"
+    ]
+  },
+  {
+    "objectID": "04-jak-rozmawiac.html#trzy-poziomy-pamięci-agenta",
+    "href": "04-jak-rozmawiac.html#trzy-poziomy-pamięci-agenta",
+    "title": "4  Jak rozmawiać z agentem",
+    "section": "",
+    "text": "Poziom\nCo to\nTrwałość\n\n\n\n\n1. Prompt\n„Streść mi ten artykuł”\nZnika z sesją\n\n\n2. Projekt\nFolder + dodane pliki w Claude.ai\nTrwa w obrębie projektu\n\n\n3. Pliki kontekstowe\nCLAUDE.md, AGENTS.md w folderze\nAgent czyta je automatycznie na start każdej sesji\n\n\n\n\n\nPliki kontekstowe zamieniają agenta w Twojego asystenta.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Jak rozmawiać z agentem</span>"
+    ]
+  },
+  {
+    "objectID": "04-jak-rozmawiac.html#plik-kontekstowy-to-nie-kod",
+    "href": "04-jak-rozmawiac.html#plik-kontekstowy-to-nie-kod",
+    "title": "4  Jak rozmawiać z agentem",
+    "section": "4.2 Plik kontekstowy — to nie kod",
+    "text": "4.2 Plik kontekstowy — to nie kod\nNajprostszy przykład pliku AGENTS.md dla projektu socjologicznego:\n# AGENTS.md\n\n## Rola\nJesteś asystentem badawczym wspierającym socjologa\nw analizie publicznych danych ESS.\n\n## Zasady\n- Nie wymyślaj cytatów.\n- Oddziel źródła od interpretacji.\n- Oznacz niepewność.\n- Zapisuj wyniki w outputs/.\n- Nie nadpisuj danych źródłowych.\n- Jeśli czegoś nie da się potwierdzić — napisz to wprost.\n\n\n\n\n\n\nWskazówka\n\n\n\nTo zwykły polski tekst. Możesz go napisać w 15 minut. Nie wymaga kursu programowania, nie wymaga znajomości YAML-a ani JSON-a. Jeśli umiesz napisać brief dla nowego pracownika — umiesz napisać AGENTS.md.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Jak rozmawiać z agentem</span>"
+    ]
+  },
+  {
+    "objectID": "04-jak-rozmawiac.html#skills-i-mcp-drugi-i-trzeci-poziom",
+    "href": "04-jak-rozmawiac.html#skills-i-mcp-drugi-i-trzeci-poziom",
+    "title": "4  Jak rozmawiać z agentem",
+    "section": "4.3 Skills i MCP — drugi i trzeci poziom",
+    "text": "4.3 Skills i MCP — drugi i trzeci poziom\nDwa pojęcia, które warto rozróżnić — bo robią różne rzeczy, choć często się je myli.\n\n\nSkills (umiejętności)\nPowtarzalne procedury zapisane w .md — uruchamiają się automatycznie, gdy agent rozpozna zadanie.\nPrzykład skili dla badacza:\n\ndeep-research-synthesizer\nacademic-paper\nsource-validation\ninterview-coding\n\nAnalogia: Przepis kulinarny, który agent zapamiętał i wykonuje, gdy widzi znajome składniki.\n\nMCP (Model Context Protocol)\nStandard wtyczek łączących agenta z zewnętrznymi źródłami danych.\nPrzykład MCP dla badacza:\n\nZotero\nOpenAlex\nPubMed / Scite\nTwoja baza danych\nRepozytorium instytucjonalne\n\nAnalogia: Klucz do szafy z dokumentami — agent nie prosi o każdy plik z osobna, bo ma dostęp.\n\n\nRóżnica w jednym zdaniu: Skills uczą agenta jak myśleć i działać. MCP dają mu kanały, skąd brać dane i gdzie działać.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Jak rozmawiać z agentem</span>"
+    ]
+  },
+  {
+    "objectID": "04-jak-rozmawiac.html#skrypty-pythona-tylko-zajawka",
+    "href": "04-jak-rozmawiac.html#skrypty-pythona-tylko-zajawka",
+    "title": "4  Jak rozmawiać z agentem",
+    "section": "4.4 Skrypty Pythona — tylko zajawka",
+    "text": "4.4 Skrypty Pythona — tylko zajawka\nAgent potrafi uruchamiać gotowe skrypty Pythona — i to jest jego siła. Nie chodzi o to, żebyś ty je pisał. Najczęściej używane w warsztacie badacza:\n\npymupdf4llm, Docling — parsowanie PDF do Markdown\nPresidio — anonimizacja transkrypcji (imiona, miejscowości, instytucje → znaczniki)\nfaster-whisper — transkrypcja audio offline\npandas, statsmodels — czyszczenie i analiza danych ilościowych\nBERTopic — modelowanie tematów\n\n\n\n\n\n\n\nFilozofia\n\n\n\nNie musisz umieć tego napisać — agent jest dyrygentem, skrypty są instrumentami.\nW praktyce agent sam zapisuje skrypty, sam je uruchamia, sam interpretuje wyniki. Twoja rola: powiedzieć, co ma być zrobione i sprawdzić, czy wynik ma sens.\n\n\nW kolejnym rozdziale zobaczysz, jak to wygląda w praktyce — na pełnym pipeline’ie analizy danych European Social Survey.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Jak rozmawiać z agentem</span>"
+    ]
+  },
+  {
+    "objectID": "05-case-study-ess.html",
+    "href": "05-case-study-ess.html",
+    "title": "5  Case Study — European Social Survey",
+    "section": "",
+    "text": "5.1 Pytanie badawcze\nTen rozdział to najważniejsza część książki. Wszystko, co dotąd opisałem, ma sens dopiero wtedy, gdy zobaczysz pełny pipeline badawczy wykonany przez agenta — od pustego folderu do publikowalnego raportu.\nDane: European Social Survey (publiczne, dostępne na europeansocialsurvey.org).\nModel:",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Case Study — European Social Survey</span>"
+    ]
+  },
+  {
+    "objectID": "05-case-study-ess.html#pytanie-badawcze",
+    "href": "05-case-study-ess.html#pytanie-badawcze",
+    "title": "5  Case Study — European Social Survey",
+    "section": "",
+    "text": "Czy osoby o wyższym zaufaniu społecznym, lepszym zdrowiu, wyższym dochodzie i wyższym poziomie edukacji deklarują wyższe zadowolenie z życia?\n\n\n\nstflife ~ ppltrst + health + hinctnta + eduyrs + agea + gndr + cntry",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Case Study — European Social Survey</span>"
+    ]
+  },
+  {
+    "objectID": "05-case-study-ess.html#folder-demo-punkt-wyjścia",
+    "href": "05-case-study-ess.html#folder-demo-punkt-wyjścia",
+    "title": "5  Case Study — European Social Survey",
+    "section": "5.2 Folder demo — punkt wyjścia",
+    "text": "5.2 Folder demo — punkt wyjścia\ness-demo/\n  AGENTS.md            ← konstytucja agenta\n  CONTEXT.md           ← opis projektu i pytanie\n  WORKFLOW.md          ← procedura analizy\n  prompt-wykonawczy.md ← zlecenie\n  data_raw/            ← surowe dane ESS\n  data_clean/          ← po czyszczeniu\n  scripts/             ← skrypty pomocnicze\n  outputs/             ← raport + wykres\n  agent_logs/          ← ślad decyzji\n\nTrzy pliki .md mówią agentowi, kim jest, co bada i jak ma to zrobić.\n\nCały folder znajdziesz w repozytorium pod ścieżką ESS-demo/ — możesz go skopiować i uruchomić u siebie.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Case Study — European Social Survey</span>"
+    ]
+  },
+  {
+    "objectID": "05-case-study-ess.html#pipeline-wykonany-przez-agenta",
+    "href": "05-case-study-ess.html#pipeline-wykonany-przez-agenta",
+    "title": "5  Case Study — European Social Survey",
+    "section": "5.3 Pipeline wykonany przez agenta",
+    "text": "5.3 Pipeline wykonany przez agenta\n\n\n\n\n\nflowchart LR\n    A[Pusty folder&lt;br/&gt;+ pliki .md] --&gt; B[Agent czyta&lt;br/&gt;AGENTS.md&lt;br/&gt;CONTEXT.md&lt;br/&gt;WORKFLOW.md]\n    B --&gt; C[Pobieranie danych&lt;br/&gt;ESS Data Portal]\n    C --&gt; D[Standaryzacja&lt;br/&gt;zmiennych&lt;br/&gt;+ braki danych]\n    D --&gt; E[Analiza:&lt;br/&gt;korelacja&lt;br/&gt;+ regresja OLS]\n    E --&gt; F[Wykres&lt;br/&gt;matplotlib]\n    F --&gt; G[Raport.md&lt;br/&gt;+ audit log]\n\n\n\n\n\n\nWszystkie te kroki agent wykonuje sam, na podstawie procedury zapisanej w WORKFLOW.md. Twoja rola: napisać prompt wykonawczy i sprawdzić wynik.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Case Study — European Social Survey</span>"
+    ]
+  },
+  {
+    "objectID": "05-case-study-ess.html#prompt-wykonawczy-czyli-zadanie-na-dziś",
+    "href": "05-case-study-ess.html#prompt-wykonawczy-czyli-zadanie-na-dziś",
+    "title": "5  Case Study — European Social Survey",
+    "section": "5.4 Prompt wykonawczy — czyli „zadanie na dziś”",
+    "text": "5.4 Prompt wykonawczy — czyli „zadanie na dziś”\nWykonaj demonstracyjną analizę ESS zgodnie z\nAGENTS.md, CONTEXT.md i WORKFLOW.md.\n\nPytanie badawcze:\nCzy osoby o wyższym zaufaniu społecznym, lepszym zdrowiu,\nwyższym dochodzie i wyższym poziomie edukacji deklarują\nwyższe zadowolenie z życia?\n\nModel:\nstflife = ppltrst + health + hinctnta + eduyrs + agea + gndr + cntry\n\nWykonaj: sprawdzenie danych, czyszczenie, opis,\nkorelację, wykres, regresję, ostrożną interpretację,\nlistę ograniczeń.\n\nZapisz: outputs/raport-ess-stflife.md\n        agent_logs/decyzje-ess-stflife.md\n\nTo wszystko po polsku. Żadnego kodu napisanego przez prowadzącego.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Case Study — European Social Survey</span>"
+    ]
+  },
+  {
+    "objectID": "05-case-study-ess.html#krok-1-agent-pisze-skrypt-czyszczący",
+    "href": "05-case-study-ess.html#krok-1-agent-pisze-skrypt-czyszczący",
+    "title": "5  Case Study — European Social Survey",
+    "section": "5.5 Krok 1: Agent pisze skrypt czyszczący",
+    "text": "5.5 Krok 1: Agent pisze skrypt czyszczący\n\n\n\n\n\n\nNie musisz tego napisać\n\n\n\nPoniższy skrypt jest przykładem, jak agent sam zaprojektował kod na podstawie procedury z WORKFLOW.md. Pokazuję go tu, żeby zilustrować, co konkretnie dzieje się „pod maską”. Twoim zadaniem jest wyłącznie ocena wyniku.\n\n\nimport pandas as pd\n\ndf = pd.read_csv(\"data_raw/ESS_subset.csv\")\n\ncols = [\"stflife\", \"ppltrst\", \"health\", \"hinctnta\",\n        \"eduyrs\", \"agea\", \"gndr\", \"cntry\"]\ndf = df[cols]\n\n# Kody braków ESS: 7, 8, 9, 77, 88, 99\nmissing_codes = {\n    \"stflife\": [77, 88, 99],\n    \"ppltrst\": [77, 88, 99],\n    \"health\":  [7, 8, 9],\n    \"hinctnta\":[77, 88, 99],\n    \"eduyrs\":  [77, 88, 99],\n}\nfor col, codes in missing_codes.items():\n    df.loc[df[col].isin(codes), col] = pd.NA\n\ndf_clean = df.dropna()\ndf_clean.to_csv(\"data_clean/ess_clean.csv\", index=False)",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Case Study — European Social Survey</span>"
+    ]
+  },
+  {
+    "objectID": "05-case-study-ess.html#krok-2-agent-liczy-regresję-ols",
+    "href": "05-case-study-ess.html#krok-2-agent-liczy-regresję-ols",
+    "title": "5  Case Study — European Social Survey",
+    "section": "5.6 Krok 2: Agent liczy regresję OLS",
+    "text": "5.6 Krok 2: Agent liczy regresję OLS\n\n\n\n\n\n\nAdnotacja\n\n\n\nNie musisz znać statsmodels — chodzi tylko o to, że agent sam dobiera bibliotekę odpowiednią do zadania.\n\n\nimport statsmodels.formula.api as smf\n\nmodel = smf.ols(\n    \"stflife ~ ppltrst + health + hinctnta + eduyrs \"\n    \"+ agea + C(gndr) + C(cntry)\",\n    data=df_clean,\n).fit()\n\nprint(model.summary())",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Case Study — European Social Survey</span>"
+    ]
+  },
+  {
+    "objectID": "05-case-study-ess.html#krok-3-tabela-wyników-wycinek",
+    "href": "05-case-study-ess.html#krok-3-tabela-wyników-wycinek",
+    "title": "5  Case Study — European Social Survey",
+    "section": "5.7 Krok 3: Tabela wyników (wycinek)",
+    "text": "5.7 Krok 3: Tabela wyników (wycinek)\n\n\n\nZmienna\nWspółczynnik\nBłąd std.\np-value\n\n\n\n\n(Intercept)\n4.21\n0.14\n&lt;0.001\n\n\nppltrst\n+0.13\n0.01\n&lt;0.001\n\n\nhealth\n−0.61\n0.02\n&lt;0.001\n\n\nhinctnta\n+0.10\n0.01\n&lt;0.001\n\n\neduyrs\n+0.02\n0.004\n&lt;0.001\n\n\nagea\n−0.01\n0.001\n&lt;0.001\n\n\n\nWartości ilustracyjne. Agent sam zaznaczył w raporcie: „skala porządkowa traktowana jako liczbowa — uproszczenie”.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Case Study — European Social Survey</span>"
+    ]
+  },
+  {
+    "objectID": "05-case-study-ess.html#krok-4-wykres-i-raport",
+    "href": "05-case-study-ess.html#krok-4-wykres-i-raport",
+    "title": "5  Case Study — European Social Survey",
+    "section": "5.8 Krok 4: Wykres i raport",
+    "text": "5.8 Krok 4: Wykres i raport\n\n\n\n\n\nflowchart LR\n    A[Dane oczyszczone] --&gt; B[Wykres: średnie stflife&lt;br/&gt;dla poziomów ppltrst]\n    B --&gt; C[outputs/wykres-stflife-ppltrst.png]\n    A --&gt; D[Raport 12 sekcji:&lt;br/&gt;pytanie, dane, zmienne,&lt;br/&gt;czyszczenie, opis,&lt;br/&gt;korelacja, wykres,&lt;br/&gt;regresja, interpretacja,&lt;br/&gt;ograniczenia]\n    D --&gt; E[outputs/raport-ess-stflife.md]\n    A --&gt; F[Audit log:&lt;br/&gt;co czytał,&lt;br/&gt;co uruchomił,&lt;br/&gt;jakie decyzje podjął]\n    F --&gt; G[agent_logs/decyzje-ess-stflife.md]",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Case Study — European Social Survey</span>"
+    ]
+  },
+  {
+    "objectID": "05-case-study-ess.html#co-jest-socjologicznie-ważne-w-tym-pokazie",
+    "href": "05-case-study-ess.html#co-jest-socjologicznie-ważne-w-tym-pokazie",
+    "title": "5  Case Study — European Social Survey",
+    "section": "5.9 Co jest socjologicznie ważne w tym pokazie",
+    "text": "5.9 Co jest socjologicznie ważne w tym pokazie\n\nAgent nie pisze interpretacji za nas — proponuje, a my decydujemy.\nAgent sam zaznacza ograniczenia: wagi ESS, skale porządkowe, cntry jako proste fixed effects zamiast modelu wielopoziomowego.\nAgent NIE formułuje wniosków przyczynowych z danych przekrojowych.\nAudit log = polisa ubezpieczeniowa dla recenzentów.\n\n\n\n\n\n\n\nKlucz dydaktyczny\n\n\n\nAgent zna metodologię, bo my mu ją wpisaliśmy w AGENTS.md.\nBez pliku kontekstowego agent byłby tylko „mądrzejszym czatem”. Z plikiem — staje się asystentem, który respektuje Twoje zasady metodologiczne. To Ty ustawiasz reguły gry.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Case Study — European Social Survey</span>"
+    ]
+  },
+  {
+    "objectID": "06-zastosowania.html",
+    "href": "06-zastosowania.html",
+    "title": "6  Zastosowania w socjologii",
+    "section": "",
+    "text": "6.1 Galeria zastosowań — od pytania do publikacji\nCase study ESS to tylko jeden z wielu możliwych pipeline’ów. Poniżej galeria 360° — gdzie agent może realnie pomóc w warsztacie badacza społecznego.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Zastosowania w socjologii</span>"
+    ]
+  },
+  {
+    "objectID": "06-zastosowania.html#galeria-zastosowań-od-pytania-do-publikacji",
+    "href": "06-zastosowania.html#galeria-zastosowań-od-pytania-do-publikacji",
+    "title": "6  Zastosowania w socjologii",
+    "section": "",
+    "text": "Faza koncepcyjna\n\nWyszukiwanie literatury — OpenAlex, Elicit, Grok DeepSearch, Semantic Scholar\nPrzegląd literatury — tabela: autor, metoda, ustalenia, luka\nPytania badawcze, hipotezy — operacjonalizacja, mapa pojęć\nResearch plan w .md — strukturyzacja projektu\n\n\n\nFaza terenowa / analityczna\n\nTranskrypcja — Whisper offline\nAnonimizacja — Presidio, znaczniki [OSOBA_001]\nPropozycje kodów jakościowych — induktywne / dedukcyjne\nCzyszczenie i analiza danych ilościowych — pandas, statsmodels\nModelowanie tematów — BERTopic, analiza dyskursu\n\n\n\n\nFaza pisania\n\nDraft artykułu — sekcja po sekcji\nSekcja metodologiczna — z respektem dla wymogów czasopisma\nBibliografia — automatyczne formatowanie przez Zotero MCP\nGrant proposal — od streszczenia do harmonogramu\nSlajdy do prezentacji — strukturyzacja narracji\n\n\n\nFaza recenzji\n\nPseudo-recenzent przed publikacją — wykrywanie luk i niespójności\nWykrywanie luk i niespójności w argumentacji\nOdpowiedzi dla recenzentów — strukturyzacja revision letter",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Zastosowania w socjologii</span>"
+    ]
+  },
+  {
+    "objectID": "06-zastosowania.html#chmura-czy-lokalnie-szybki-przewodnik",
+    "href": "06-zastosowania.html#chmura-czy-lokalnie-szybki-przewodnik",
+    "title": "6  Zastosowania w socjologii",
+    "section": "6.2 Chmura czy lokalnie — szybki przewodnik",
+    "text": "6.2 Chmura czy lokalnie — szybki przewodnik\nReguła kciuka, którą warto zapamiętać:\n\n\n\nEtap\nKomercyjny (chmura)\nLokalny (Ollama)\n\n\n\n\nPrzegląd literatury\n✅\n⚪\n\n\nDraft grantu\n✅\n⚪\n\n\nCzyszczenie publicznych CSV\n✅\n⚪\n\n\nTranskrypcje wywiadów\n❌\n✅\n\n\nKodowanie wywiadów z danymi wrażliwymi\n❌\n✅\n\n\nRecenzowanie cudzego draftu\n⚠️\n✅\n\n\n\n\n\n\n\n\n\nZasada brzytwy\n\n\n\nJeśli plik, który dajesz agentowi, mógłby zostać wyciągnięty z chmury i pokazany na konferencji bez Twojej zgody — to znak, że tego pliku tam być nie powinno.\nDla wszystkiego, co ma respondentów, dane osobowe albo niepublikowane wyniki — model lokalny.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Zastosowania w socjologii</span>"
+    ]
+  },
+  {
+    "objectID": "06-zastosowania.html#czego-nie-delegujesz-agentowi",
+    "href": "06-zastosowania.html#czego-nie-delegujesz-agentowi",
+    "title": "6  Zastosowania w socjologii",
+    "section": "6.3 Czego nie delegujesz agentowi",
+    "text": "6.3 Czego nie delegujesz agentowi\nDla równowagi — lista rzeczy, których nie outsource’ujesz, nawet gdy agent to potrafi:\n\nDecyzję metodologiczną. Czy badanie jest etyczne? Czy próba jest reprezentatywna? Czy hipoteza jest Twoja? — to twoja odpowiedzialność.\nInterpretację wyników. Statystycznie istotne ≠ socjologicznie ważne. To rozróżnienie wymaga Twojej wiedzy dziedzinowej.\nStanowisko autorskie. Jeśli artykuł nie ma Twojego głosu — po co go pisać?\nOcenę jakości danych. Czy dane są wiarygodne? Czy braki danych są systematyczne? Bez znajomości pola — agent może to przeoczyć.\nEtyczną decyzję o ujawnieniu / ukryciu rezultatów. Decyzja należy do Ciebie i (czasem) komitetu etyki.\n\nGranica nie jest sztywna i będzie się przesuwać. Ale na 2026 rok — to bezpieczna baza.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Zastosowania w socjologii</span>"
+    ]
+  },
+  {
+    "objectID": "07-friction.html",
+    "href": "07-friction.html",
+    "title": "7  Friction — etyka i napięcia",
+    "section": "",
+    "text": "7.1 Cztery głosy z literatury\nWokół AI w nauce toczy się dziś gorący spór. Nie ma jednej, dobrej odpowiedzi. Są głosy — od entuzjazmu po totalną odmowę. Warto je usłyszeć przed podjęciem decyzji, co konkretnie chcesz outsource’ować.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Friction — etyka i napięcia</span>"
+    ]
+  },
+  {
+    "objectID": "07-friction.html#cztery-głosy-z-literatury",
+    "href": "07-friction.html#cztery-głosy-z-literatury",
+    "title": "7  Friction — etyka i napięcia",
+    "section": "",
+    "text": "Optymizm (Stanford 2026)\n\n„This is the most exciting moment ever to be a PhD student in social sciences.”\n— Matthew Gentzkow\n\nAthey, Gentzkow, Hall i inni z workshop Stanforda 2026: agent przejmuje żmudną pracę (czyszczenie danych, replikacje, przegląd literatury), badacz zyskuje czas na to, co istotne — pytania badawcze, interpretację, relacje z zespołem. Rola badacza zmienia się z wykonawcy w kuratora procesu.\n\n\nKrytyka pisania (Nature 2025)\n\n„Writing is thinking.”\n— Nature Reviews Bioengineering, 2025\n\nOutsourcing pisania pozbawia nas refleksji. Pisanie nie jest tylko zapisywaniem gotowej myśli — jest myśleniem. Jeśli AI napisze za nas zdanie, nie wiemy, jakie inne zdanie pomyślelibyśmy, gdyby AI go nie napisała.\n\n\n\nOdrzucenie (Qualitative Inquiry)\n419 badaczy jakościowych (Braun, Clarke, Lupton i in.): GenAI nie nadaje się do reflexive thematic analysis.\nArgumenty:\n\nMetodologiczne — symulowana inteligencja nie jest zdolna do refleksyjnej interpretacji osadzonej w relacji badawczej.\nEkologiczne — centra danych, woda, energia.\nSprawiedliwości społecznej — praca w Globalnym Południu, wzmacnianie dominujących narracji.\n\n\n\nProwokacja (Masters 2025)\n\n„Artificial intelligence and the death of the academic author”\n— Ken Masters, Medical Teacher, 2025\n\nLLM = blender tekstów kulturowych. Skoro autorstwo akademickie zawsze było aktem syntezy istniejących myśli — to LLM jest dla niego stworzony. Pytanie, czy w ogóle ma sens mówić o „śmierci autora” — czy raczej o końcu pewnego rodzaju autorstwa.\n\n\n\n\n\n\n\n\n\nWażne\n\n\n\nPytanie nie brzmi „używać czy nie”, lecz „co outsource’ować, a co zostawić sobie”.\nCztery powyższe głosy nie są nie do pogodzenia. Można jednocześnie:\n\nużywać agenta do przeglądu literatury (Stanford),\npisać samodzielnie (Nature),\nnie kodować wywiadów AI (419 badaczy),\nmieć świadomość, że coś w pojęciu autorstwa się zmienia (Masters).\n\nTo jest właśnie refleksyjna praktyka.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Friction — etyka i napięcia</span>"
+    ]
+  },
+  {
+    "objectID": "07-friction.html#dobre-praktyki-minimum-sanitarne",
+    "href": "07-friction.html#dobre-praktyki-minimum-sanitarne",
+    "title": "7  Friction — etyka i napięcia",
+    "section": "7.2 Dobre praktyki — minimum sanitarne",
+    "text": "7.2 Dobre praktyki — minimum sanitarne\nNiezależnie od tego, jak głęboko wejdziesz w pracę z agentami, w nauce obowiązują nas zasady minimum:\n\nNie wymyślaj. Każde twierdzenie agenta = cytat z konkretnego źródła. Skrypty walidujące (verify_claims_against_sources.py) są Twoją polisą.\nZostaw ślad pracy. Agent zapisuje, co czytał, co uruchamiał i co wyprodukował — folder agent_logs/.\nChroń dane respondentów. Anonimizacja przed chmurą. Ollama dla danych wrażliwych.\nOddzielaj cytat, streszczenie, interpretację. To ogranicza ryzyko, że elegancko brzmiący tekst ukryje błąd.\nPracuj na kopiach. Agent nie nadpisuje danych źródłowych.\nUjawniaj użycie AI — w publikacjach, grantach, recenzjach, materiałach dydaktycznych.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Friction — etyka i napięcia</span>"
+    ]
+  },
+  {
+    "objectID": "07-friction.html#ai-disclosure-statement",
+    "href": "07-friction.html#ai-disclosure-statement",
+    "title": "7  Friction — etyka i napięcia",
+    "section": "7.3 AI Disclosure Statement",
+    "text": "7.3 AI Disclosure Statement\n\n\n\n\n\n\nObowiązkowa formuła do artykułów\n\n\n\n\nThis manuscript was developed through a human-AI collaborative writing process. The conceptual framework, core arguments, theoretical choices, and analytical judgments are the sole intellectual contribution of the author. AI tools were used to assist with drafting, organization, and citation management. The author takes full responsibility for all claims and any errors.\n\n\n\nDlaczego to ważne: Nature, journale APA i SAGE już wymagają takiej deklaracji. Tam, gdzie jeszcze nie wymagają, brak deklaracji jest dziś czytany jako naukowa nieuczciwość. Lepiej mieć formułę i z niej nie skorzystać niż na odwrót.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Friction — etyka i napięcia</span>"
+    ]
+  },
+  {
+    "objectID": "07-friction.html#zaawansowane-tylko-zaglądamy-przez-szybę",
+    "href": "07-friction.html#zaawansowane-tylko-zaglądamy-przez-szybę",
+    "title": "7  Friction — etyka i napięcia",
+    "section": "7.4 Zaawansowane — tylko zaglądamy przez szybę",
+    "text": "7.4 Zaawansowane — tylko zaglądamy przez szybę\nNa końcu kilka kierunków, w które można iść, ale dzisiaj tylko je sygnalizujemy:\n\nOrkiestracja agentów — CrewAI, AutoGen. Zespół „socjolog-teoretyk” + „socjolog-analityk” + „krytyk metodologiczny”, każdy z własną rolą.\nPipeline’y — LangChain, LangGraph, Prefect. Przepływ pracy jako graf z gałęziami i warunkami.\nLokalne bazy wiedzy — LlamaIndex, ChromaDB, FAISS, Qdrant. Wyszukiwanie semantyczne we własnych dokumentach.\nFine-tuning małych modeli — Unsloth, Hugging Face. Dostrajanie modelu do specyfiki Twojej dziedziny.\n\n\n\n\n\n\n\nAdnotacja\n\n\n\nNie oczekuję, że będziesz to robić jutro. Chcę, żebyś wiedział, że istnieje. Każde z tych narzędzi to osobny krok i osobna decyzja — żadne nie jest „dalej tym samym warsztatem”.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Friction — etyka i napięcia</span>"
+    ]
+  },
+  {
+    "objectID": "08-zamkniecie.html",
+    "href": "08-zamkniecie.html",
+    "title": "Zamknięcie",
+    "section": "",
+    "text": "Trzy obserwacje na koniec",
+    "crumbs": [
+      "Zamknięcie"
+    ]
+  },
+  {
+    "objectID": "08-zamkniecie.html#trzy-obserwacje-na-koniec",
+    "href": "08-zamkniecie.html#trzy-obserwacje-na-koniec",
+    "title": "Zamknięcie",
+    "section": "",
+    "text": "Systemy agentowe nie zastępują badacza — zmieniają charakter jego pracy. Mniej ręcznego wykonywania, więcej nadzorowania, oceniania, korygowania. Przesunięcie z roli wykonawcy na rolę kuratora procesu badawczego.\nNajwiększe ryzyko: agent myli się przekonująco. Nie chodzi o oczywiste błędy — chodzi o teksty, które brzmią poprawnie, ale są subtelnie nieprawdziwe i trudne do wyłapania bez wiedzy dziedzinowej. Dlatego te narzędzia potrzebują kompetentnych użytkowników — nie zastępują kompetencji.\nZacznij od prostego: jedno zadanie, jeden agent, temat, który znasz dobrze. Sprawdź, co agent zrobi z czymś, co umiesz ocenić. Dopiero potem rozszerzaj zakres.",
+    "crumbs": [
+      "Zamknięcie"
+    ]
+  },
+  {
+    "objectID": "08-zamkniecie.html#co-dalej-siedem-kroków-na-start",
+    "href": "08-zamkniecie.html#co-dalej-siedem-kroków-na-start",
+    "title": "Zamknięcie",
+    "section": "Co dalej — siedem kroków na start",
+    "text": "Co dalej — siedem kroków na start\nJeśli ta książka cię zainspirowała, oto konkretne kroki, które możesz wykonać w najbliższym tygodniu:\n\nPrompty. Naucz się dobrze formułować polecenia w Claude.ai lub ChatGPT — najpierw na zadaniu, które znasz dobrze.\nProjekty. Utwórz projekt w Claude.ai, dodaj kilka plików i instrukcję. Zobacz, jak zmienia się jakość odpowiedzi.\nAgent w folderze. Wypróbuj Claude Code Desktop — otwórz folder z materiałami badawczymi, daj zadanie, obserwuj.\nPlik kontekstowy. Napisz prosty CLAUDE.md lub AGENTS.md. 15 minut roboty, zmienia jakość każdej kolejnej interakcji.\nSkill. Gdy zobaczysz, że powtarzasz to samo zadanie trzeci raz — zbuduj skill. Poproś agenta: „utwórz skill do przeglądu literatury”.\nPrywatność. Zainstaluj Ollama (ollama.com) — zanim zaczniesz pracę z transkrypcjami wywiadów.\nProtokół kontroli. Ustal własne zasady: gdzie sprawdzasz wyniki? Jak oznaczasz fragmenty wygenerowane przez AI? Nie ma jeszcze standardów — musisz mieć własne.",
+    "crumbs": [
+      "Zamknięcie"
+    ]
+  },
+  {
+    "objectID": "08-zamkniecie.html#materiały-dodatkowe",
+    "href": "08-zamkniecie.html#materiały-dodatkowe",
+    "title": "Zamknięcie",
+    "section": "Materiały dodatkowe",
+    "text": "Materiały dodatkowe\nW repozytorium znajdziesz:\n\nnew-plan.md — pełny plan warsztatu (75 minut) z agendą, celami edukacyjnymi i opisem pokazu.\nESS-demo/ — folder demonstracyjny do analizy ESS: AGENTS.md, CONTEXT.md, WORKFLOW.md, prompt wykonawczy.",
+    "crumbs": [
+      "Zamknięcie"
+    ]
+  },
+  {
+    "objectID": "08-zamkniecie.html#podziękowania",
+    "href": "08-zamkniecie.html#podziękowania",
+    "title": "Zamknięcie",
+    "section": "Podziękowania",
+    "text": "Podziękowania\nMateriały powstały z syntezy notatek roboczych, kilku iteracji planu warsztatu i analizy zawartości katalogu notes-base (publikacje o agentach AI, debaty etyczne, dokumentacja narzędzi). Sam tekst — w duchu ujawnienia — został przygotowany w procesie human-AI collaborative writing, zgodnie z formułą AI Disclosure Statement podaną w rozdziale o napięciach etycznych.\n\n\n\n\n\n\nKontakt\n\n\n\n\nRepozytorium: github.com/jaroslawchodak/agentic-sociology\nIssues / pytania: otwórz issue na GitHubie\n\nPowodzenia w pracy z agentami — i pamiętaj, że interpretacja, sąd i odpowiedzialność zostają po Twojej stronie.",
+    "crumbs": [
+      "Zamknięcie"
+    ]
+  }
+]
