@@ -1,19 +1,30 @@
 ---
 title: "Nowy warsztat socjologa"
 subtitle: "Systemy agentowe AI w procesie badawczym"
-author: "Jarosław Chodak"
+author: ""
 date: today
 lang: pl
 format:
   revealjs:
-    theme: simple
-    slide-number: true
+    theme: [simple, custom.scss]
+    slide-number: c/t
     chalkboard: false
     embed-resources: true
     incremental: false
     transition: slide
     highlight-style: github
     code-overflow: wrap
+    progress: true
+    menu:
+      side: left
+      width: normal
+      numbers: true
+      titleSelector: "h1, h2"
+      useTextContentForMissingTitles: true
+      sticky: true
+      autoOpen: true
+      keyboard: true
+      openButton: true
     mermaid:
       theme: neutral
     footer: "Półwarsztat dla socjologów"
