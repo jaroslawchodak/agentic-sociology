@@ -6,7 +6,7 @@ date: today
 lang: pl
 format:
   revealjs:
-    theme: default
+    theme: simple
     slide-number: true
     chalkboard: false
     embed-resources: true
@@ -16,7 +16,7 @@ format:
     code-overflow: wrap
     mermaid:
       theme: neutral
-    footer: "Półwarsztat dla socjologów · 75 min"
+    footer: "Półwarsztat dla socjologów"
 ---
 
 # Wstęp {.center background-color="#0b3d91"}
