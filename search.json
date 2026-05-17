@@ -60,11 +60,11 @@
     ]
   },
   {
-    "objectID": "01-wprowadzenie.html#trzy-pytania-na-które-odpowiada-ta-książka",
-    "href": "01-wprowadzenie.html#trzy-pytania-na-które-odpowiada-ta-książka",
+    "objectID": "01-wprowadzenie.html#trzy-pytania-na-które-odpowiada-ten-przewodnik",
+    "href": "01-wprowadzenie.html#trzy-pytania-na-które-odpowiada-ten-przewodnik",
     "title": "1  Wprowadzenie",
-    "section": "1.2 Trzy pytania, na które odpowiada ta książka",
-    "text": "1.2 Trzy pytania, na które odpowiada ta książka\n\nCzym właściwie różni się agent od czatu? I dlaczego ta różnica zmienia sposób pracy badawczej.\nJakie są dziś główne narzędzia? Claude Code, Codex, OpenCode, edytory typu Zed i Warp, modele lokalne (Ollama) — co do czego.\nCo konkretnie agent może zrobić w warsztacie socjologa? Pokaz na danych European Social Survey: od pustego folderu do publikowalnego raportu.",
+    "section": "1.2 Trzy pytania, na które odpowiada ten przewodnik",
+    "text": "1.2 Trzy pytania, na które odpowiada ten przewodnik\n\nCzym właściwie różni się agent od czatu? I dlaczego ta różnica zmienia sposób pracy badawczej.\nJakie są dziś główne narzędzia? Claude Code, Codex, OpenCode, edytory typu Zed i Warp, modele lokalne (Ollama) — co do czego.\nCo konkretnie agent może zrobić w warsztacie socjologa? Pokaz na danych European Social Survey: od pustego folderu do publikowalnego raportu.",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Wprowadzenie</span>"
     ]
@@ -84,7 +84,7 @@
     "href": "01-wprowadzenie.html#co-warto-wynieść-z-lektury",
     "title": "1  Wprowadzenie",
     "section": "1.4 Co warto wynieść z lektury",
-    "text": "1.4 Co warto wynieść z lektury\nPo przeczytaniu tej książki powinieneś:\n\nRozróżniać czat, LLM i system agentowy — i rozumieć, dlaczego ta różnica zmienia sposób pracy badawczej.\nZnać główne narzędzia rodziny Agentic AI oraz wiedzieć, czym są edytory/terminale wspierające agentów.\nRozumieć nowy paradygmat: pracę na projekcie z plikami kontekstowymi (CLAUDE.md, AGENTS.md, WORKFLOW.md) zamiast „zaczynania rozmowy od zera”.\nWidzieć konkretne, namacalne zastosowanie — pełną demonstrację pracy agenta na danych ESS.\nWiedzieć, kiedy wybrać model komercyjny, a kiedy lokalny — i dlaczego ma to znaczenie dla danych wrażliwych.\nByć świadomy/-a napięć etycznych wokół AI w nauce i znać obowiązkową formułę AI Disclosure Statement.\n\nW kolejnym rozdziale zaczynamy od najbardziej podstawowego rozróżnienia: czym właściwie jest agent.",
+    "text": "1.4 Co warto wynieść z lektury\nPo przeczytaniu tego przewodnika powinieneś:\n\nRozróżniać czat, LLM i system agentowy — i rozumieć, dlaczego ta różnica zmienia sposób pracy badawczej.\nZnać główne narzędzia rodziny Agentic AI oraz wiedzieć, czym są edytory/terminale wspierające agentów.\nRozumieć nowy paradygmat: pracę na projekcie z plikami kontekstowymi (CLAUDE.md, AGENTS.md, WORKFLOW.md) zamiast „zaczynania rozmowy od zera”.\nWidzieć konkretne, namacalne zastosowanie — pełną demonstrację pracy agenta na danych ESS.\nWiedzieć, kiedy wybrać model komercyjny, a kiedy lokalny — i dlaczego ma to znaczenie dla danych wrażliwych.\nByć świadomy/-a napięć etycznych wokół AI w nauce i znać obowiązkową formułę AI Disclosure Statement.\n\nW kolejnym rozdziale zaczynamy od najbardziej podstawowego rozróżnienia: czym właściwie jest agent.",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Wprowadzenie</span>"
     ]
@@ -164,7 +164,7 @@
     "href": "03-krajobraz.html#edytory-i-terminale-z-obsługą-agentów",
     "title": "3  Krajobraz narzędzi",
     "section": "3.2 Edytory i terminale z obsługą agentów",
-    "text": "3.2 Edytory i terminale z obsługą agentów\n\n\n\n\n\n\nOpenCode to pracownik. Zed to biuro.\n\n\n\nPomyśl o tym tak: OpenCode / Claude Code / Codex to pracownik. Zed / Warp to biuro, w którym ten pracownik siedzi.\n\n\n\nZed — edytor tekstu z trybem agentowym; potrafi „gościć” Claude’a / Codexa / OpenCode jako wbudowanego pomocnika.\nWarp — inteligentny terminal-środowisko z natywną integracją z agentami.\nCursor / Kiro — edytory z agentami w środku, popularne wśród programistów.\n\nTo tylko zajawka — nie musisz instalować żadnego z nich, żeby zacząć. Wystarczy okienko Claude’a w przeglądarce albo aplikacja desktopowa.",
+    "text": "3.2 Edytory i terminale z obsługą agentów\n\n\n\n\n\n\nOpenCode to pracownik. Zed to biuro.\n\n\n\nPomyśl o tym tak: OpenCode / Claude Code / Codex to pracownik. Zed / Warp to biuro, w którym ten pracownik siedzi.\n\n\n\nZed — edytor tekstu z trybem agentowym; potrafi „gościć” Claude’a / Codexa / OpenCode jako wbudowanego pomocnika.\nWarp — inteligentny terminal-środowisko z natywną integracją z agentami.\nCursor — edytor z agentami w środku, popularny wśród programistów.\n\nTo tylko zajawka — nie musisz instalować żadnego z nich, żeby zacząć. Wystarczy okienko Claude’a w przeglądarce albo aplikacja desktopowa.",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Krajobraz narzędzi</span>"
     ]
@@ -372,51 +372,51 @@
   {
     "objectID": "07-friction.html",
     "href": "07-friction.html",
-    "title": "7  Friction — etyka i napięcia",
+    "title": "7  Etyka i napięcia",
     "section": "",
     "text": "7.1 Cztery głosy z literatury\nWokół AI w nauce toczy się dziś gorący spór. Nie ma jednej, dobrej odpowiedzi. Są głosy — od entuzjazmu po totalną odmowę. Warto je usłyszeć przed podjęciem decyzji, co konkretnie chcesz outsource’ować.",
     "crumbs": [
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Friction — etyka i napięcia</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Etyka i napięcia</span>"
     ]
   },
   {
     "objectID": "07-friction.html#cztery-głosy-z-literatury",
     "href": "07-friction.html#cztery-głosy-z-literatury",
-    "title": "7  Friction — etyka i napięcia",
+    "title": "7  Etyka i napięcia",
     "section": "",
     "text": "Optymizm (Stanford 2026)\n\n„This is the most exciting moment ever to be a PhD student in social sciences.”\n— Matthew Gentzkow\n\nAthey, Gentzkow, Hall i inni z workshop Stanforda 2026: agent przejmuje żmudną pracę (czyszczenie danych, replikacje, przegląd literatury), badacz zyskuje czas na to, co istotne — pytania badawcze, interpretację, relacje z zespołem. Rola badacza zmienia się z wykonawcy w kuratora procesu.\n\n\nKrytyka pisania (Nature 2025)\n\n„Writing is thinking.”\n— Nature Reviews Bioengineering, 2025\n\nOutsourcing pisania pozbawia nas refleksji. Pisanie nie jest tylko zapisywaniem gotowej myśli — jest myśleniem. Jeśli AI napisze za nas zdanie, nie wiemy, jakie inne zdanie pomyślelibyśmy, gdyby AI go nie napisała.\n\n\n\nOdrzucenie (Qualitative Inquiry)\n419 badaczy jakościowych (Braun, Clarke, Lupton i in.): GenAI nie nadaje się do reflexive thematic analysis.\nArgumenty:\n\nMetodologiczne — symulowana inteligencja nie jest zdolna do refleksyjnej interpretacji osadzonej w relacji badawczej.\nEkologiczne — centra danych, woda, energia.\nSprawiedliwości społecznej — praca w Globalnym Południu, wzmacnianie dominujących narracji.\n\n\n\nProwokacja (Masters 2025)\n\n„Artificial intelligence and the death of the academic author”\n— Ken Masters, Medical Teacher, 2025\n\nLLM = blender tekstów kulturowych. Skoro autorstwo akademickie zawsze było aktem syntezy istniejących myśli — to LLM jest dla niego stworzony. Pytanie, czy w ogóle ma sens mówić o „śmierci autora” — czy raczej o końcu pewnego rodzaju autorstwa.\n\n\n\n\n\n\n\n\n\nWażne\n\n\n\nPytanie nie brzmi „używać czy nie”, lecz „co outsource’ować, a co zostawić sobie”.\nCztery powyższe głosy nie są nie do pogodzenia. Można jednocześnie:\n\nużywać agenta do przeglądu literatury (Stanford),\npisać samodzielnie (Nature),\nnie kodować wywiadów AI (419 badaczy),\nmieć świadomość, że coś w pojęciu autorstwa się zmienia (Masters).\n\nTo jest właśnie refleksyjna praktyka.",
     "crumbs": [
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Friction — etyka i napięcia</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Etyka i napięcia</span>"
     ]
   },
   {
     "objectID": "07-friction.html#dobre-praktyki-minimum-sanitarne",
     "href": "07-friction.html#dobre-praktyki-minimum-sanitarne",
-    "title": "7  Friction — etyka i napięcia",
+    "title": "7  Etyka i napięcia",
     "section": "7.2 Dobre praktyki — minimum sanitarne",
     "text": "7.2 Dobre praktyki — minimum sanitarne\nNiezależnie od tego, jak głęboko wejdziesz w pracę z agentami, w nauce obowiązują nas zasady minimum:\n\nNie wymyślaj. Każde twierdzenie agenta = cytat z konkretnego źródła. Skrypty walidujące (verify_claims_against_sources.py) są Twoją polisą.\nZostaw ślad pracy. Agent zapisuje, co czytał, co uruchamiał i co wyprodukował — folder agent_logs/.\nChroń dane respondentów. Anonimizacja przed chmurą. Ollama dla danych wrażliwych.\nOddzielaj cytat, streszczenie, interpretację. To ogranicza ryzyko, że elegancko brzmiący tekst ukryje błąd.\nPracuj na kopiach. Agent nie nadpisuje danych źródłowych.\nUjawniaj użycie AI — w publikacjach, grantach, recenzjach, materiałach dydaktycznych.",
     "crumbs": [
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Friction — etyka i napięcia</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Etyka i napięcia</span>"
     ]
   },
   {
     "objectID": "07-friction.html#ai-disclosure-statement",
     "href": "07-friction.html#ai-disclosure-statement",
-    "title": "7  Friction — etyka i napięcia",
+    "title": "7  Etyka i napięcia",
     "section": "7.3 AI Disclosure Statement",
     "text": "7.3 AI Disclosure Statement\n\n\n\n\n\n\nObowiązkowa formuła do artykułów\n\n\n\n\nThis manuscript was developed through a human-AI collaborative writing process. The conceptual framework, core arguments, theoretical choices, and analytical judgments are the sole intellectual contribution of the author. AI tools were used to assist with drafting, organization, and citation management. The author takes full responsibility for all claims and any errors.\n\n\n\nDlaczego to ważne: Nature, journale APA i SAGE już wymagają takiej deklaracji. Tam, gdzie jeszcze nie wymagają, brak deklaracji jest dziś czytany jako naukowa nieuczciwość. Lepiej mieć formułę i z niej nie skorzystać niż na odwrót.",
     "crumbs": [
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Friction — etyka i napięcia</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Etyka i napięcia</span>"
     ]
   },
   {
     "objectID": "07-friction.html#zaawansowane-tylko-zaglądamy-przez-szybę",
     "href": "07-friction.html#zaawansowane-tylko-zaglądamy-przez-szybę",
-    "title": "7  Friction — etyka i napięcia",
+    "title": "7  Etyka i napięcia",
     "section": "7.4 Zaawansowane — tylko zaglądamy przez szybę",
     "text": "7.4 Zaawansowane — tylko zaglądamy przez szybę\nNa końcu kilka kierunków, w które można iść, ale dzisiaj tylko je sygnalizujemy:\n\nOrkiestracja agentów — CrewAI, AutoGen. Zespół „socjolog-teoretyk” + „socjolog-analityk” + „krytyk metodologiczny”, każdy z własną rolą.\nPipeline’y — LangChain, LangGraph, Prefect. Przepływ pracy jako graf z gałęziami i warunkami.\nLokalne bazy wiedzy — LlamaIndex, ChromaDB, FAISS, Qdrant. Wyszukiwanie semantyczne we własnych dokumentach.\nFine-tuning małych modeli — Unsloth, Hugging Face. Dostrajanie modelu do specyfiki Twojej dziedziny.\n\n\n\n\n\n\n\nAdnotacja\n\n\n\nNie oczekuję, że będziesz to robić jutro. Chcę, żebyś wiedział, że istnieje. Każde z tych narzędzi to osobny krok i osobna decyzja — żadne nie jest „dalej tym samym warsztatem”.",
     "crumbs": [
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Friction — etyka i napięcia</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Etyka i napięcia</span>"
     ]
   },
   {
@@ -444,7 +444,7 @@
     "href": "08-zamkniecie.html#co-dalej-siedem-kroków-na-start",
     "title": "Zamknięcie",
     "section": "Co dalej — siedem kroków na start",
-    "text": "Co dalej — siedem kroków na start\nJeśli ta książka cię zainspirowała, oto konkretne kroki, które możesz wykonać w najbliższym tygodniu:\n\nPrompty. Naucz się dobrze formułować polecenia w Claude.ai lub ChatGPT — najpierw na zadaniu, które znasz dobrze.\nProjekty. Utwórz projekt w Claude.ai, dodaj kilka plików i instrukcję. Zobacz, jak zmienia się jakość odpowiedzi.\nAgent w folderze. Wypróbuj Claude Code Desktop — otwórz folder z materiałami badawczymi, daj zadanie, obserwuj.\nPlik kontekstowy. Napisz prosty CLAUDE.md lub AGENTS.md. 15 minut roboty, zmienia jakość każdej kolejnej interakcji.\nSkill. Gdy zobaczysz, że powtarzasz to samo zadanie trzeci raz — zbuduj skill. Poproś agenta: „utwórz skill do przeglądu literatury”.\nPrywatność. Zainstaluj Ollama (ollama.com) — zanim zaczniesz pracę z transkrypcjami wywiadów.\nProtokół kontroli. Ustal własne zasady: gdzie sprawdzasz wyniki? Jak oznaczasz fragmenty wygenerowane przez AI? Nie ma jeszcze standardów — musisz mieć własne.",
+    "text": "Co dalej — siedem kroków na start\nJeśli ten przewodnik cię zainspirował, oto konkretne kroki, które możesz wykonać w najbliższym tygodniu:\n\nPrompty. Naucz się dobrze formułować polecenia w Claude.ai lub ChatGPT — najpierw na zadaniu, które znasz dobrze.\nProjekty. Utwórz projekt w Claude.ai, dodaj kilka plików i instrukcję. Zobacz, jak zmienia się jakość odpowiedzi.\nAgent w folderze. Wypróbuj Claude Code Desktop — otwórz folder z materiałami badawczymi, daj zadanie, obserwuj.\nPlik kontekstowy. Napisz prosty CLAUDE.md lub AGENTS.md. 15 minut roboty, zmienia jakość każdej kolejnej interakcji.\nSkill. Gdy zobaczysz, że powtarzasz to samo zadanie trzeci raz — zbuduj skill. Poproś agenta: „utwórz skill do przeglądu literatury”.\nPrywatność. Zainstaluj Ollama (ollama.com) — zanim zaczniesz pracę z transkrypcjami wywiadów.\nProtokół kontroli. Ustal własne zasady: gdzie sprawdzasz wyniki? Jak oznaczasz fragmenty wygenerowane przez AI? Nie ma jeszcze standardów — musisz mieć własne.",
     "crumbs": [
       "Zamknięcie"
     ]
