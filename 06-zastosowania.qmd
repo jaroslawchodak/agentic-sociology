@@ -1,0 +1,71 @@
+# Zastosowania w socjologii
+
+Case study ESS to tylko jeden z wielu możliwych pipeline'ów. Poniżej galeria 360° — gdzie agent może realnie pomóc w warsztacie badacza społecznego.
+
+## Galeria zastosowań — od pytania do publikacji
+
+::: {.columns}
+::: {.column width="50%"}
+### Faza koncepcyjna
+
+- **Wyszukiwanie literatury** — OpenAlex, Elicit, Grok DeepSearch, Semantic Scholar
+- **Przegląd literatury** — tabela: autor, metoda, ustalenia, luka
+- **Pytania badawcze, hipotezy** — operacjonalizacja, mapa pojęć
+- **Research plan w `.md`** — strukturyzacja projektu
+
+### Faza terenowa / analityczna
+
+- **Transkrypcja** — Whisper offline
+- **Anonimizacja** — Presidio, znaczniki `[OSOBA_001]`
+- **Propozycje kodów jakościowych** — induktywne / dedukcyjne
+- **Czyszczenie i analiza danych ilościowych** — pandas, statsmodels
+- **Modelowanie tematów** — BERTopic, analiza dyskursu
+:::
+
+::: {.column width="50%"}
+### Faza pisania
+
+- **Draft artykułu** — sekcja po sekcji
+- **Sekcja metodologiczna** — z respektem dla wymogów czasopisma
+- **Bibliografia** — automatyczne formatowanie przez Zotero MCP
+- **Grant proposal** — od streszczenia do harmonogramu
+- **Slajdy do prezentacji** — strukturyzacja narracji
+
+### Faza recenzji
+
+- **Pseudo-recenzent** przed publikacją — wykrywanie luk i niespójności
+- **Wykrywanie luk i niespójności** w argumentacji
+- **Odpowiedzi dla recenzentów** — strukturyzacja revision letter
+:::
+:::
+
+## Chmura czy lokalnie — szybki przewodnik
+
+Reguła kciuka, którą warto zapamiętać:
+
+| Etap | Komercyjny (chmura) | Lokalny (Ollama) |
+|---|:---:|:---:|
+| Przegląd literatury | ✅ | ⚪ |
+| Draft grantu | ✅ | ⚪ |
+| Czyszczenie publicznych CSV | ✅ | ⚪ |
+| **Transkrypcje wywiadów** | ❌ | ✅ |
+| **Kodowanie wywiadów z danymi wrażliwymi** | ❌ | ✅ |
+| Recenzowanie cudzego draftu | ⚠️ | ✅ |
+
+::: {.callout-tip title="Zasada brzytwy"}
+Jeśli plik, który dajesz agentowi, **mógłby zostać wyciągnięty z chmury i pokazany na konferencji bez Twojej zgody** — to znak, że tego pliku tam być nie powinno.
+
+Dla wszystkiego, co ma respondentów, dane osobowe albo niepublikowane wyniki — model lokalny.
+:::
+
+## Czego *nie* delegujesz agentowi
+
+Dla równowagi — lista rzeczy, których **nie outsource'ujesz**, nawet gdy agent to potrafi:
+
+1. **Decyzję metodologiczną.** Czy badanie jest etyczne? Czy próba jest reprezentatywna? Czy hipoteza jest *Twoja*? — to twoja odpowiedzialność.
+2. **Interpretację wyników.** Statystycznie istotne ≠ socjologicznie ważne. To rozróżnienie wymaga *Twojej* wiedzy dziedzinowej.
+3. **Stanowisko autorskie.** Jeśli artykuł nie ma *Twojego* głosu — po co go pisać?
+4. **Ocenę jakości danych.** Czy dane są wiarygodne? Czy braki danych są systematyczne? Bez znajomości pola — agent może to przeoczyć.
+5. **Etyczną decyzję o ujawnieniu / ukryciu rezultatów.** Decyzja należy do Ciebie i (czasem) komitetu etyki.
+
+Granica nie jest sztywna i będzie się przesuwać. Ale na 2026 rok — to **bezpieczna baza**.

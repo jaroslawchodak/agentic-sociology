@@ -1,0 +1,52 @@
+# Przedmowa {.unnumbered}
+
+To materiały do **półwarsztatu (75 minut)** dla pracowników naukowych i doktorantów nauk społecznych i humanistycznych — początkujących w obszarze AI. Pokaz „od czatu do systemu agentowego" z pełną demonstracją na danych European Social Survey (ESS).
+
+::: {.callout-note title="Dla kogo to repozytorium"}
+Tekst tutaj nie jest klasyczną prezentacją — to **wersja do czytania** dla osób, które albo nie były na warsztacie, albo chcą wrócić do treści po sesji. Slajdy do projekcji prowadzę z innego narzędzia; tutaj jest wszystko spisane w spokojnym, czytelnym formacie.
+:::
+
+## O czym jest ten materiał
+
+Nie musisz być programistą.
+
+Nie musisz instalować terminala.
+
+Nie musisz rozumieć sieci neuronowych.
+
+**Jeśli potrafisz otworzyć folder i napisać pytanie po polsku — jesteś przygotowany.**
+
+## Czego się dowiesz
+
+::: {.columns}
+::: {.column width="50%"}
+**Co to NIE jest**
+
+- ❌ Kurs Pythona
+- ❌ Warsztat terminala
+- ❌ Live coding
+- ❌ Reklama jednego narzędzia
+:::
+
+::: {.column width="50%"}
+**Co to JEST**
+
+- ✅ Mapa nowego krajobrazu narzędzi
+- ✅ Pokaz pełnego pipeline'u badawczego z agentem
+- ✅ Rozróżnienie *czatu* od *systemu agentowego*
+- ✅ Rozmowa o etyce i odpowiedzialności
+:::
+:::
+
+## Jak korzystać z tej książki
+
+- Po lewej masz **spis treści całej książki** — klikalna nawigacja po rozdziałach.
+- Po prawej, w trakcie czytania rozdziału — **spis treści tego rozdziału**.
+- Na dole każdej strony — przyciski **„poprzedni / następny"**.
+- Górne pole wyszukiwania pozwala znaleźć fragment w obrębie całej książki.
+
+## Linki
+
+- **Repozytorium:** [github.com/jaroslawchodak/agentic-sociology](https://github.com/jaroslawchodak/agentic-sociology)
+- **Folder demo ESS:** w katalogu [`ESS-demo/`](https://github.com/jaroslawchodak/agentic-sociology/tree/main/ESS-demo)
+- **Plan warsztatu (75 min):** [`new-plan.md`](https://github.com/jaroslawchodak/agentic-sociology/blob/main/new-plan.md)

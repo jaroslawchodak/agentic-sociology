@@ -1,0 +1,96 @@
+# Jak rozmawiać z agentem
+
+## Trzy poziomy „pamięci" agenta
+
+Kluczowa różnica między *czatem* a *agentem* dotyczy tego, **co i jak długo agent pamięta**. Mamy trzy poziomy:
+
+| Poziom | Co to | Trwałość |
+|---|---|---|
+| **1. Prompt** | „Streść mi ten artykuł" | Znika z sesją |
+| **2. Projekt** | Folder + dodane pliki w Claude.ai | Trwa w obrębie projektu |
+| **3. Pliki kontekstowe** | `CLAUDE.md`, `AGENTS.md` w folderze | Agent czyta je *automatycznie* na start każdej sesji |
+
+Pliki kontekstowe to *gamechanger*: zamiast tłumaczyć agentowi za każdym razem, kim jesteś, co badasz i czego nie wolno mu robić — wpisujesz to raz, do pliku, a agent odczytuje to sam.
+
+> **Pliki kontekstowe zamieniają agenta w *Twojego* asystenta.**
+
+## Plik kontekstowy — to nie kod
+
+Najprostszy przykład pliku `AGENTS.md` dla projektu socjologicznego:
+
+```markdown
+# AGENTS.md
+
+## Rola
+Jesteś asystentem badawczym wspierającym socjologa
+w analizie publicznych danych ESS.
+
+## Zasady
+- Nie wymyślaj cytatów.
+- Oddziel źródła od interpretacji.
+- Oznacz niepewność.
+- Zapisuj wyniki w outputs/.
+- Nie nadpisuj danych źródłowych.
+- Jeśli czegoś nie da się potwierdzić — napisz to wprost.
+```
+
+::: {.callout-tip}
+*To zwykły polski tekst.* Możesz go napisać w 15 minut. Nie wymaga kursu programowania, nie wymaga znajomości YAML-a ani JSON-a. Jeśli umiesz napisać brief dla nowego pracownika — umiesz napisać `AGENTS.md`.
+:::
+
+## Skills i MCP — drugi i trzeci poziom
+
+Dwa pojęcia, które warto rozróżnić — bo robią różne rzeczy, choć często się je myli.
+
+::: {.columns}
+::: {.column width="50%"}
+**Skills (umiejętności)**
+
+Powtarzalne procedury zapisane w `.md` — uruchamiają się automatycznie, gdy agent rozpozna zadanie.
+
+Przykład skili dla badacza:
+
+- `deep-research-synthesizer`
+- `academic-paper`
+- `source-validation`
+- `interview-coding`
+
+**Analogia:** *Przepis kulinarny, który agent zapamiętał i wykonuje, gdy widzi znajome składniki.*
+:::
+
+::: {.column width="50%"}
+**MCP (Model Context Protocol)**
+
+Standard wtyczek łączących agenta z **zewnętrznymi źródłami danych**.
+
+Przykład MCP dla badacza:
+
+- Zotero
+- OpenAlex
+- PubMed / Scite
+- Twoja baza danych
+- Repozytorium instytucjonalne
+
+**Analogia:** *Klucz do szafy z dokumentami — agent nie prosi o każdy plik z osobna, bo ma dostęp.*
+:::
+:::
+
+**Różnica w jednym zdaniu:** Skills uczą agenta *jak myśleć i działać*. MCP dają mu *kanały, skąd brać dane i gdzie działać*.
+
+## Skrypty Pythona — tylko zajawka
+
+Agent potrafi *uruchamiać* gotowe skrypty Pythona — i to jest jego siła. Nie chodzi o to, żebyś *ty* je pisał. Najczęściej używane w warsztacie badacza:
+
+- `pymupdf4llm`, `Docling` — parsowanie PDF do Markdown
+- `Presidio` — anonimizacja transkrypcji (imiona, miejscowości, instytucje → znaczniki)
+- `faster-whisper` — transkrypcja audio offline
+- `pandas`, `statsmodels` — czyszczenie i analiza danych ilościowych
+- `BERTopic` — modelowanie tematów
+
+::: {.callout-note title="Filozofia"}
+*Nie musisz umieć tego napisać — agent jest dyrygentem, skrypty są instrumentami.*
+
+W praktyce agent **sam zapisuje skrypty**, sam je uruchamia, sam interpretuje wyniki. Twoja rola: powiedzieć, co ma być zrobione i sprawdzić, czy wynik ma sens.
+:::
+
+W kolejnym rozdziale zobaczysz, jak to wygląda w praktyce — na pełnym pipeline'ie analizy danych European Social Survey.

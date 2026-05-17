@@ -1,0 +1,39 @@
+# Zamknięcie {.unnumbered}
+
+## Trzy obserwacje na koniec
+
+1. **Systemy agentowe nie zastępują badacza** — zmieniają charakter jego pracy. Mniej ręcznego wykonywania, więcej nadzorowania, oceniania, korygowania. Przesunięcie z roli *wykonawcy* na rolę **kuratora procesu badawczego**.
+
+2. **Największe ryzyko: agent myli się przekonująco.** Nie chodzi o oczywiste błędy — chodzi o teksty, które brzmią poprawnie, ale są subtelnie nieprawdziwe i trudne do wyłapania bez wiedzy dziedzinowej. Dlatego te narzędzia potrzebują **kompetentnych użytkowników** — nie zastępują kompetencji.
+
+3. **Zacznij od prostego:** jedno zadanie, jeden agent, temat, który *znasz dobrze*. Sprawdź, co agent zrobi z czymś, co umiesz ocenić. Dopiero potem rozszerzaj zakres.
+
+## Co dalej — siedem kroków na start
+
+Jeśli ta książka cię zainspirowała, oto konkretne kroki, które możesz wykonać w najbliższym tygodniu:
+
+1. **Prompty.** Naucz się dobrze formułować polecenia w Claude.ai lub ChatGPT — najpierw na zadaniu, które znasz dobrze.
+2. **Projekty.** Utwórz projekt w Claude.ai, dodaj kilka plików i instrukcję. Zobacz, jak zmienia się jakość odpowiedzi.
+3. **Agent w folderze.** Wypróbuj Claude Code Desktop — otwórz folder z materiałami badawczymi, daj zadanie, obserwuj.
+4. **Plik kontekstowy.** Napisz prosty `CLAUDE.md` lub `AGENTS.md`. 15 minut roboty, zmienia jakość każdej kolejnej interakcji.
+5. **Skill.** Gdy zobaczysz, że powtarzasz to samo zadanie trzeci raz — zbuduj skill. Poproś agenta: *„utwórz skill do przeglądu literatury"*.
+6. **Prywatność.** Zainstaluj Ollama (`ollama.com`) — *zanim* zaczniesz pracę z transkrypcjami wywiadów.
+7. **Protokół kontroli.** Ustal własne zasady: gdzie sprawdzasz wyniki? Jak oznaczasz fragmenty wygenerowane przez AI? Nie ma jeszcze standardów — musisz mieć własne.
+
+## Materiały dodatkowe
+
+W repozytorium znajdziesz:
+
+- [`new-plan.md`](https://github.com/jaroslawchodak/agentic-sociology/blob/main/new-plan.md) — pełny plan warsztatu (75 minut) z agendą, celami edukacyjnymi i opisem pokazu.
+- [`ESS-demo/`](https://github.com/jaroslawchodak/agentic-sociology/tree/main/ESS-demo) — folder demonstracyjny do analizy ESS: `AGENTS.md`, `CONTEXT.md`, `WORKFLOW.md`, prompt wykonawczy.
+
+## Podziękowania
+
+Materiały powstały z syntezy notatek roboczych, kilku iteracji planu warsztatu i analizy zawartości katalogu `notes-base` (publikacje o agentach AI, debaty etyczne, dokumentacja narzędzi). Sam tekst — w duchu ujawnienia — został przygotowany w procesie *human-AI collaborative writing*, zgodnie z formułą *AI Disclosure Statement* podaną w rozdziale o napięciach etycznych.
+
+::: {.callout-tip title="Kontakt"}
+- **Repozytorium:** [github.com/jaroslawchodak/agentic-sociology](https://github.com/jaroslawchodak/agentic-sociology)
+- **Issues / pytania:** otwórz [issue na GitHubie](https://github.com/jaroslawchodak/agentic-sociology/issues)
+
+Powodzenia w pracy z agentami — i pamiętaj, że *interpretacja, sąd i odpowiedzialność* zostają po Twojej stronie.
+:::

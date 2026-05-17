@@ -1,73 +1,76 @@
 # Agentic Sociology — warsztat
 
-Półwarsztat (75 minut) dla pracowników naukowych i doktorantów nauk społecznych i humanistycznych, początkujących w obszarze AI. Pokaz „od czatu do systemu agentowego" z pełną demonstracją na danych European Social Survey (ESS).
+Półwarsztat (75 minut) dla pracowników naukowych i doktorantów nauk społecznych i humanistycznych — początkujących w obszarze AI. Pokaz „od czatu do systemu agentowego" z pełną demonstracją na danych European Social Survey (ESS).
+
+📖 **Wersja online (Quarto Book):** [jaroslawchodak.github.io/agentic-sociology](https://jaroslawchodak.github.io/agentic-sociology)
 
 ## Zawartość repozytorium
 
 | Plik / folder | Co to |
 |---|---|
-| `presentation.qmd` | Prezentacja Quarto (revealjs) — gotowa do renderowania |
+| `_quarto.yml` | Konfiguracja Quarto Book |
+| `index.qmd` | Strona startowa książki |
+| `01-wprowadzenie.qmd` … `08-zamkniecie.qmd` | Rozdziały książki (kolejność wynika z numeru) |
 | `new-plan.md` | Plan warsztatu (75 min) — agenda, cele edukacyjne, opis pokazu |
-| `ESS-demo/` | Folder demonstracyjny: `AGENTS.md` (konstytucja agenta), `CONTEXT.md` (opis projektu), `WORKFLOW.md` (procedura analizy), `prompt-wykonawczy.md` |
+| `ESS-demo/` | Folder demonstracyjny do analizy ESS: `AGENTS.md`, `CONTEXT.md`, `WORKFLOW.md`, `prompt-wykonawczy.md` |
+
+## Struktura książki
+
+```
+Przedmowa                       index.qmd
+1. Wprowadzenie                 01-wprowadzenie.qmd
+2. Czym jest agent              02-czym-jest-agent.qmd
+3. Krajobraz narzędzi           03-krajobraz.qmd
+4. Jak rozmawiać z agentem      04-jak-rozmawiac.qmd
+5. Case Study ESS               05-case-study-ess.qmd
+6. Zastosowania w socjologii    06-zastosowania.qmd
+7. Friction — etyka i napięcia  07-friction.qmd
+Zamknięcie                      08-zamkniecie.qmd
+```
 
 ## Wymagania
 
 - [Quarto](https://quarto.org/docs/get-started/) ≥ 1.4
-- Przeglądarka z obsługą JavaScript (do podglądu slajdów)
+- Przeglądarka z obsługą JavaScript (do podglądu)
 
-Diagramy Mermaid renderują się natywnie przez Quarto — nic dodatkowo nie trzeba instalować.
+Diagramy Mermaid i motyw Bootswatch `litera` renderują się natywnie przez Quarto — nic dodatkowo nie trzeba instalować.
 
-## Renderowanie prezentacji
+## Lokalne renderowanie
 
 ```bash
 git clone https://github.com/jaroslawchodak/agentic-sociology.git
 cd agentic-sociology
 
-# render do pojedynczego, samodzielnego pliku HTML
-quarto render presentation.qmd
+# render całej książki do _book/
+quarto render
 
 # podgląd na żywo (z autorefresh)
-quarto preview presentation.qmd
+quarto preview
 ```
 
-Po wyrenderowaniu plik `presentation.html` zawiera wszystkie zasoby (CSS, JS, obrazki) wbudowane dzięki `embed-resources: true` — można go wysłać mailem albo wrzucić na dowolny hosting statyczny.
+Po `quarto render` w katalogu `_book/` powstaje cała strona z `index.html`, plikami rozdziałów i lewym sidebarem TOC.
 
 ## Publikacja na GitHub Pages
 
-Najprostsza ścieżka — Quarto sam zrobi gałąź `gh-pages`:
+```bash
+quarto publish gh-pages
+```
+
+Quarto zarządza gałęzią `gh-pages` samodzielnie. Po pierwszej publikacji w **Settings → Pages** ustaw źródło na `gh-pages` → `/ (root)`. Strona będzie dostępna pod:
+
+```
+https://jaroslawchodak.github.io/agentic-sociology/
+```
+
+## Aktualizacja repozytorium
+
+Po wprowadzeniu zmian w plikach `.qmd`:
 
 ```bash
-quarto publish gh-pages presentation.qmd
-```
-
-Po pierwszej publikacji w **Settings → Pages** repozytorium ustaw źródło na `gh-pages` → `/ (root)`. Slajdy będą dostępne pod adresem:
-
-```
-https://jaroslawchodak.github.io/agentic-sociology/presentation.html
-```
-
-### Wariant „ręczny" (bez `quarto publish`)
-
-```bash
-quarto render presentation.qmd --output-dir docs
-git add docs/
-git commit -m "Publish slides"
-git push
-```
-
-W **Settings → Pages** wybierz źródło `main` → `/docs`. Jeśli wybierasz ten wariant, **odkomentuj** linię `/docs` w `.gitignore`.
-
-## Struktura prezentacji
-
-```
-Wstęp                 → ramy, „co to NIE jest"
-Część 1               → LLM ↔ Czat ↔ Agent (analogie, pętla działania)
-Część 2               → krajobraz narzędzi + modele chmurowe vs lokalne
-Część 3               → pliki kontekstowe, Skills, MCP, skrypty
-Część 4 (showcase)    → Case Study ESS: pełny pipeline analityczny
-Część 5               → galeria zastosowań w socjologii
-Część 6               → friction: etyka, AI Disclosure
-Zamknięcie            → trzy obserwacje + Q&A
+git add .
+git commit -m "Opis zmiany"
+git push                            # źródła do main
+quarto publish gh-pages             # wyrenderowana wersja do gh-pages
 ```
 
 ## Licencja

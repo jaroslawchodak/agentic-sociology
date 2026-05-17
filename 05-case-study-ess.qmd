@@ -1,0 +1,158 @@
+# Case Study — European Social Survey
+
+Ten rozdział to **najważniejsza część książki**. Wszystko, co dotąd opisałem, ma sens dopiero wtedy, gdy zobaczysz **pełny pipeline badawczy wykonany przez agenta** — od pustego folderu do publikowalnego raportu.
+
+## Pytanie badawcze
+
+> Czy osoby o wyższym zaufaniu społecznym, lepszym zdrowiu, wyższym dochodzie i wyższym poziomie edukacji deklarują wyższe zadowolenie z życia?
+
+**Dane:** European Social Survey (publiczne, dostępne na [europeansocialsurvey.org](https://www.europeansocialsurvey.org/data-portal)).
+
+**Model:**
+
+```
+stflife ~ ppltrst + health + hinctnta + eduyrs + agea + gndr + cntry
+```
+
+## Folder demo — punkt wyjścia
+
+```text
+ess-demo/
+  AGENTS.md            ← konstytucja agenta
+  CONTEXT.md           ← opis projektu i pytanie
+  WORKFLOW.md          ← procedura analizy
+  prompt-wykonawczy.md ← zlecenie
+  data_raw/            ← surowe dane ESS
+  data_clean/          ← po czyszczeniu
+  scripts/             ← skrypty pomocnicze
+  outputs/             ← raport + wykres
+  agent_logs/          ← ślad decyzji
+```
+
+> *Trzy pliki `.md` mówią agentowi, kim jest, co bada i jak ma to zrobić.*
+
+Cały folder znajdziesz w repozytorium pod ścieżką [`ESS-demo/`](https://github.com/jaroslawchodak/agentic-sociology/tree/main/ESS-demo) — możesz go skopiować i uruchomić u siebie.
+
+## Pipeline wykonany przez agenta
+
+```{mermaid}
+flowchart LR
+    A[Pusty folder<br/>+ pliki .md] --> B[Agent czyta<br/>AGENTS.md<br/>CONTEXT.md<br/>WORKFLOW.md]
+    B --> C[Pobieranie danych<br/>ESS Data Portal]
+    C --> D[Standaryzacja<br/>zmiennych<br/>+ braki danych]
+    D --> E[Analiza:<br/>korelacja<br/>+ regresja OLS]
+    E --> F[Wykres<br/>matplotlib]
+    F --> G[Raport.md<br/>+ audit log]
+```
+
+Wszystkie te kroki agent wykonuje **sam**, na podstawie procedury zapisanej w `WORKFLOW.md`. Twoja rola: napisać prompt wykonawczy i sprawdzić wynik.
+
+## Prompt wykonawczy — czyli „zadanie na dziś"
+
+```text
+Wykonaj demonstracyjną analizę ESS zgodnie z
+AGENTS.md, CONTEXT.md i WORKFLOW.md.
+
+Pytanie badawcze:
+Czy osoby o wyższym zaufaniu społecznym, lepszym zdrowiu,
+wyższym dochodzie i wyższym poziomie edukacji deklarują
+wyższe zadowolenie z życia?
+
+Model:
+stflife = ppltrst + health + hinctnta + eduyrs + agea + gndr + cntry
+
+Wykonaj: sprawdzenie danych, czyszczenie, opis,
+korelację, wykres, regresję, ostrożną interpretację,
+listę ograniczeń.
+
+Zapisz: outputs/raport-ess-stflife.md
+        agent_logs/decyzje-ess-stflife.md
+```
+
+> **To wszystko po polsku. Żadnego kodu napisanego przez prowadzącego.**
+
+## Krok 1: Agent pisze skrypt czyszczący
+
+::: {.callout-note title="Nie musisz tego napisać"}
+Poniższy skrypt jest *przykładem*, jak agent sam zaprojektował kod na podstawie procedury z `WORKFLOW.md`. Pokazuję go tu, żeby zilustrować, *co konkretnie* dzieje się „pod maską". Twoim zadaniem jest wyłącznie ocena wyniku.
+:::
+
+```python
+import pandas as pd
+
+df = pd.read_csv("data_raw/ESS_subset.csv")
+
+cols = ["stflife", "ppltrst", "health", "hinctnta",
+        "eduyrs", "agea", "gndr", "cntry"]
+df = df[cols]
+
+# Kody braków ESS: 7, 8, 9, 77, 88, 99
+missing_codes = {
+    "stflife": [77, 88, 99],
+    "ppltrst": [77, 88, 99],
+    "health":  [7, 8, 9],
+    "hinctnta":[77, 88, 99],
+    "eduyrs":  [77, 88, 99],
+}
+for col, codes in missing_codes.items():
+    df.loc[df[col].isin(codes), col] = pd.NA
+
+df_clean = df.dropna()
+df_clean.to_csv("data_clean/ess_clean.csv", index=False)
+```
+
+## Krok 2: Agent liczy regresję OLS
+
+::: {.callout-note}
+*Nie musisz znać `statsmodels` — chodzi tylko o to, że agent sam dobiera bibliotekę odpowiednią do zadania.*
+:::
+
+```python
+import statsmodels.formula.api as smf
+
+model = smf.ols(
+    "stflife ~ ppltrst + health + hinctnta + eduyrs "
+    "+ agea + C(gndr) + C(cntry)",
+    data=df_clean,
+).fit()
+
+print(model.summary())
+```
+
+## Krok 3: Tabela wyników (wycinek)
+
+| Zmienna | Współczynnik | Błąd std. | p-value |
+|---|---:|---:|---:|
+| (Intercept) | 4.21 | 0.14 | <0.001 |
+| `ppltrst` | **+0.13** | 0.01 | <0.001 |
+| `health` | **−0.61** | 0.02 | <0.001 |
+| `hinctnta` | **+0.10** | 0.01 | <0.001 |
+| `eduyrs` | +0.02 | 0.004 | <0.001 |
+| `agea` | −0.01 | 0.001 | <0.001 |
+
+*Wartości ilustracyjne. Agent sam zaznaczył w raporcie: „skala porządkowa traktowana jako liczbowa — uproszczenie".*
+
+## Krok 4: Wykres i raport
+
+```{mermaid}
+flowchart LR
+    A[Dane oczyszczone] --> B[Wykres: średnie stflife<br/>dla poziomów ppltrst]
+    B --> C[outputs/wykres-stflife-ppltrst.png]
+    A --> D[Raport 12 sekcji:<br/>pytanie, dane, zmienne,<br/>czyszczenie, opis,<br/>korelacja, wykres,<br/>regresja, interpretacja,<br/>ograniczenia]
+    D --> E[outputs/raport-ess-stflife.md]
+    A --> F[Audit log:<br/>co czytał,<br/>co uruchomił,<br/>jakie decyzje podjął]
+    F --> G[agent_logs/decyzje-ess-stflife.md]
+```
+
+## Co jest socjologicznie ważne w tym pokazie
+
+- Agent **nie pisze interpretacji za nas** — proponuje, a my decydujemy.
+- Agent **sam zaznacza ograniczenia**: wagi ESS, skale porządkowe, `cntry` jako proste *fixed effects* zamiast modelu wielopoziomowego.
+- Agent **NIE formułuje wniosków przyczynowych** z danych przekrojowych.
+- **Audit log** = polisa ubezpieczeniowa dla recenzentów.
+
+::: {.callout-important title="Klucz dydaktyczny"}
+**Agent zna metodologię, bo my mu ją wpisaliśmy w `AGENTS.md`.**
+
+Bez pliku kontekstowego agent byłby tylko „mądrzejszym czatem". Z plikiem — staje się asystentem, który respektuje *Twoje* zasady metodologiczne. To **Ty** ustawiasz reguły gry.
+:::

@@ -1,0 +1,77 @@
+# Czym jest agent
+
+## Trzy pojęcia, jedna analogia
+
+Trzy pojęcia, które łatwo się mylą — i analogie, które pomagają je rozróżnić:
+
+| Pojęcie | Analogia |
+|---|---|
+| **LLM** (model językowy) | Mózg językowy bez rąk |
+| **Czat w przeglądarce** | Rozmówca przez telefon |
+| **System agentowy** | Pracownik, który dostaje cel, planuje, działa, sprawdza |
+
+Sam LLM (jak GPT czy Claude) to *zdolność generowania tekstu* — nic więcej. Czat to *interfejs* do tej zdolności. System agentowy to *organizacja pracy*, w której LLM jest jednym z elementów, ale nie jedynym.
+
+## Agent = LLM + pamięć + narzędzia + pętla
+
+System agentowy ma cztery komponenty, które działają razem w pętli:
+
+```{mermaid}
+flowchart LR
+    A[Cel od badacza] --> B[Mózg: LLM]
+    B --> C{Plan}
+    C --> D[Narzędzia:<br/>pliki, skrypty,<br/>wyszukiwarka]
+    D --> E[Obserwacja wyniku]
+    E --> F{Czy gotowe?}
+    F -->|nie| C
+    F -->|tak| G[Wynik + audit log]
+```
+
+- **Cel** — zlecenie badacza („zrób przegląd literatury", „zanonimizuj wywiady").
+- **Mózg (LLM)** — to, co rozumie język i planuje kolejny krok.
+- **Narzędzia** — pliki, skrypty, wyszukiwarki, bazy danych, API. To, co LLM może *uruchomić*.
+- **Pętla** — agent obserwuje wynik akcji i decyduje, co dalej. Jeśli skrypt się wywalił — naprawia. Jeśli wynik jest niepełny — szuka dalej.
+
+Bez tej pętli mamy „LLM, który tylko gada". Z pętlą — agent, który *wykonuje*.
+
+## Czat vs Agent — różnica, która zmienia wszystko
+
+|  | **Czat w przeglądarce** | **System agentowy** |
+|---|---|---|
+| **Tryb pracy** | Pytanie → odpowiedź | Cel → plan → pętla |
+| **Kontekst** | Znika po sesji | Pliki kontekstowe trwają |
+| **Pliki** | Wklejasz fragmenty | Agent widzi cały folder |
+| **Wynik** | Tekst w okienku | Zapisane pliki + ślad pracy |
+| **Odpowiedzialność** | Twoja | **Wciąż Twoja** |
+
+Ostatni wiersz jest kluczowy: zmienia się *sposób pracy*, ale *odpowiedzialność* — nie. Agent może pomylić się przekonująco. Bez wiedzy dziedzinowej trudno to wyłapać.
+
+## Zmiana paradygmatu: od rozmowy do projektu
+
+::: {.columns}
+::: {.column width="50%"}
+**Stara praca z AI**
+
+- Otwieram okno czatu
+- Wklejam fragment
+- Kopiuję odpowiedź
+- Zamykam okno
+- Jutro: od zera
+:::
+
+::: {.column width="50%"}
+**Nowa praca z agentem**
+
+- Otwieram folder projektu
+- Agent czyta `CLAUDE.md`
+- Wykonuje zadanie
+- Zostawia pliki + log
+- Jutro: kontynuujemy
+:::
+:::
+
+Najtrudniejsze w tej zmianie jest **mentalne przesunięcie**. Przestajesz myśleć „zadam pytanie i dostanę odpowiedź" — zaczynasz myśleć „mam folder badawczy, agent w nim pracuje, ja kontroluję wyniki".
+
+::: {.callout-tip title="Reguła trzech rozmów"}
+Jeśli wpisujesz to samo polecenie **trzeci raz** — to znak, że czas zrobić z tego *skill*. Skille omówimy w rozdziale „Jak rozmawiać z agentem".
+:::
