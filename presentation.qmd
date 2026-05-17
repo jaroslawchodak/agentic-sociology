@@ -1,0 +1,511 @@
+---
+title: "Nowy warsztat socjologa"
+subtitle: "Systemy agentowe AI w procesie badawczym"
+author: "Jarosław Chodak"
+date: today
+lang: pl
+format:
+  revealjs:
+    theme: default
+    slide-number: true
+    chalkboard: false
+    embed-resources: true
+    incremental: false
+    transition: slide
+    highlight-style: github
+    code-overflow: wrap
+    mermaid:
+      theme: neutral
+    footer: "Półwarsztat dla socjologów · 75 min"
+---
+
+# Wstęp {.center background-color="#0b3d91"}
+
+## O co tu chodzi?
+
+Nie musisz być programistą.
+
+Nie musisz instalować terminala.
+
+Nie musisz rozumieć sieci neuronowych.
+
+. . .
+
+**Jeśli potrafisz otworzyć folder i napisać pytanie po polsku — jesteś przygotowany.**
+
+## Co to NIE jest
+
+- ❌ Kurs Pythona
+- ❌ Warsztat terminala
+- ❌ Live coding
+- ❌ Reklama jednego narzędzia
+
+## Co to JEST
+
+- ✅ Mapa nowego krajobrazu narzędzi
+- ✅ Pokaz pełnego pipeline'u badawczego z agentem
+- ✅ Rozróżnienie *czatu* od *systemu agentowego*
+- ✅ Rozmowa o etyce i odpowiedzialności
+
+# Część 1. Czym jest agent? {.center background-color="#0b3d91"}
+
+## Trzy pojęcia, jedna analogia
+
+| Pojęcie | Analogia |
+|---|---|
+| **LLM** | Mózg językowy bez rąk |
+| **Czat w przeglądarce** | Rozmówca przez telefon |
+| **System agentowy** | Pracownik, który dostaje cel, planuje, działa, sprawdza |
+
+## Agent = LLM + pamięć + narzędzia + pętla
+
+```{mermaid}
+flowchart LR
+    A[Cel od badacza] --> B[Mózg: LLM]
+    B --> C{Plan}
+    C --> D[Narzędzia:<br/>pliki, skrypty,<br/>wyszukiwarka]
+    D --> E[Obserwacja wyniku]
+    E --> F{Czy gotowe?}
+    F -->|nie| C
+    F -->|tak| G[Wynik + audit log]
+```
+
+## Czat vs Agent — różnica, która zmienia wszystko
+
+| | **Czat w przeglądarce** | **System agentowy** |
+|---|---|---|
+| Tryb | Pytanie → odpowiedź | Cel → plan → pętla |
+| Kontekst | Znika po sesji | Pliki kontekstowe trwają |
+| Pliki | Wklejasz fragmenty | Agent widzi cały folder |
+| Wynik | Tekst w okienku | Zapisane pliki + ślad pracy |
+| Odpowiedzialność | Twoja | **Wciąż Twoja** |
+
+## Zmiana paradygmatu
+
+::: {.columns}
+::: {.column width="50%"}
+**Stara praca**
+
+- Otwieram okno czatu
+- Wklejam fragment
+- Kopiuję odpowiedź
+- Zamykam
+- Jutro: od zera
+:::
+
+::: {.column width="50%"}
+**Nowa praca**
+
+- Otwieram folder projektu
+- Agent czyta `CLAUDE.md`
+- Wykonuje zadanie
+- Zostawia pliki + log
+- Jutro: kontynuujemy
+:::
+:::
+
+. . .
+
+**Reguła trzech rozmów:** *jeśli wpisujesz to samo trzeci raz — zrób z tego skill.*
+
+# Część 2. Krajobraz narzędzi {.center background-color="#0b3d91"}
+
+## Główne systemy Agentic AI
+
+| Narzędzie | Dostawca | Co je wyróżnia |
+|---|---|---|
+| **Claude Code** | Anthropic | Dojrzały ekosystem Skills i MCP. Punkt startowy dla socjologa. |
+| **Codex** | OpenAI | Agent + chmura, zintegrowany z ekosystemem OpenAI. |
+| **OpenCode** | Open source | Agnostyczny wobec modelu, pozwala podpiąć modele lokalne. |
+| **Antigravity** | Google | Pełne środowisko z wieloma agentami równolegle. |
+
+## Edytory i terminale z agentami
+
+**OpenCode to pracownik. Zed to biuro, w którym ten pracownik siedzi.**
+
+- **Zed** — edytor z trybem agentowym (Claude / Codex / OpenCode w środku)
+- **Warp** — inteligentny terminal-środowisko
+- **Cursor / Kiro** — edytory z agentami w środku
+
+. . .
+
+To tylko *zajawka* — nie musisz instalować żadnego z nich, żeby zacząć.
+
+## Modele: komercyjne vs lokalne
+
+```{mermaid}
+flowchart TD
+    A[Mam zadanie] --> B{Dane wrażliwe?<br/>Wywiady, dane osobowe?}
+    B -->|TAK| C[Model lokalny<br/>Ollama + Llama / Gemma]
+    B -->|NIE| D{Zadanie złożone?<br/>Długi kontekst?}
+    D -->|TAK| E[Model komercyjny<br/>Claude / GPT / Gemini]
+    D -->|NIE| F[Wybór swobodny]
+    C --> G[Offline, prywatne,<br/>darmowe, słabsze]
+    E --> H[Najwyższa jakość,<br/>chmura, koszt za token]
+```
+
+**Reguła dla socjologa:** wywiady → lokalnie; literatura, grant → chmura.
+
+# Część 3. Jak rozmawiać z agentem? {.center background-color="#0b3d91"}
+
+## Trzy poziomy „pamięci" agenta
+
+| Poziom | Co to | Trwałość |
+|---|---|---|
+| **1. Prompt** | „Streść mi ten artykuł" | Znika z sesją |
+| **2. Projekt** | Folder + dodane pliki w Claude.ai | Trwa w projekcie |
+| **3. Pliki kontekstowe** | `CLAUDE.md`, `AGENTS.md` w folderze | Agent czyta je *automatycznie* |
+
+. . .
+
+**Pliki kontekstowe zamieniają agenta w *Twojego* asystenta.**
+
+## Plik kontekstowy — to nie kod
+
+```markdown
+# AGENTS.md
+
+## Rola
+Jesteś asystentem badawczym wspierającym socjologa
+w analizie publicznych danych ESS.
+
+## Zasady
+- Nie wymyślaj cytatów.
+- Oddziel źródła od interpretacji.
+- Oznacz niepewność.
+- Zapisuj wyniki w outputs/.
+- Nie nadpisuj danych źródłowych.
+- Jeśli czegoś nie da się potwierdzić — napisz to wprost.
+```
+
+> *To zwykły polski tekst. Możesz go napisać w 15 minut.*
+
+## Skills i MCP — drugi i trzeci poziom
+
+::: {.columns}
+::: {.column width="50%"}
+**Skills (umiejętności)**
+
+Powtarzalne procedury zapisane w `.md`.
+
+Przykład:
+- `deep-research`
+- `academic-paper`
+- `source-validation`
+
+*Przepis kulinarny, który agent zapamiętał.*
+:::
+
+::: {.column width="50%"}
+**MCP (Model Context Protocol)**
+
+Wtyczki do zewnętrznych źródeł.
+
+Przykład:
+- Zotero
+- OpenAlex
+- PubMed
+- Twoja baza danych
+
+*Klucz do szafy z dokumentami.*
+:::
+:::
+
+. . .
+
+**Różnica w jednym zdaniu:** Skills uczą agenta *jak myśleć*. MCP dają mu *skąd brać dane*.
+
+## Skrypty Pythona — tylko zajawka
+
+Agent potrafi uruchamiać gotowe skrypty:
+
+- `pymupdf4llm`, `Docling` — PDF → Markdown
+- `Presidio` — anonimizacja transkrypcji
+- `faster-whisper` — transkrypcja audio offline
+- `pandas`, `statsmodels` — analiza danych
+
+. . .
+
+> *Nie musisz umieć tego napisać — to agent jest dyrygentem, skrypty są instrumentami.*
+
+# Część 4. Case Study ESS {.center background-color="#7a1f3d"}
+
+## Demonstracja na żywo: agent w analizie danych
+
+**Pytanie badawcze:**
+
+> Czy osoby o wyższym zaufaniu społecznym, lepszym zdrowiu, wyższym dochodzie i wyższym poziomie edukacji deklarują wyższe zadowolenie z życia?
+
+**Dane:** European Social Survey (publiczne)
+
+**Model:** `stflife ~ ppltrst + health + hinctnta + eduyrs + agea + gndr + cntry`
+
+## Folder demo — punkt wyjścia
+
+```text
+ess-demo/
+  AGENTS.md            ← konstytucja agenta
+  CONTEXT.md           ← opis projektu i pytanie
+  WORKFLOW.md          ← procedura analizy
+  prompt-wykonawczy.md ← zlecenie
+  data_raw/            ← surowe dane ESS
+  data_clean/          ← po czyszczeniu
+  scripts/             ← skrypty pomocnicze
+  outputs/             ← raport + wykres
+  agent_logs/          ← ślad decyzji
+```
+
+> *Trzy pliki `.md` mówią agentowi, kim jest, co bada i jak ma to zrobić.*
+
+## Pipeline wykonany przez agenta
+
+```{mermaid}
+flowchart LR
+    A[Pusty folder<br/>+ pliki .md] --> B[Agent czyta<br/>AGENTS.md<br/>CONTEXT.md<br/>WORKFLOW.md]
+    B --> C[Pobieranie danych<br/>ESS Data Portal]
+    C --> D[Standaryzacja<br/>zmiennych<br/>+ braki danych]
+    D --> E[Analiza:<br/>korelacja<br/>+ regresja OLS]
+    E --> F[Wykres<br/>matplotlib]
+    F --> G[Raport.md<br/>+ audit log]
+```
+
+## Prompt wykonawczy — czyli „zadanie na dziś"
+
+```text
+Wykonaj demonstracyjną analizę ESS zgodnie z
+AGENTS.md, CONTEXT.md i WORKFLOW.md.
+
+Pytanie badawcze:
+Czy osoby o wyższym zaufaniu społecznym, lepszym zdrowiu,
+wyższym dochodzie i wyższym poziomie edukacji deklarują
+wyższe zadowolenie z życia?
+
+Model:
+stflife = ppltrst + health + hinctnta + eduyrs + agea + gndr + cntry
+
+Wykonaj: sprawdzenie danych, czyszczenie, opis,
+korelację, wykres, regresję, ostrożną interpretację,
+listę ograniczeń.
+
+Zapisz: outputs/raport-ess-stflife.md
+        agent_logs/decyzje-ess-stflife.md
+```
+
+. . .
+
+> **To wszystko po polsku. Żadnego kodu napisanego przez prowadzącego.**
+
+## Krok 1: Agent pisze skrypt czyszczący
+
+> *Nie musisz tego napisać — to przykład, jak agent sam zaprojektował skrypt na podstawie `WORKFLOW.md`.*
+
+```python
+import pandas as pd
+
+df = pd.read_csv("data_raw/ESS_subset.csv")
+
+cols = ["stflife", "ppltrst", "health", "hinctnta",
+        "eduyrs", "agea", "gndr", "cntry"]
+df = df[cols]
+
+# Kody braków ESS: 7, 8, 9, 77, 88, 99
+missing_codes = {
+    "stflife": [77, 88, 99],
+    "ppltrst": [77, 88, 99],
+    "health":  [7, 8, 9],
+    "hinctnta":[77, 88, 99],
+    "eduyrs":  [77, 88, 99],
+}
+for col, codes in missing_codes.items():
+    df.loc[df[col].isin(codes), col] = pd.NA
+
+df_clean = df.dropna()
+df_clean.to_csv("data_clean/ess_clean.csv", index=False)
+```
+
+## Krok 2: Agent liczy regresję OLS
+
+> *Nie musisz znać `statsmodels` — chodzi tylko o to, że agent sam dobiera bibliotekę.*
+
+```python
+import statsmodels.formula.api as smf
+
+model = smf.ols(
+    "stflife ~ ppltrst + health + hinctnta + eduyrs "
+    "+ agea + C(gndr) + C(cntry)",
+    data=df_clean,
+).fit()
+
+print(model.summary())
+```
+
+## Krok 3: Tabela wyników (wycinek)
+
+| Zmienna | Współczynnik | Błąd std. | p-value |
+|---|---:|---:|---:|
+| (Intercept) | 4.21 | 0.14 | <0.001 |
+| `ppltrst` | **+0.13** | 0.01 | <0.001 |
+| `health` | **−0.61** | 0.02 | <0.001 |
+| `hinctnta` | **+0.10** | 0.01 | <0.001 |
+| `eduyrs` | +0.02 | 0.004 | <0.001 |
+| `agea` | −0.01 | 0.001 | <0.001 |
+
+. . .
+
+*Wartości ilustracyjne. Agent sam zaznaczył w raporcie: „skala porządkowa traktowana jako liczbowa — uproszczenie".*
+
+## Krok 4: Wykres i raport
+
+```{mermaid}
+flowchart LR
+    A[Dane oczyszczone] --> B[Wykres: średnie stflife<br/>dla poziomów ppltrst]
+    B --> C[outputs/wykres-stflife-ppltrst.png]
+    A --> D[Raport 12 sekcji:<br/>pytanie, dane, zmienne,<br/>czyszczenie, opis,<br/>korelacja, wykres,<br/>regresja, interpretacja,<br/>ograniczenia]
+    D --> E[outputs/raport-ess-stflife.md]
+    A --> F[Audit log:<br/>co czytał,<br/>co uruchomił,<br/>jakie decyzje podjął]
+    F --> G[agent_logs/decyzje-ess-stflife.md]
+```
+
+## Co jest socjologicznie ważne w tym pokazie
+
+- Agent **nie pisze interpretacji za nas** — proponuje, a my decydujemy.
+- Agent **sam zaznacza ograniczenia**: wagi ESS, skale porządkowe, `cntry` jako proste FE zamiast modelu wielopoziomowego.
+- Agent **NIE formułuje wniosków przyczynowych** z danych przekrojowych.
+- **Audit log** = polisa ubezpieczeniowa dla recenzentów.
+
+. . .
+
+> **Agent zna metodologię, bo my mu ją wpisaliśmy w `AGENTS.md`.**
+
+# Część 5. Gdzie jeszcze pomoże agent? {.center background-color="#0b3d91"}
+
+## Zastosowania w socjologii — galeria 360°
+
+::: {.columns}
+::: {.column width="50%"}
+**Faza koncepcyjna**
+
+- Wyszukiwanie literatury (OpenAlex, Elicit)
+- Przegląd literatury (tabela: autor, metoda, ustalenia, luka)
+- Pytania badawcze, hipotezy
+- Research plan w `.md`
+
+**Faza terenowa / analityczna**
+
+- Transkrypcja (Whisper)
+- Anonimizacja (Presidio)
+- Propozycje kodów jakościowych
+- Czyszczenie i analiza danych ilościowych
+:::
+
+::: {.column width="50%"}
+**Faza pisania**
+
+- Draft artykułu
+- Sekcja metodologiczna
+- Bibliografia
+- Grant proposal
+- Slajdy do prezentacji
+
+**Faza recenzji**
+
+- Pseudo-recenzent przed publikacją
+- Wykrywanie luk i niespójności
+- Odpowiedzi dla recenzentów
+:::
+:::
+
+## Chmura czy lokalnie — szybki przewodnik
+
+| Etap | Komercyjny (chmura) | Lokalny (Ollama) |
+|---|:---:|:---:|
+| Przegląd literatury | ✅ | ⚪ |
+| Draft grantu | ✅ | ⚪ |
+| Czyszczenie publicznych CSV | ✅ | ⚪ |
+| **Transkrypcje wywiadów** | ❌ | ✅ |
+| **Kodowanie wywiadów z danymi wrażliwymi** | ❌ | ✅ |
+| Recenzowanie cudzego draftu | ⚠️ | ✅ |
+
+# Część 6. Friction — etyka i napięcia {.center background-color="#7a1f3d"}
+
+## Cztery głosy z literatury
+
+::: {.columns}
+::: {.column width="50%"}
+**Optymizm (Stanford 2026)**
+
+> *„This is the most exciting moment ever to be a PhD student in social sciences."* — Gentzkow
+
+Badacz → kurator procesu, nie wykonawca.
+
+**Krytyka pisania (Nature 2025)**
+
+> *„Writing is thinking."*
+
+Outsourcing pisania = utrata refleksji.
+:::
+
+::: {.column width="50%"}
+**Odrzucenie (Qualitative Inquiry)**
+
+419 badaczy jakościowych: GenAI nie nadaje się do *reflexive thematic analysis* — z powodów metodologicznych, ekologicznych i sprawiedliwości społecznej.
+
+**Prowokacja (Masters 2025)**
+
+LLM = blender tekstów kulturowych → „śmierć autora akademickiego".
+:::
+:::
+
+. . .
+
+**Pytanie nie brzmi „używać czy nie", lecz „co outsource'ować, a co zostawić sobie".**
+
+## Dobre praktyki — minimum sanitarne
+
+1. **Nie wymyślaj.** Każde twierdzenie agenta = cytat z konkretnego źródła.
+2. **Zostaw ślad pracy.** Agent zapisuje, co czytał i co uruchamiał.
+3. **Chroń dane respondentów.** Anonimizacja *przed* chmurą.
+4. **Oddzielaj cytat, streszczenie, interpretację.**
+5. **Pracuj na kopiach.** Agent nie nadpisuje danych źródłowych.
+6. **Ujawniaj użycie AI** — w publikacjach, grantach, recenzjach.
+
+## Zaawansowane — tylko zaglądamy przez szybę
+
+- **Orkiestracja agentów** (CrewAI) — zespół „socjolog-teoretyk" + „socjolog-analityk" + „krytyk metodologiczny"
+- **Pipeline'y** (LangChain, LangGraph) — przepływ jako graf
+- **Lokalne bazy wiedzy** (LlamaIndex, ChromaDB, FAISS)
+- **Fine-tuning** (Unsloth) — uczenie modelu *Twojego* języka
+
+. . .
+
+> *Nie oczekuję, że będziecie to robić jutro. Chcę, żebyście wiedzieli, że istnieje.*
+
+# Zamknięcie {.center background-color="#0b3d91"}
+
+## Trzy obserwacje na koniec
+
+1. **Systemy agentowe nie zastępują badacza** — zmieniają charakter jego pracy. Mniej wykonywania, więcej nadzorowania.
+
+2. **Największe ryzyko: agent myli się przekonująco.** Te narzędzia potrzebują *kompetentnych* użytkowników — nie zastępują kompetencji.
+
+3. **Zacznij od prostego:** jedno zadanie, jeden agent, temat, który znasz dobrze. Sprawdź, co agent zrobi z czymś, co umiesz ocenić.
+
+## AI Disclosure Statement
+
+::: {.callout-important title="Obowiązkowa formuła"}
+> This manuscript was developed through a human-AI collaborative writing process. The conceptual framework, core arguments, theoretical choices, and analytical judgments are the sole intellectual contribution of the author. AI tools were used to assist with drafting, organization, and citation management. The author takes full responsibility for all claims and any errors.
+:::
+
+**Dlaczego to ważne:** Nature, journale APA i SAGE już tego wymagają. Tam, gdzie jeszcze nie wymagają — brak deklaracji jest dziś czytany jako naukowa nieuczciwość.
+
+## Dziękuję {.center background-color="#0b3d91"}
+
+**Pytania?**
+
+Plan warsztatu, slajdy i folder demo ESS są dostępne w repozytorium:
+
+`github.com/jchodak/cowork-warsztat`
+
+::: {.callout-note}
+Materiały: `presentation.qmd`, `new-plan.md`, `ESS-demo/`
+:::

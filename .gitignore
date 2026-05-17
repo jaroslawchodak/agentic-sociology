@@ -1,0 +1,68 @@
+# --- Quarto ---
+/.quarto/
+_site/
+_freeze/
+_book/
+_publish.yml
+
+# rendery
+presentation_files/
+*.html
+!index.html
+*.pdf
+*_cache/
+*_files/
+
+# folder publikacji (jeśli używasz wariantu ręcznego — odkomentuj jeśli chcesz wersjonować)
+# docs/
+
+# --- System ---
+.DS_Store
+Thumbs.db
+.Rhistory
+.Rapp.history
+.RData
+.Ruserdata
+
+# --- Edytory / IDE ---
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.\#*
+\#*\#
+
+# --- Środowiska Pythona (dla ESS-demo) ---
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+.env
+.envrc
+*.egg-info/
+
+# --- Jupyter ---
+.ipynb_checkpoints/
+
+# --- Logi i pliki tymczasowe ---
+*.log
+*.tmp
+*.bak
+*~
+
+# --- Sekrety ---
+.env.local
+.env.*.local
+secrets.yml
+credentials.json
+
+# --- Dane robocze ESS-demo (zwykle za duże do gita) ---
+ESS-demo/data_raw/*.csv
+ESS-demo/data_raw/*.sav
+ESS-demo/data_raw/*.dta
+ESS-demo/data_clean/*.csv
+!ESS-demo/data_raw/.gitkeep
+!ESS-demo/data_clean/.gitkeep
