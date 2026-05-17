@@ -21,7 +21,7 @@ Pomyśl o tym tak: **OpenCode / Claude Code / Codex to *pracownik*. Zed / Warp t
 
 - **Zed** — edytor tekstu z trybem agentowym; potrafi „gościć" Claude'a / Codexa / OpenCode jako wbudowanego pomocnika.
 - **Warp** — inteligentny terminal-środowisko z natywną integracją z agentami.
-- **Cursor / Kiro** — edytory z agentami w środku, popularne wśród programistów.
+- **Cursor** — edytor z agentami w środku, popularny wśród programistów.
 
 To tylko *zajawka* — nie musisz instalować żadnego z nich, żeby zacząć. Wystarczy okienko Claude'a w przeglądarce albo aplikacja desktopowa.
 

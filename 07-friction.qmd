@@ -1,4 +1,4 @@
-# Friction — etyka i napięcia
+# Etyka i napięcia
 
 Wokół AI w nauce toczy się dziś *gorący spór*. Nie ma jednej, dobrej odpowiedzi. Są **głosy** — od entuzjazmu po totalną odmowę. Warto je usłyszeć przed podjęciem decyzji, *co konkretnie* chcesz outsource'ować.
 

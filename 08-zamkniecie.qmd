@@ -10,7 +10,7 @@
 
 ## Co dalej — siedem kroków na start
 
-Jeśli ta książka cię zainspirowała, oto konkretne kroki, które możesz wykonać w najbliższym tygodniu:
+Jeśli ten przewodnik cię zainspirował, oto konkretne kroki, które możesz wykonać w najbliższym tygodniu:
 
 1. **Prompty.** Naucz się dobrze formułować polecenia w Claude.ai lub ChatGPT — najpierw na zadaniu, które znasz dobrze.
 2. **Projekty.** Utwórz projekt w Claude.ai, dodaj kilka plików i instrukcję. Zobacz, jak zmienia się jakość odpowiedzi.

@@ -6,7 +6,7 @@ Krajobraz narzędzi AI dla badaczy społecznych zmienił się w ostatnim roku ta
 
 Czat to rozmówca. System agentowy to pracownik, który dostaje cel, planuje kroki, używa narzędzi i zostawia po sobie ślad pracy. Granica między „pomocą językową" a „delegowaniem zadań" przesunęła się w 2025 roku do miejsca, w którym warto się zatrzymać i zorientować — *zanim* zaczniesz outsource'ować pracę badawczą.
 
-## Trzy pytania, na które odpowiada ta książka
+## Trzy pytania, na które odpowiada ten przewodnik
 
 1. **Czym właściwie różni się agent od czatu?** I dlaczego ta różnica zmienia sposób pracy badawczej.
 2. **Jakie są dziś główne narzędzia?** Claude Code, Codex, OpenCode, edytory typu Zed i Warp, modele lokalne (Ollama) — co do czego.
@@ -20,7 +20,7 @@ Czat to rozmówca. System agentowy to pracownik, który dostaje cel, planuje kro
 
 ## Co warto wynieść z lektury
 
-Po przeczytaniu tej książki powinieneś:
+Po przeczytaniu tego przewodnika powinieneś:
 
 1. **Rozróżniać** czat, LLM i system agentowy — i rozumieć, dlaczego ta różnica zmienia sposób pracy badawczej.
 2. **Znać główne narzędzia** rodziny Agentic AI oraz wiedzieć, czym są edytory/terminale wspierające agentów.
