@@ -7,8 +7,6 @@ _publish.yml
 
 # rendery
 presentation_files/
-*.html
-!index.html
 *.pdf
 *_cache/
 *_files/
