@@ -202,31 +202,31 @@
   {
     "objectID": "04-krajobraz.html",
     "href": "04-krajobraz.html",
-    "title": "4  Krajobraz narzędzi i pierwsza decyzja etyczna",
+    "title": "4  Mapowanie narzędzi i etyczny punkt wyjścia",
     "section": "",
     "text": "4.1 Środowiska pracy różnią się sposobem trzymania projektu, nie inteligencją\nNazwy brzmią technicznie, ale w codziennym użyciu różnice są intuicyjne:\nTe same materiały otworzą się w kilku z nich. Wybór narzędzia jest mniej istotny niż dobre AGENTS.md w folderze.",
     "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Krajobraz narzędzi i pierwsza decyzja etyczna</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Mapowanie narzędzi i etyczny punkt wyjścia</span>"
     ]
   },
   {
     "objectID": "04-krajobraz.html#środowiska-pracy-różnią-się-sposobem-trzymania-projektu-nie-inteligencją",
     "href": "04-krajobraz.html#środowiska-pracy-różnią-się-sposobem-trzymania-projektu-nie-inteligencją",
-    "title": "4  Krajobraz narzędzi i pierwsza decyzja etyczna",
+    "title": "4  Mapowanie narzędzi i etyczny punkt wyjścia",
     "section": "",
     "text": "Claude Code — folder + Skills + MCP\nCodex — kod i skrypty\nZed — edytor z agentem\nWarp — terminal agentowy\nOpenCode — open-source\n\n\n\nClaude Code dobrze pracuje na folderze projektu badawczego — czyta pliki kontekstowe, używa Skills, podłącza się do MCP. Naturalne środowisko dla pracy z korpusem literaturowym i danymi.\nCodex (OpenAI) dobrze sprawdza się tam, gdzie trzeba generować i poprawiać skrypty. Mniej „badawczy”, bardziej „inżynierski”.\nZed to szybki edytor z wbudowanym agentem — dobry, kiedy chcecie widzieć i edytować pliki sami, a agent pełni rolę asystenta.\nWarp to terminal agentowy — agent działa „w linii komend”, widać każdy krok.\nOpenCode to rozwiązanie otwarte, dla badaczy, którzy chcą niezależności od jednego dostawcy lub muszą pracować na lokalnym modelu.\n\n\n\n\n\n\n\n\nCo naprawdę różnicuje\n\n\n\nNie jakość modelu (modele są dziś podobne w bazowych zadaniach), ale sposób, w jaki narzędzie trzyma projekt: czy pamięta o plikach kontekstowych, jak prowadzi log, jak wygląda zatwierdzanie zmian.",
     "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Krajobraz narzędzi i pierwsza decyzja etyczna</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Mapowanie narzędzi i etyczny punkt wyjścia</span>"
     ]
   },
   {
     "objectID": "04-krajobraz.html#wybór-modelu-chmurowego-lub-lokalnego-to-decyzja-etyczna-nie-techniczna",
     "href": "04-krajobraz.html#wybór-modelu-chmurowego-lub-lokalnego-to-decyzja-etyczna-nie-techniczna",
-    "title": "4  Krajobraz narzędzi i pierwsza decyzja etyczna",
+    "title": "4  Mapowanie narzędzi i etyczny punkt wyjścia",
     "section": "4.2 Wybór modelu chmurowego lub lokalnego to decyzja etyczna, nie techniczna",
     "text": "4.2 Wybór modelu chmurowego lub lokalnego to decyzja etyczna, nie techniczna\n\nchmura: silniejsze rozumowanie, twoje dane wychodzą\nlokalnie: pełna kontrola, słabsze wnioskowanie\n\nTu po raz pierwszy w tej książce musicie powiedzieć narzędziu „nie”. I to właśnie jest moment dojrzałości warsztatu. Nie wybór najlepszego modelu, ale świadoma decyzja, czego mu nie dacie.\nPytanie nie brzmi „który model jest najlepszy”. Brzmi: co ten materiał może opuścić wasz komputer.\n\n\nChmura zwykle nie jest problemem dla:\n\nliteratury naukowej (publicznej)\nraportów branżowych i statystyk publicznych\nkodu i skryptów\nwłasnych szkiców i notatek roboczych\n\n\nLokalnie pracujemy z:\n\nniezanonimizowanymi transkrypcjami wywiadów\nnotatkami terenowymi i danymi etnograficznymi\ndanymi wrażliwymi (medyczne, prawne, dot. osób w sytuacji ryzyka)\nrecenzjami i materiałami powierzonymi w zaufaniu\n\n\n\nModele lokalne — uruchamiane przez Ollama, LM Studio albo bezpośrednio przez llama.cpp — są dziś wyraźnie słabsze w rozumowaniu niż frontier-modele chmurowe, ale wystarczające do wielu zadań warsztatowych: streszczeń, klastrowania, pierwszych kodów jakościowych.\n\n\n\n\n\n\nDojrzały warsztat dobiera narzędzie do materiału\n\n\n\nNie wybiera „jednego rozwiązania na wszystko”. Część projektu może iść w chmurę (przegląd literatury), część zostaje lokalnie (anonimizacja transkrypcji), i to nie jest niespójność — to świadoma segregacja danych.\n\n\nMając ten rozdział za sobą, pora zobaczyć cały warsztat w działaniu. Na jednym konkretnym przykładzie — folder z setką streszczeń, jedno zadanie, jeden log.",
     "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Krajobraz narzędzi i pierwsza decyzja etyczna</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Mapowanie narzędzi i etyczny punkt wyjścia</span>"
     ]
   },
   {
