@@ -1,77 +1,37 @@
 # Czym jest agent
 
-## Trzy pojęcia, jedna analogia
+## LLM, chatbot i agent to trzy różne poziomy systemu
 
-Trzy pojęcia, które łatwo się mylą — i analogie, które pomagają je rozróżnić:
+- **LLM** — przewiduje słowa
+- **Chatbot** — rozmawia
+- **Agent** — czyta pliki, używa narzędzi, zapisuje wyniki
 
-| Pojęcie | Analogia |
-|---|---|
-| **LLM** (model językowy) | Mózg językowy bez rąk |
-| **Czat w przeglądarce** | Rozmówca przez telefon |
-| **System agentowy** | Pracownik, który dostaje cel, planuje, działa, sprawdza |
+Model językowy sam w sobie nie widzi waszego folderu. To silnik probabilistyczny, który dostaje tekst i zwraca tekst. Chatbot daje mu **interfejs rozmowy** — okienko, historię, pamięć w obrębie sesji — ale wymaga ręcznego przenoszenia materiałów między oknami.
 
-Sam LLM (jak GPT czy Claude) to *zdolność generowania tekstu* — nic więcej. Czat to *interfejs* do tej zdolności. System agentowy to *organizacja pracy*, w której LLM jest jednym z elementów, ale nie jedynym.
+Agent to coś jeszcze innego. To system, w którym model jest **podłączony do plików projektu**, do narzędzi (wyszukiwarka, baza, interpreter, system plików) i do **mechanizmu sprawdzania własnej pracy**. Różnica nie polega na „lepszej rozmowie". Polega na tym, że agent może zrobić coś poza wygenerowaniem tekstu — może *coś zmienić w świecie* (zapisać plik, uruchomić skrypt, pobrać dane).
 
-## Agent = LLM + pamięć + narzędzia + pętla
-
-System agentowy ma cztery komponenty, które działają razem w pętli:
-
-```{mermaid}
-flowchart LR
-    A[Cel od badacza] --> B[Mózg: LLM]
-    B --> C{Plan}
-    C --> D[Narzędzia:<br/>pliki, skrypty,<br/>wyszukiwarka]
-    D --> E[Obserwacja wyniku]
-    E --> F{Czy gotowe?}
-    F -->|nie| C
-    F -->|tak| G[Wynik + audit log]
-```
-
-- **Cel** — zlecenie badacza („zrób przegląd literatury", „zanonimizuj wywiady").
-- **Mózg (LLM)** — to, co rozumie język i planuje kolejny krok.
-- **Narzędzia** — pliki, skrypty, wyszukiwarki, bazy danych, API. To, co LLM może *uruchomić*.
-- **Pętla** — agent obserwuje wynik akcji i decyduje, co dalej. Jeśli skrypt się wywalił — naprawia. Jeśli wynik jest niepełny — szuka dalej.
-
-Bez tej pętli mamy „LLM, który tylko gada". Z pętlą — agent, który *wykonuje*.
-
-## Czat vs Agent — różnica, która zmienia wszystko
-
-|  | **Czat w przeglądarce** | **System agentowy** |
-|---|---|---|
-| **Tryb pracy** | Pytanie → odpowiedź | Cel → plan → pętla |
-| **Kontekst** | Znika po sesji | Pliki kontekstowe trwają |
-| **Pliki** | Wklejasz fragmenty | Agent widzi cały folder |
-| **Wynik** | Tekst w okienku | Zapisane pliki + ślad pracy |
-| **Odpowiedzialność** | Twoja | **Wciąż Twoja** |
-
-Ostatni wiersz jest kluczowy: zmienia się *sposób pracy*, ale *odpowiedzialność* — nie. Agent może pomylić się przekonująco. Bez wiedzy dziedzinowej trudno to wyłapać.
-
-## Zmiana paradygmatu: od rozmowy do projektu
-
-::: {.columns}
-::: {.column width="50%"}
-**Stara praca z AI**
-
-- Otwieram okno czatu
-- Wklejam fragment
-- Kopiuję odpowiedź
-- Zamykam okno
-- Jutro: od zera
+::: {.callout-tip title="Skrót mnemoniczny"}
+**LLM** to silnik. **Chatbot** to silnik w samochodzie z kierownicą. **Agent** to flota z dyspozytorem, który wie, dokąd jedzie i dlaczego.
 :::
 
-::: {.column width="50%"}
-**Nowa praca z agentem**
+## Agent działa w pętli, a nie w pojedynczym wywołaniu
 
-- Otwieram folder projektu
-- Agent czyta `CLAUDE.md`
-- Wykonuje zadanie
-- Zostawia pliki + log
-- Jutro: kontynuujemy
-:::
+> rozpoznaj → zaplanuj → uruchom narzędzie → sprawdź → zdecyduj
+
+Tu zaczyna się prawdziwa różnica w sposobie myślenia. Klasyczne pytanie do chatbota jest jednorazowe: wpisujesz, dostajesz odpowiedź, koniec.
+
+Agent działa **cyklicznie**:
+
+1. **Rozpoznaje kontekst** — czyta pliki kontekstowe, sprawdza, w jakim folderze jest, jakie ma materiały.
+2. **Planuje kolejny krok** — formułuje, co chce zrobić i dlaczego.
+3. **Sięga po narzędzie** — uruchamia skrypt, otwiera plik, pyta bazę.
+4. **Sprawdza, co wyszło** — porównuje wynik z oczekiwaniem.
+5. **Decyduje** — iść dalej, cofnąć się, poprosić człowieka o decyzję.
+
+Ta pętla ma znaczenie **metodologiczne**. Wynik nie jest pojedynczą odpowiedzią modelu. Jest **serią drobnych decyzji**, które potem da się prześledzić. To właśnie z tej własności bierze się późniejszy „log pracy agenta" — najważniejszy artefakt całego warsztatu.
+
+::: {.callout-important title="Konsekwencja dla badacza"}
+Skoro praca agenta to **sekwencja decyzji**, a nie pojedyncza odpowiedź, to **kontrola jakości** też przestaje być oceną jednego tekstu. Staje się audytem ścieżki. Tym audytem zajmiemy się w rozdziale [Case study](05-case-study.qmd).
 :::
 
-Najtrudniejsze w tej zmianie jest **mentalne przesunięcie**. Przestajesz myśleć „zadam pytanie i dostanę odpowiedź" — zaczynasz myśleć „mam folder badawczy, agent w nim pracuje, ja kontroluję wyniki".
-
-::: {.callout-tip title="Reguła trzech rozmów"}
-Jeśli wpisujesz to samo polecenie **trzeci raz** — to znak, że czas zrobić z tego *skill*. Skille omówimy w rozdziale „Jak rozmawiać z agentem".
-:::
+W następnym rozdziale przejdziemy od ogólnej definicji do **konkretnej architektury** — pokażę, jak wygląda folder projektu agentowego i dlaczego jego struktura jest *formą metodologii*.

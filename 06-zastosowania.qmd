@@ -1,71 +1,88 @@
-# Zastosowania w socjologii
+# Zastosowania i granica delegacji
 
-Case study ESS to tylko jeden z wielu możliwych pipeline'ów. Poniżej galeria 360° — gdzie agent może realnie pomóc w warsztacie badacza społecznego.
+## Agent może wspierać każdą fazę pracy badawczej
 
-## Galeria zastosowań — od pytania do publikacji
+> koncepcja → dane → analiza → pisanie → weryfikacja
 
-::: {.columns}
-::: {.column width="50%"}
-### Faza koncepcyjna
+Przejdźmy przez fazy badania, w których agent **realnie pomaga**.
 
-- **Wyszukiwanie literatury** — OpenAlex, Elicit, Grok DeepSearch, Semantic Scholar
-- **Przegląd literatury** — tabela: autor, metoda, ustalenia, luka
-- **Pytania badawcze, hipotezy** — operacjonalizacja, mapa pojęć
-- **Research plan w `.md`** — strukturyzacja projektu
+### 1. Koncepcja
 
-### Faza terenowa / analityczna
+- **przegląd literatury** według kryteriów zapisanych w `AGENTS.md`,
+- **identyfikacja luk** w istniejącym dorobku,
+- **robocze pytania badawcze** dla każdego klastra tematycznego,
+- **operacjonalizacja** pojęć — propozycje wskaźników empirycznych.
 
-- **Transkrypcja** — Whisper offline
-- **Anonimizacja** — Presidio, znaczniki `[OSOBA_001]`
-- **Propozycje kodów jakościowych** — induktywne / dedukcyjne
-- **Czyszczenie i analiza danych ilościowych** — pandas, statsmodels
-- **Modelowanie tematów** — BERTopic, analiza dyskursu
+### 2. Przygotowanie danych
+
+- **konwersja PDF → Markdown** (`docling`, `pymupdf`, Granite-Docling),
+- **OCR** materiałów archiwalnych,
+- **transkrypcja** nagrań (Whisper + post-processing),
+- **anonimizacja** transkrypcji wywiadów (lokalnie!),
+- **czyszczenie tabel** i deduplikacja źródeł.
+
+### 3. Analiza
+
+- **propozycje kodów** dla materiału jakościowego,
+- **memo analityczne** — robocze notatki teoretyczne agenta,
+- **skrypty statystyczne** (R, Python — agent sam je pisze),
+- **wizualizacje** — wykresy do raportu i prezentacji.
+
+### 4. Pisanie
+
+- **konspekt** rozdziału lub artykułu,
+- **szkic sekcji metodologicznej** na podstawie `WORKFLOW.md`,
+- **kontrola spójności** terminologii w długim tekście,
+- **redakcja** — drobne poprawki językowe i formatowanie.
+
+### 5. Weryfikacja
+
+- **sprawdzanie cytatów** — czy każdy znajduje się w pliku źródłowym,
+- **kontrola zgodności** twierdzeń ze źródłami,
+- **sprawdzanie spójności** wniosków z danymi.
+
+```{mermaid}
+flowchart LR
+    K[Koncepcja] --> D[Dane]
+    D --> A[Analiza]
+    A --> P[Pisanie]
+    P --> W[Weryfikacja]
+    W -.->|iteracja| K
+```
+
+Agent **przyspiesza czynności przygotowawcze i kontrolne**. Warsztatu socjologa **nie zastępuje**.
+
+::: {.callout-tip title="Co dzieje się z czasem badacza"}
+Im więcej czynności przygotowawczych przejmuje agent, tym więcej czasu zostaje na **to, czego nie da się zlecić** — na czytanie krytyczne, na decyzje metodologiczne, na pisanie, które jest myśleniem.
 :::
 
-::: {.column width="50%"}
-### Faza pisania
+## Granica delegacji nie jest techniczna — jest metodologiczna
 
-- **Draft artykułu** — sekcja po sekcji
-- **Sekcja metodologiczna** — z respektem dla wymogów czasopisma
-- **Bibliografia** — automatyczne formatowanie przez Zotero MCP
-- **Grant proposal** — od streszczenia do harmonogramu
-- **Slajdy do prezentacji** — strukturyzacja narracji
+> *„writing is thinking"*
+>
+> **pisanie ≠ ostatni etap redakcji**
 
-### Faza recenzji
+To, że agent **potrafi** napisać akapit, nie znaczy, że **powinien**.
 
-- **Pseudo-recenzent** przed publikacją — wykrywanie luk i niespójności
-- **Wykrywanie luk i niespójności** w argumentacji
-- **Odpowiedzi dla recenzentów** — strukturyzacja revision letter
-:::
-:::
+W naukach społecznych **pisanie jest częścią myślenia**. Sformułowanie zdania zmusza do zajęcia stanowiska. Trzeba wybrać jedno słowo zamiast drugiego, podjąć decyzję interpretacyjną. *Czy nazwę to „opór" czy „strategią przetrwania"? Czy „klasa" czy „warstwa"?* To nie są decyzje stylistyczne. To są **decyzje teoretyczne**.
 
-## Chmura czy lokalnie — szybki przewodnik
+Jeśli oddamy ten proces narzędziu, oddamy też **część własnego namysłu**. Tekst napisany przez agenta jest często gładki, ale **nie zmusił nikogo do zajęcia stanowiska**.
 
-Reguła kciuka, którą warto zapamiętać:
+Agent może zaproponować:
 
-| Etap | Komercyjny (chmura) | Lokalny (Ollama) |
-|---|:---:|:---:|
-| Przegląd literatury | ✅ | ⚪ |
-| Draft grantu | ✅ | ⚪ |
-| Czyszczenie publicznych CSV | ✅ | ⚪ |
-| **Transkrypcje wywiadów** | ❌ | ✅ |
-| **Kodowanie wywiadów z danymi wrażliwymi** | ❌ | ✅ |
-| Recenzowanie cudzego draftu | ⚠️ | ✅ |
+- kody do materiału jakościowego,
+- streszczenia i parafrazy,
+- porządki tematyczne,
+- struktury argumentu.
 
-::: {.callout-tip title="Zasada brzytwy"}
-Jeśli plik, który dajesz agentowi, **mógłby zostać wyciągnięty z chmury i pokazany na konferencji bez Twojej zgody** — to znak, że tego pliku tam być nie powinno.
+Badacz decyduje:
 
-Dla wszystkiego, co ma respondentów, dane osobowe albo niepublikowane wyniki — model lokalny.
+- czy mają sens w danym podejściu metodologicznym,
+- co z tego wziąć, co odrzucić, co zmodyfikować,
+- bierze **odpowiedzialność za interpretację**.
+
+::: {.callout-important title="Robocza zasada"}
+**Delegujcie czynności, nie decyzje.** Konwersja PDF → Markdown to czynność. Wybór, który tekst trafi do korpusu — to decyzja. Streszczenie artykułu to czynność. Wybór, jak go zaklasyfikować w argumentacji — to decyzja.
 :::
 
-## Czego *nie* delegujesz agentowi
-
-Dla równowagi — lista rzeczy, których **nie outsource'ujesz**, nawet gdy agent to potrafi:
-
-1. **Decyzję metodologiczną.** Czy badanie jest etyczne? Czy próba jest reprezentatywna? Czy hipoteza jest *Twoja*? — to twoja odpowiedzialność.
-2. **Interpretację wyników.** Statystycznie istotne ≠ socjologicznie ważne. To rozróżnienie wymaga *Twojej* wiedzy dziedzinowej.
-3. **Stanowisko autorskie.** Jeśli artykuł nie ma *Twojego* głosu — po co go pisać?
-4. **Ocenę jakości danych.** Czy dane są wiarygodne? Czy braki danych są systematyczne? Bez znajomości pola — agent może to przeoczyć.
-5. **Etyczną decyzję o ujawnieniu / ukryciu rezultatów.** Decyzja należy do Ciebie i (czasem) komitetu etyki.
-
-Granica nie jest sztywna i będzie się przesuwać. Ale na 2026 rok — to **bezpieczna baza**.
+W następnym rozdziale przejdziemy do trzech **napięć etycznych**, które wynikają wprost z tej granicy: refleksyjność, higiena badawcza i obowiązek ujawniania użycia AI.

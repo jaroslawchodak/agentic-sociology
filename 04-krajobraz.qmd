@@ -1,0 +1,61 @@
+# Krajobraz narzędzi i pierwsza decyzja etyczna
+
+## Środowiska pracy różnią się sposobem trzymania projektu, nie inteligencją
+
+- **Claude Code** — folder + Skills + MCP
+- **Codex** — kod i skrypty
+- **Zed** — edytor z agentem
+- **Warp** — terminal agentowy
+- **OpenCode** — open-source
+
+Nazwy brzmią technicznie, ale w codziennym użyciu różnice są intuicyjne:
+
+- **[Claude Code](https://www.anthropic.com/claude-code)** dobrze pracuje na **folderze projektu badawczego** — czyta pliki kontekstowe, używa Skills, podłącza się do MCP. Naturalne środowisko dla pracy z korpusem literaturowym i danymi.
+- **[Codex](https://openai.com/codex/)** (OpenAI) dobrze sprawdza się tam, gdzie trzeba **generować i poprawiać skrypty**. Mniej „badawczy", bardziej „inżynierski".
+- **[Zed](https://zed.dev/)** to **szybki edytor** z wbudowanym agentem — dobry, kiedy chcecie widzieć i edytować pliki sami, a agent pełni rolę asystenta.
+- **[Warp](https://www.warp.dev/)** to **terminal agentowy** — agent działa „w linii komend", widać każdy krok.
+- **[OpenCode](https://github.com/opencode-ai/opencode)** to **rozwiązanie otwarte**, dla badaczy, którzy chcą niezależności od jednego dostawcy lub muszą pracować na lokalnym modelu.
+
+**Te same materiały** otworzą się w kilku z nich. Wybór narzędzia jest mniej istotny niż dobre `AGENTS.md` w folderze.
+
+::: {.callout-note title="Co naprawdę różnicuje"}
+Nie *jakość modelu* (modele są dziś podobne w bazowych zadaniach), ale **sposób, w jaki narzędzie trzyma projekt**: czy pamięta o plikach kontekstowych, jak prowadzi log, jak wygląda zatwierdzanie zmian.
+:::
+
+## Wybór modelu chmurowego lub lokalnego to decyzja etyczna, nie techniczna
+
+> **chmura:** silniejsze rozumowanie, twoje dane wychodzą
+>
+> **lokalnie:** pełna kontrola, słabsze wnioskowanie
+
+Tu po raz pierwszy w tej książce musicie powiedzieć narzędziu **„nie"**. I to właśnie jest moment dojrzałości warsztatu. Nie wybór najlepszego modelu, ale **świadoma decyzja, czego mu nie dacie**.
+
+Pytanie nie brzmi „który model jest najlepszy". Brzmi: **co ten materiał może opuścić wasz komputer**.
+
+::: {.columns}
+::: {.column width="50%"}
+**Chmura zwykle nie jest problemem dla:**
+
+- literatury naukowej (publicznej)
+- raportów branżowych i statystyk publicznych
+- kodu i skryptów
+- własnych szkiców i notatek roboczych
+:::
+
+::: {.column width="50%"}
+**Lokalnie pracujemy z:**
+
+- niezanonimizowanymi transkrypcjami wywiadów
+- notatkami terenowymi i danymi etnograficznymi
+- danymi wrażliwymi (medyczne, prawne, dot. osób w sytuacji ryzyka)
+- recenzjami i materiałami powierzonymi w zaufaniu
+:::
+:::
+
+Modele lokalne — uruchamiane przez [Ollama](https://ollama.com/), [LM Studio](https://lmstudio.ai/) albo bezpośrednio przez llama.cpp — są dziś wyraźnie słabsze w rozumowaniu niż frontier-modele chmurowe, ale **wystarczające do wielu zadań warsztatowych**: streszczeń, klastrowania, pierwszych kodów jakościowych.
+
+::: {.callout-important title="Dojrzały warsztat dobiera narzędzie do materiału"}
+Nie wybiera „jednego rozwiązania na wszystko". Część projektu może iść w chmurę (przegląd literatury), część zostaje lokalnie (anonimizacja transkrypcji), i to nie jest niespójność — to **świadoma segregacja danych**.
+:::
+
+Mając ten rozdział za sobą, pora **zobaczyć cały warsztat w działaniu**. Na jednym konkretnym przykładzie — folder z setką streszczeń, jedno zadanie, jeden log.

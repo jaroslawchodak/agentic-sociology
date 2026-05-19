@@ -1,39 +1,80 @@
 # Zamknięcie {.unnumbered}
 
-## Trzy obserwacje na koniec
+## Architektury wieloagentowe to dalszy etap — nie punkt startu
 
-1. **Systemy agentowe nie zastępują badacza** — zmieniają charakter jego pracy. Mniej ręcznego wykonywania, więcej nadzorowania, oceniania, korygowania. Przesunięcie z roli *wykonawcy* na rolę **kuratora procesu badawczego**.
+> analityk literatury · analityk danych · krytyk metodologiczny
+>
+> **→ ale najpierw: jeden folder, jeden raport**
 
-2. **Największe ryzyko: agent myli się przekonująco.** Nie chodzi o oczywiste błędy — chodzi o teksty, które brzmią poprawnie, ale są subtelnie nieprawdziwe i trudne do wyłapania bez wiedzy dziedzinowej. Dlatego te narzędzia potrzebują **kompetentnych użytkowników** — nie zastępują kompetencji.
+Bardziej zaawansowany warsztat może obejmować **kilku agentów w różnych rolach**: jeden czyta literaturę, drugi pracuje na danych, trzeci pełni funkcję krytyka metodologicznego. Można budować **grafy zadań** (LangGraph, AutoGen, CrewAI) i **lokalne bazy wiedzy** nad własnym korpusem (RAG nad `summaries/`).
 
-3. **Zacznij od prostego:** jedno zadanie, jeden agent, temat, który *znasz dobrze*. Sprawdź, co agent zrobi z czymś, co umiesz ocenić. Dopiero potem rozszerzaj zakres.
+To wszystko jest możliwe i będzie coraz częstsze. **Ale nie tam zaczynamy.** Zaczynamy od jednego folderu, jednego pliku `AGENTS.md`, jednego prostego zadania, którego sami potrafimy ocenić. Architektura wieloagentowa, którą postawicie *zanim* dobrze ogarniecie pojedynczego agenta, będzie po prostu **kilkoma czarnymi skrzynkami zamiast jednej**.
 
-## Co dalej — siedem kroków na start
+## Najkrótsza droga do warsztatu agentowego ma pięć elementów
 
-Jeśli ten przewodnik cię zainspirował, oto konkretne kroki, które możesz wykonać w najbliższym tygodniu:
+1. **jeden folder**
+2. **jeden** `AGENTS.md`
+3. **jeden korpus w Markdown**
+4. **jedno zadanie**
+5. **jeden log**
 
-1. **Prompty.** Naucz się dobrze formułować polecenia w Claude.ai lub ChatGPT — najpierw na zadaniu, które znasz dobrze.
-2. **Projekty.** Utwórz projekt w Claude.ai, dodaj kilka plików i instrukcję. Zobacz, jak zmienia się jakość odpowiedzi.
-3. **Agent w folderze.** Wypróbuj Claude Code Desktop — otwórz folder z materiałami badawczymi, daj zadanie, obserwuj.
-4. **Plik kontekstowy.** Napisz prosty `CLAUDE.md` lub `AGENTS.md`. 15 minut roboty, zmienia jakość każdej kolejnej interakcji.
-5. **Skill.** Gdy zobaczysz, że powtarzasz to samo zadanie trzeci raz — zbuduj skill. Poproś agenta: *„utwórz skill do przeglądu literatury"*.
-6. **Prywatność.** Zainstaluj Ollama (`ollama.com`) — *zanim* zaczniesz pracę z transkrypcjami wywiadów.
-7. **Protokół kontroli.** Ustal własne zasady: gdzie sprawdzasz wyniki? Jak oznaczasz fragmenty wygenerowane przez AI? Nie ma jeszcze standardów — musisz mieć własne.
+Nie zaczynajcie od architektury wieloagentowej. Nie zaczynajcie od fine-tuningu modelu lokalnego. Nie zaczynajcie od porównywania pięciu narzędzi.
 
-## Materiały dodatkowe
+Zacznijcie od **jednego folderu projektu**. Napiszcie krótki `AGENTS.md` (10–15 linii wystarczy). Wrzućcie korpus w Markdown, choćby **dziesięć plików**. Zlećcie **jedno proste zadanie**, którego wynik **potraficie sami ocenić**. **Sprawdźcie log**. To wszystko. Z tej minimalnej konfiguracji można potem pójść w dowolnym kierunku.
 
-W repozytorium znajdziesz:
-
-- [`new-plan.md`](https://github.com/jaroslawchodak/agentic-sociology/blob/main/new-plan.md) — pełny plan warsztatu (75 minut) z agendą, celami edukacyjnymi i opisem pokazu.
-- [`ESS-demo/`](https://github.com/jaroslawchodak/agentic-sociology/tree/main/ESS-demo) — folder demonstracyjny do analizy ESS: `AGENTS.md`, `CONTEXT.md`, `WORKFLOW.md`, prompt wykonawczy.
-
-## Podziękowania
-
-Materiały powstały z syntezy notatek roboczych, kilku iteracji planu warsztatu i analizy zawartości katalogu `notes-base` (publikacje o agentach AI, debaty etyczne, dokumentacja narzędzi). Sam tekst — w duchu ujawnienia — został przygotowany w procesie *human-AI collaborative writing*, zgodnie z formułą *AI Disclosure Statement* podaną w rozdziale o napięciach etycznych.
-
-::: {.callout-tip title="Kontakt"}
-- **Repozytorium:** [github.com/jaroslawchodak/agentic-sociology](https://github.com/jaroslawchodak/agentic-sociology)
-- **Issues / pytania:** otwórz [issue na GitHubie](https://github.com/jaroslawchodak/agentic-sociology/issues)
-
-Powodzenia w pracy z agentami — i pamiętaj, że *interpretacja, sąd i odpowiedzialność* zostają po Twojej stronie.
+::: {.callout-tip title="Próg startu"}
+Pierwsza sesja agentowa nie ma was nauczyć agentowości. Ma was nauczyć **co was zaskoczyło** — co agent zrobił dobrze, gdzie się pomylił, gdzie wahał. Bez tej intuicji żadna dokumentacja narzędzia nie pomoże.
 :::
+
+## W poniedziałek rano otwórzcie pusty folder
+
+> **jeden projekt**
+>
+> **jeden materiał, który znacie**
+>
+> **jedno pytanie, na które dziś nie macie czasu**
+
+Nie czekajcie na idealne narzędzie. Nie czekajcie na ukończenie tutoriala. **Wybierzcie jeden temat**, którym i tak musicie się zająć w tym semestrze:
+
+- przegląd literatury do projektu, który leży od dwóch miesięcy,
+- korpus wywiadów do anonimizacji,
+- zestaw raportów branżowych do streszczenia.
+
+Stwórzcie folder. Napiszcie trzy linijki w `AGENTS.md`. Wrzućcie dziesięć plików. Zlećcie agentowi pierwsze zadanie. Po godzinie **będziecie wiedzieć więcej** o tym, jak wygląda nowy warsztat, niż po przeczytaniu pięciu artykułów na ten temat.
+
+## Agent ma wzmacniać kompetencje socjologa, nie zastępować ich pozorem pewności
+
+> system agentowy = **nowy warsztat**
+>
+> warsztat = **wasza kompetencja + jego narzędzia**
+
+Wracamy do folderu z pierwszego rozdziału. Poniedziałek rano, kawa, raport czeka.
+
+Teraz **wiecie, co naprawdę się w tym folderze wydarzyło**:
+
+- Agent przeczytał materiały, których **wybór był waszą decyzją**.
+- Pracował według reguł, które **zapisaliście w** `AGENTS.md`.
+- Zostawił log, **który możecie przeczytać** i sprawdzić.
+- Tam, gdzie się wahał, **postawił `[?]`** — i te miejsca to wasze pole pracy.
+
+**Wynik nie jest magią. Jest pracą, którą potraficie obronić.**
+
+::: {.callout-important title="Obietnica i granica"}
+Systemy agentowe **nie obiecują**, że za was pomyślą. Obiecują coś **skromniejszego i poważniejszego**: że zostanie więcej czasu na to, co naprawdę wymaga socjologa. **Na pytanie, interpretację, refleksyjność, decyzję.**
+
+Agent jest **dobry wtedy**, gdy wzmacnia waszą kompetencję.
+
+Jest **niebezpieczny wtedy**, gdy daje pozór automatycznej pewności.
+
+Różnica między tymi dwoma trybami **nie jest techniczna. Jest metodologiczna. I należy do was.**
+:::
+
+## Linki przydatne na start
+
+- **Repozytorium tej książki:** [github.com/jaroslawchodak/agentic-sociology](https://github.com/jaroslawchodak/agentic-sociology)
+- **Folder demo ESS:** [`ESS-demo/`](https://github.com/jaroslawchodak/agentic-sociology/tree/main/ESS-demo) — gotowy przykład projektu z `AGENTS.md`, `CONTEXT.md`, `WORKFLOW.md`
+- **Claude Code:** [anthropic.com/claude-code](https://www.anthropic.com/claude-code)
+- **Codex (OpenAI):** [openai.com/codex](https://openai.com/codex/)
+- **OpenCode (open-source):** [github.com/opencode-ai/opencode](https://github.com/opencode-ai/opencode)
+- **Ollama (modele lokalne):** [ollama.com](https://ollama.com/)
+- **Docling (PDF → Markdown):** [github.com/DS4SD/docling](https://github.com/DS4SD/docling)

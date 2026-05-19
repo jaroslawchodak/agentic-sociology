@@ -1,32 +1,35 @@
 # Wprowadzenie
 
-## Po co tu jesteśmy
+## Folder z poniedziałkowego poranka
 
-Krajobraz narzędzi AI dla badaczy społecznych zmienił się w ostatnim roku tak głęboko, że samo „korzystam z ChatGPT" przestało mówić cokolwiek o sposobie pracy. Różnica między *czatem w przeglądarce* a *systemem agentowym* nie jest różnicą stopnia — to różnica **kategorii**.
+Wyobraźcie sobie folder na własnym dysku, w którym leżą streszczenia trzystu artykułów. W poniedziałek rano otwieracie laptop, mówicie: *„przeczytaj wszystko, pogrupuj tematycznie, wskaż luki i zapisz raport"*. Wracacie po kawę. Raport czeka — z listą plików, których agent użył, i z miejscami, gdzie sam się waha.
 
-Czat to rozmówca. System agentowy to pracownik, który dostaje cel, planuje kroki, używa narzędzi i zostawia po sobie ślad pracy. Granica między „pomocą językową" a „delegowaniem zadań" przesunęła się w 2025 roku do miejsca, w którym warto się zatrzymać i zorientować — *zanim* zaczniesz outsource'ować pracę badawczą.
+To nie jest scenariusz z przyszłości. To **tryb pracy, który już istnieje** — z narzędziami, które macie na swoich laptopach. A mimo to większość z nas pracuje wciąż zupełnie inaczej. Dlaczego? Bo nikt nam nie pokazał różnicy między **modelem językowym**, **chatbotem** a **agentem**. To trzy różne rzeczy. I tylko ostatnia z nich zmienia warsztat naukowy — bardziej, niż się wydaje.
+
+::: {.callout-note title="Powrócimy do tego folderu"}
+Na końcu książki wrócimy do tej samej sceny — kawy, laptopa, raportu. Wtedy będziecie już wiedzieć, *co właściwie* się w tym folderze wydarzyło i dlaczego można za ten wynik wziąć odpowiedzialność.
+:::
+
+## Większość z nas używa AI jak inteligentnej wklejarki
+
+> wklej → zapytaj → skopiuj → wklej
+>
+> **chatbot ≠ warsztat**
+
+Spójrzcie szczerze na własną pracę z modelem językowym. Otwieramy okno czatu, wklejamy fragment artykułu, pytamy o streszczenie, kopiujemy odpowiedź do dokumentu. Potem następny fragment. I następny. To jest **praca z AI w trybie wklejarki**. Szybsza niż ręczne pisanie, ale wciąż to my przenosimy materiał między oknami.
+
+Agent działa inaczej. **Dostaje folder, nie fragment.** Sam sięga po pliki, sam decyduje, w jakiej kolejności je przeczytać, sam zapisuje wynik. Tę pojedynczą różnicę warto zatrzymać w głowie, bo z niej wynika cała reszta tej książki.
 
 ## Trzy pytania, na które odpowiada ten przewodnik
 
 1. **Czym właściwie różni się agent od czatu?** I dlaczego ta różnica zmienia sposób pracy badawczej.
-2. **Jakie są dziś główne narzędzia?** Claude Code, Codex, OpenCode, edytory typu Zed i Warp, modele lokalne (Ollama) — co do czego.
-3. **Co konkretnie agent może zrobić w warsztacie socjologa?** Pokaz na danych European Social Survey: od pustego folderu do publikowalnego raportu.
+2. **Jak wygląda projekt agentowy?** Folder, pliki kontekstowe, ślad decyzji — czyli architektura warsztatu.
+3. **Co konkretnie agent może zrobić w warsztacie socjologa?** Pokaz na korpusie literaturowym i danych ESS — od pustego folderu do publikowalnego raportu.
 
 ## Czego nie znajdziesz tutaj
 
-- **Kursu programowania.** Nie uczymy Pythona. Skrypty pojawiają się tylko jako dowód, że agent *sam je pisze*.
-- **Tutoriala instalacji.** Nie pokazujemy „kliknij tu, wpisz to". Punkt wejścia do narzędzi agentowych jest dziś tak prosty, że dokumentacja narzędzi załatwia sprawę.
+- **Kursu programowania.** Nie uczę Pythona. Skrypty pojawiają się tylko jako dowód, że agent *sam je pisze*.
+- **Tutoriala instalacji.** Punkt wejścia do narzędzi agentowych jest dziś tak prosty, że dokumentacja narzędzi załatwia sprawę.
 - **Reklamy jednego dostawcy.** Mapa narzędzi jest celowo wielogłosowa — Anthropic, OpenAI, otwarta społeczność, modele lokalne.
 
-## Co warto wynieść z lektury
-
-Po przeczytaniu tego przewodnika powinieneś:
-
-1. **Rozróżniać** czat, LLM i system agentowy — i rozumieć, dlaczego ta różnica zmienia sposób pracy badawczej.
-2. **Znać główne narzędzia** rodziny Agentic AI oraz wiedzieć, czym są edytory/terminale wspierające agentów.
-3. **Rozumieć nowy paradygmat**: pracę na projekcie z plikami kontekstowymi (`CLAUDE.md`, `AGENTS.md`, `WORKFLOW.md`) zamiast „zaczynania rozmowy od zera".
-4. **Widzieć konkretne, namacalne zastosowanie** — pełną demonstrację pracy agenta na danych ESS.
-5. **Wiedzieć**, kiedy wybrać model komercyjny, a kiedy lokalny — i dlaczego ma to znaczenie dla danych wrażliwych.
-6. **Być świadomy/-a napięć etycznych** wokół AI w nauce i znać obowiązkową formułę *AI Disclosure Statement*.
-
-W kolejnym rozdziale zaczynamy od najbardziej podstawowego rozróżnienia: **czym właściwie jest agent**.
+W kolejnym rozdziale zaczynamy od najbardziej podstawowego rozróżnienia: **czym właściwie jest agent** i czym różni się od modelu i od czatu.

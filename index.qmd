@@ -1,10 +1,16 @@
 # Przedmowa {.unnumbered}
 
-To materiały do **półwarsztatu (75 minut)** dla pracowników naukowych i doktorantów nauk społecznych i humanistycznych — początkujących w obszarze AI. Pokaz „od czatu do systemu agentowego" z pełną demonstracją na danych European Social Survey (ESS).
+To materiały do **półwarsztatu (75 minut)** dla pracowników naukowych i doktorantów nauk społecznych i humanistycznych — początkujących w obszarze AI. Pokaz „od czatu do systemu agentowego" z konkretną demonstracją na korpusie literaturowym i danych European Social Survey (ESS).
 
 ::: {.callout-note title="Dla kogo to repozytorium"}
 Tekst tutaj nie jest klasyczną prezentacją — to **wersja do czytania** dla osób, które albo nie były na warsztacie, albo chcą wrócić do treści po sesji. Slajdy do projekcji prowadzę z innego narzędzia; tutaj jest wszystko spisane w spokojnym, czytelnym formacie.
 :::
+
+## Punkt wyjścia — folder z poniedziałkowego poranka
+
+Wyobraźcie sobie folder na własnym dysku, w którym leżą streszczenia trzystu artykułów. W poniedziałek rano otwieracie laptop, mówicie: „przeczytaj wszystko, pogrupuj tematycznie, wskaż luki i zapisz raport". Wracacie po kawę. Raport czeka — z listą plików, których agent użył, i z miejscami, gdzie sam się waha.
+
+To nie jest scenariusz z przyszłości. To tryb pracy, który już istnieje — z narzędziami, które macie na swoich laptopach. A mimo to większość z nas pracuje wciąż zupełnie inaczej. Dlaczego? Bo nikt nam nie pokazał różnicy między modelem językowym, chatbotem a agentem. To trzy różne rzeczy. I tylko ostatnia z nich zmienia warsztat naukowy — bardziej, niż się wydaje.
 
 ## O czym jest ten materiał
 
@@ -32,7 +38,7 @@ Nie musisz rozumieć sieci neuronowych.
 **Co to JEST**
 
 - ✅ Mapa nowego krajobrazu narzędzi
-- ✅ Pokaz pełnego pipeline'u badawczego z agentem
+- ✅ Pełny pipeline badawczy z agentem
 - ✅ Rozróżnienie *czatu* od *systemu agentowego*
 - ✅ Rozmowa o etyce i odpowiedzialności
 :::
@@ -49,4 +55,4 @@ Nie musisz rozumieć sieci neuronowych.
 
 - **Repozytorium:** [github.com/jaroslawchodak/agentic-sociology](https://github.com/jaroslawchodak/agentic-sociology)
 - **Folder demo ESS:** w katalogu [`ESS-demo/`](https://github.com/jaroslawchodak/agentic-sociology/tree/main/ESS-demo)
-- **Plan warsztatu (75 min):** [`new-plan.md`](https://github.com/jaroslawchodak/agentic-sociology/blob/main/new-plan.md)
+- **Plan prezentacji (slajdy):** [`_prezentacja.md`](https://github.com/jaroslawchodak/agentic-sociology/blob/main/_prezentacja.md)

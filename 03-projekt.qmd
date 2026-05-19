@@ -1,0 +1,80 @@
+# Projekt jako warsztat
+
+## Sensowna praca z agentem zaczyna się od projektu, nie od zapytania
+
+> jedna sesja czatu ≠ projekt badawczy
+>
+> **folder zostaje. rozmowa znika.**
+
+Pytanie zadane chatbotowi i odpowiedź, którą otrzymujemy, **znikają wraz z zamknięciem okna**. Projekt — folder z plikami, instrukcjami i logami — **zostaje**. Można do niego wrócić w przyszłym tygodniu, sprawdzić, co agent zrobił, poprawić jego decyzje i kontynuować pracę.
+
+To nie jest drobiazg organizacyjny. To **zmiana statusu wyniku**: z efemerycznej rozmowy na **trwały artefakt badawczy**. A skoro folder zostaje, to pojawia się pytanie, którego rzadko sobie zadajemy: jak ten folder powinien wyglądać.
+
+## Struktura folderu jest formą metodologii
+
+```text
+sources/        summaries/
+data/           notes/
+outputs/        agent_logs/
+```
+
+Folder projektu to mała architektura. Każdy podkatalog ma swoje zadanie:
+
+- `sources/` — materiały źródłowe w postaci surowej (PDF-y, transkrypcje, surowe pliki danych).
+- `summaries/` — opracowania źródeł, najlepiej w Markdown (jeden plik = jedno źródło).
+- `data/` — przygotowane dane analityczne, kopie robocze, wyniki pośrednie.
+- `notes/` — własne notatki badacza, idee, robocze hipotezy.
+- `outputs/` — gotowe artefakty (raporty, wykresy, drafty).
+- `agent_logs/` — **ślad pracy agenta**: które pliki czytał, jakie decyzje podjął, gdzie zaznaczył niepewność.
+
+Tego układu **nie narzuca żadne narzędzie**. Wybieracie go sami. I właśnie dlatego chroni on wasz materiał źródłowy przed nadpisaniem i pozwala wam **audytować własną pracę**. Zasada operacyjna: `sources/` jest tylko do odczytu, agent pisze tylko do `summaries/`, `data/`, `outputs/` i `agent_logs/`.
+
+## Pliki kontekstowe są konstytucją projektu
+
+- `CONTEXT.md` — **o czym to jest**
+- `AGENTS.md` — **co wolno agentowi**
+- `WORKFLOW.md` — **w jakiej kolejności**
+
+To są zwykłe pliki Markdown. Technicznie nic w nich nie ma. **Metodologicznie znaczą bardzo dużo.**
+
+`CONTEXT.md` opisuje **temat projektu**, pytania badawcze, etap pracy, definicje pojęć kluczowych i listę najważniejszych źródeł. To krótki dokument — kilka akapitów — który mówi agentowi: *„to jest projekt o X, w którym zadaję pytanie Y, używając metody Z"*.
+
+`AGENTS.md` definiuje **zasady**: zakaz nadpisywania źródeł, obowiązek wskazywania pliku przy każdym twierdzeniu, sposób oznaczania niepewności, format cytowania, listę katalogów do zapisu i do odczytu. To jest *konstytucja* agenta.
+
+`WORKFLOW.md` ustala **kolejność czynności** i format wyników: w jakiej kolejności czytać materiały, jaki format ma mieć raport, gdzie zapisać log.
+
+Agent **działa w ramach tych reguł albo wcale**. Dobrze napisana trójka plików kontekstowych jest ważniejsza niż wybór konkretnego narzędzia.
+
+::: {.callout-note title="Praktyczna wskazówka"}
+Zacznij od `AGENTS.md` na 10 linii. *„Pracuj na kopiach. Cytuj plik przy każdym twierdzeniu. Niepewność oznaczaj `[?]`. Zapisuj log w `agent_logs/`."* To wystarczy, żeby pierwsza sesja agentowa była audytowalna.
+:::
+
+## Trzy mechanizmy rozszerzają możliwości agenta
+
+- **Skills** — zapisane procedury
+- **MCP** — dostęp do zasobów
+- **Skrypty** — operacje na danych
+
+**Skills** to procedury zapisane w Markdown, które agent może wywołać jak małe podprogramy. Na przykład *przegląd literatury według ustalonego schematu* albo *walidacja źródeł* (sprawdzenie, czy każde twierdzenie ma cytowanie). Skill jest wielokrotnego użytku i przenosi się między projektami.
+
+**MCP** (Model Context Protocol) to protokół, dzięki któremu agent **sięga do zewnętrznych zasobów** bez ręcznego kopiowania — Zotero, OpenAlex, PubMed, repozytorium plików, baza danych. Zamiast wklejać tytuły, agent sam zapytuje katalog.
+
+**Skrypty** wykonują **powtarzalne operacje** na danych: konwersję PDF → Markdown, czyszczenie tabel, anonimizację transkrypcji, deduplikację. Skrypt nie podejmuje decyzji metodologicznych — jest tylko narzędziem.
+
+Trzy mechanizmy, jedno zadanie: **oddzielić decyzje badawcze od automatycznych czynności przetwarzania**.
+
+## Markdown jest formatem, w którym widać, co agent dostał
+
+> tekst + struktura + brak magii
+>
+> **porównywalne · przeszukiwalne · wersjonowalne**
+
+PDF jest formatem prezentacyjnym. Wygląda dobrze, ale agent czytający PDF dostaje czasem **chaos**: kolumny przemieszane, tabele rozsypane, przypisy w środku akapitu, nieczytelne ligatury.
+
+Markdown jest brzydki dla człowieka i wygodny dla obu stron. **Konwersja PDF → Markdown** ujawnia, co naprawdę znajduje się w materiale wejściowym. Pomagają w tym narzędzia takie jak [PyMuPDF](https://pymupdf.readthedocs.io/), [Docling](https://github.com/DS4SD/docling) i Granite-Docling (IBM). To nie jest fetysz technologiczny. To **kontrola jakości korpusu**.
+
+::: {.callout-tip title="Praktyczna zasada"}
+**Jeśli nie potraficie sami przeczytać tego, co agent dostał na wejściu — nie potraficie też ocenić jego wyniku.** Markdown to format, w którym widać dokładnie to samo, co widzi agent.
+:::
+
+W następnym rozdziale przejdziemy do **krajobrazu narzędzi** — czyli środowisk, w których ten projekt można otworzyć — i do pierwszej decyzji etycznej całej tej pracy: *chmura czy lokalnie*.

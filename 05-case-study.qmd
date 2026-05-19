@@ -1,0 +1,132 @@
+# Case study — sto streszczeń
+
+Ten rozdział to **najważniejsza część książki**. Wszystko, co dotąd opisałem, nabiera sensu dopiero wtedy, gdy zobaczycie pełną sekwencję pracy agenta — od pustego folderu, przez klastry tematyczne, po **log decyzji**, który jest ważniejszy niż sam raport.
+
+## Wyobraźmy sobie konkretną sytuację: macie sto streszczeń i nie wiecie, od czego zacząć
+
+```text
+summaries/
+  → klastry tematyczne
+  → problemy badawcze
+  → raport + outline
+```
+
+Zamiast oprowadzania po katalogu narzędzi pokażę **jedno zadanie od początku do końca**. Materiałem wejściowym jest katalog `summaries/` ze streszczeniami artykułów i książek w Markdown. Każdy plik zawiera:
+
+- dane bibliograficzne,
+- streszczenie (1–2 akapity),
+- pojęcia kluczowe,
+- metodę,
+- ustalenia,
+- ograniczenia.
+
+Zadanie dla agenta brzmi prosto: **przeczytaj wszystko, pogrupuj tematycznie, wskaż możliwe problemy badawcze, zapisz wyniki**. To jest minimum, które pokazuje cały warsztat w działaniu — i co ważne, minimum, którego wynik **potraficie sami ocenić**.
+
+## Agent grupuje teksty — badacz ocenia, czy klaster jest sensowny
+
+> **klaster ≠ wynik**
+>
+> klaster = propozycja porządku
+
+Agent czyta wszystkie pliki, wyciąga główne wątki, proponuje grupowanie. Dla każdego klastra podaje:
+
+- nazwę i krótką definicję,
+- listę tekstów,
+- wspólne pojęcia,
+- napięcia w grupie (gdzie autorzy się różnią),
+- braki w materiale.
+
+I tu się robi **naprawdę ciekawie**. Czy te grupy są **metodologicznie spójne**, czy tylko **leksykalnie podobne**? Agent pokazuje podobieństwo słów. Tylko badacz potrafi ocenić, czy podobieństwo słów to **podobieństwo problemu**.
+
+::: {.callout-warning title="Pułapka klastrowania"}
+Agent łatwo zlepi w jeden klaster teksty, które używają tych samych słów w **różnych znaczeniach**. „Zaufanie" w teorii kapitału społecznego i „zaufanie" w badaniach instytucji to dwa różne pojęcia. Pierwsza ocena klastrów jest zawsze ręczna.
+:::
+
+## Od porządku w literaturze do problemów badawczych prowadzi jeden krok
+
+> **z czego wynika** → propozycja
+>
+> **co dodaje agent** → propozycja interpretacyjna
+
+Klastrowanie samo w sobie nie jest celem. Celem jest **postawienie pytania**, którego dotychczas nie zadawano albo zadawano w innym kontekście.
+
+Agent może dla każdego klastra zaproponować problemy badawcze:
+
+- **jednostkę analizy** (osoba? grupa? instytucja? interakcja?),
+- **zakres empiryczny** (kogo, gdzie, kiedy),
+- **relację między pojęciami** (co z czym wiąże?),
+- **możliwy sposób badania** (jakościowy / ilościowy / mieszany).
+
+Pilnujcie **jednego**: żeby agent jasno oddzielał to, **co wynika z materiału**, od tego, **co jest jego propozycją interpretacyjną**. Tę linię trzeba widzieć cały czas. W `AGENTS.md` warto wymusić oznaczenie: każde twierdzenie ma być albo zacytowane z konkretnego pliku (`[plik.md]`), albo wyraźnie oznaczone jako interpretacja agenta (`[interp]`).
+
+## Hipoteza i pytanie eksploracyjne to dwa różne wyniki tej samej pracy
+
+> **hipoteza:** relacja X–Y w warunkach Z
+>
+> **pytanie:** jak aktorzy A interpretują zjawisko B
+
+Z tego samego korpusu można wyjść w dwóch kierunkach.
+
+**Hipoteza** nadaje się do badania **ilościowego**, bo zakłada testowalną relację między zmiennymi. Ma kierunek („wyższe X wiąże się z wyższym Y"), zakres („w populacji P"), warunek („pod warunkiem Z").
+
+**Pytanie eksploracyjne** pasuje wtedy, gdy hipoteza byłaby **przedwczesna** — gdy chcemy najpierw zrozumieć, **jak ludzie sami opisują** swoje doświadczenie, jakimi kategoriami się posługują, jaki to ma porządek wewnętrzny.
+
+Agent może przygotować **oba** typy wyników. Decyzja, którą drogą iść, należy do was. **Wynika z waszego pytania, nie z tego, co potrafi narzędzie.**
+
+### Mini-przykład: korpus o pracy zdalnej
+
+```{mermaid}
+flowchart TB
+    K[Korpus: 100 streszczeń<br/>o pracy zdalnej] --> H[Hipoteza:<br/>im wyższa kontrola algorytmiczna,<br/>tym niższe poczucie autonomii<br/>w pracy zdalnej]
+    K --> P[Pytanie eksploracyjne:<br/>jak pracownicy zdalni<br/>opisują &quot;widoczność&quot;<br/>w pracy?]
+    H --> A1[Badanie ilościowe:<br/>survey + skala autonomii]
+    P --> A2[Badanie jakościowe:<br/>wywiady pogłębione<br/>+ analiza narracyjna]
+```
+
+## Praca z agentem kończy się plikami, nie odpowiedzią w okienku
+
+```text
+outputs/report.md
+outputs/literature-outline.opml
+```
+
+**Raport Markdown** (`outputs/report.md`) zawiera:
+
+- opis korpusu (liczba plików, charakterystyka źródeł, daty),
+- metodę pracy agenta (jaki workflow zastosowano),
+- klastry z definicjami i listą tekstów,
+- propozycje problemów badawczych,
+- hipotezy i pytania eksploracyjne,
+- ograniczenia (czego agent nie zrobił, gdzie się wahał),
+- listę plików źródłowych.
+
+**Outline OPML** (`outputs/literature-outline.opml`) otwiera się w narzędziach typu **OmniOutliner**, **Workflowy** czy **Logseq** jako **hierarchiczne drzewo**: klastry → teksty → propozycje. To wygodne, jeśli pracujecie nad strukturą rozdziału.
+
+To nie są pliki „na piękny ślad pracy". To są pliki, **które wracają**. Otwieracie je w środę, sprawdzacie, poprawiacie i przekazujecie dalej.
+
+::: {.callout-important title="Status wyniku"}
+Wynik dobrej pracy z agentem powinien być **artefaktem**, nie chwilowym wyświetleniem w okienku. Tylko artefakt można cytować, przekazać, wersjonować i sprawdzić tydzień później.
+:::
+
+Ale jest jeszcze **jeden plik**. I to on jest tutaj najważniejszy. **Ważniejszy od raportu.**
+
+## Najważniejszy plik nie jest wynikiem — jest logiem pracy agenta
+
+```text
+agent_logs/
+  ↳ co przeczytał · co zdecydował · czego nie był pewny
+```
+
+Jeśli macie wyjść z tej książki z **jedną myślą**, niech będzie to ta.
+
+Najcenniejszą zdobyczą pracy agentowej **nie jest raport**. Jest **plik, który mówi**:
+
+> Przeczytałem te 47 dokumentów. Pominąłem jeden (nieczytelny OCR, plik `summaries/krasinski-2019.md`). Pogrupowałem według tych kryteriów: leksykalna współwystępowalność pojęć kluczowych + ręczne zasady z `AGENTS.md`. W trzech miejscach zaznaczyłem niepewność — w klastrze „algorytmiczna kontrola" granica z klastrem „nadzór" jest nieostra (oznaczone `[?]`).
+
+Bez tego pliku praca agenta jest **czarną skrzynką**, a wynik **magicznym trickiem**. Z nim staje się **audytowalna** i zaczyna spełniać warunki, jakie stawiamy każdej innej procedurze badawczej.
+
+::: {.callout-important title="Linia odpowiedzialności"}
+Wasza odpowiedzialność jako badacza zaczyna się tutaj. Musicie potrafić powiedzieć, **co właściwie zrobił agent w waszym imieniu**. Bez tej zdolności nie jesteście autorami wyniku. Jesteście jego konsumentami. To rozróżnienie jest dziś **granicą między rzetelną nauką a użytkowaniem AI**.
+:::
+
+W następnym rozdziale spojrzymy szerzej: **w których fazach pracy badawczej** agent realnie pomaga — i gdzie biegnie granica delegacji, której nie warto przekraczać.

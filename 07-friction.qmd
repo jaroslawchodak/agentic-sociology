@@ -1,90 +1,77 @@
-# Etyka i napięcia
+# Refleksyjność, higiena, disclosure
 
-Wokół AI w nauce toczy się dziś *gorący spór*. Nie ma jednej, dobrej odpowiedzi. Są **głosy** — od entuzjazmu po totalną odmowę. Warto je usłyszeć przed podjęciem decyzji, *co konkretnie* chcesz outsource'ować.
+## Refleksyjność badacza zostaje po stronie człowieka
 
-## Cztery głosy z literatury
+> pozycja badacza
+>
+> odpowiedzialność za interpretację
+>
+> autorstwo wyniku
+
+W badaniach jakościowych liczy się **świadomość**, kto pyta, z jakiej pozycji i z jakimi założeniami. Etnograf wchodzący do społeczności, którą bada, nie udaje, że nie ma biografii. Wręcz przeciwnie — opisuje swoje miejsce w terenie, swoje uprzedzenia, swoje stawki.
+
+Agent **nie ma pozycji społecznej, nie ma biografii, nie ma stawki w temacie**. Może zaproponować kategorie, ale nie potrafi ich umiejscowić względem własnych uprzedzeń. Po prostu **ich nie ma** w sposób, w jaki ma je człowiek.
+
+::: {.callout-important title="Konsekwencja"}
+**Refleksyjność nie znika z pojawieniem się agenta. Staje się ważniejsza** — bo wymaga jawnego opisu: *co zrobił badacz, a co narzędzie*. Granica między autorem a wykonawcą musi być widzialna w tekście.
+:::
+
+Praktyczna konsekwencja w pisaniu: w sekcji metodologicznej rozróżniacie czynności agenta i decyzje badacza. *„Agent przygotował listę kodów na podstawie pierwszych 15 wywiadów; lista została następnie zredukowana, połączona i przemianowana przez badaczkę na 23 kody końcowe."* To nie tylko transparencja. To **rekonstrukcja procesu myślenia**, którą czytelnik może zweryfikować.
+
+## Bezpieczna praca z agentem to zwykła rygorystyczna higiena badawcza
+
+- **źródło dla każdego twierdzenia**
+- **oddzielaj cytat / parafrazę / interpretację**
+- **anonimizuj przed chmurą**
+- **pracuj na kopiach**
+- **zapisuj ślad pracy**
+
+Te zasady nie są nowe. Każda z nich obowiązuje w pracy **bez AI**. Agent sprawia tylko, że **ich łamanie jest szybsze i łatwiejsze do przeoczenia**.
+
+- **Twierdzenie bez źródła** w materiale to nie ustalenie, lecz **halucynacja**. Każdy fakt w raporcie powinien mieć link do pliku w `summaries/` albo do konkretnego pliku w `data/`.
+- **Cytat zlepiony z parafrazą** to **plagiat w cudzysłowie**. Agent łatwo łączy zdania z różnych źródeł — wymuście w `AGENTS.md`, żeby cytaty były dosłowne i jednoznacznie oznaczone.
+- **Dane wrażliwe wysłane do chmury** bez anonimizacji to **naruszenie zaufania** wobec uczestników badania. Anonimizacja idzie **przed** chmurą, nie *w trakcie*.
+- **Praca na kopiach** to elementarz. `sources/` jest tylko do odczytu — agent nie ma prawa tam pisać. Wszystkie operacje idą na kopiach w `data/`.
+- **Ślad pracy** w `agent_logs/` to nie luksus, tylko **podstawowa dokumentacja**.
+
+::: {.callout-tip title="Reguła operacyjna"}
+**To, co chroni nie wynik, lecz to, co po wyniku zostaje:** wasze zaufanie do własnej pracy. Bez higieny każda kolejna sesja agentowa zmniejsza pewność, że wynik da się obronić.
+:::
+
+## Ujawnianie użycia AI jest dziś częścią rzetelności
+
+> *„Narzędzia AI wykorzystano do porządkowania materiału, wsparcia redakcyjnego, generowania kodu pomocniczego i kontroli spójności. Decyzje metodologiczne i interpretacja wyników należą do autora."*
+
+Recenzent, redaktor i czytelnik mają **prawo wiedzieć**, jaką rolę odegrało narzędzie w pracy, którą widzą. Powyższa formuła to **nie gotowa klisza** do skopiowania, tylko **przykład tego, co warto opisać**.
+
+Zwróćcie uwagę na rozróżnienie:
 
 ::: {.columns}
 ::: {.column width="50%"}
-### Optymizm (Stanford 2026)
+**Czynności pomocnicze** (można zlecić)
 
-> *„This is the most exciting moment ever to be a PhD student in social sciences."*
->
-> — Matthew Gentzkow
-
-Athey, Gentzkow, Hall i inni z workshop Stanforda 2026: agent przejmuje *żmudną pracę* (czyszczenie danych, replikacje, przegląd literatury), badacz **zyskuje czas** na to, co istotne — pytania badawcze, interpretację, relacje z zespołem. Rola badacza zmienia się z *wykonawcy* w **kuratora procesu**.
-
-### Krytyka pisania (Nature 2025)
-
-> *„Writing is thinking."*
->
-> — Nature Reviews Bioengineering, 2025
-
-Outsourcing pisania pozbawia nas refleksji. Pisanie nie jest tylko *zapisywaniem* gotowej myśli — jest **myśleniem**. Jeśli AI napisze za nas zdanie, nie wiemy, jakie *inne* zdanie pomyślelibyśmy, gdyby AI go nie napisała.
+- porządkowanie materiału
+- konwersje formatów
+- kontrola spójności
+- redakcja językowa
+- generowanie kodu pomocniczego
 :::
 
 ::: {.column width="50%"}
-### Odrzucenie (Qualitative Inquiry)
+**Po stronie autora** (nie do delegacji)
 
-**419 badaczy jakościowych** (Braun, Clarke, Lupton i in.): GenAI **nie nadaje się** do *reflexive thematic analysis*.
-
-Argumenty:
-
-- **Metodologiczne** — symulowana inteligencja nie jest zdolna do refleksyjnej interpretacji osadzonej w relacji badawczej.
-- **Ekologiczne** — centra danych, woda, energia.
-- **Sprawiedliwości społecznej** — praca w Globalnym Południu, wzmacnianie dominujących narracji.
-
-### Prowokacja (Masters 2025)
-
-> *„Artificial intelligence and the death of the academic author"*
->
-> — Ken Masters, *Medical Teacher*, 2025
-
-LLM = blender tekstów kulturowych. Skoro autorstwo akademickie *zawsze było* aktem syntezy istniejących myśli — to LLM **jest** dla niego stworzony. Pytanie, czy w ogóle ma sens mówić o „śmierci autora" — czy raczej o końcu *pewnego rodzaju* autorstwa.
+- koncepcja badania
+- decyzje metodologiczne
+- interpretacja wyników
+- struktura argumentu
+- odpowiedzialność za treść
 :::
 :::
 
-::: {.callout-important}
-**Pytanie nie brzmi „używać czy nie", lecz „co outsource'ować, a co zostawić sobie".**
+**Ujawnienie nie obniża wartości pracy. Wzmacnia jej wiarygodność.** Praca z deklaracją „użyłem agenta do anonimizacji i konwersji formatów" jest bardziej audytowalna niż praca, w której to samo zrobił agent w ukryciu.
 
-Cztery powyższe głosy *nie są nie do pogodzenia*. Można jednocześnie:
-
-- używać agenta do przeglądu literatury (Stanford),
-- pisać samodzielnie (Nature),
-- nie kodować wywiadów AI (419 badaczy),
-- mieć świadomość, że *coś* w pojęciu autorstwa się zmienia (Masters).
-
-To jest właśnie *refleksyjna praktyka*.
+::: {.callout-note title="Polityki czasopism"}
+Coraz więcej czasopism (Nature, Science, Sage, Elsevier) wymaga **AI disclosure statement** w manuskrypcie. Standard nie jest jeszcze ustalony — najlepiej sprawdzić wytyczne konkretnego wydawcy. Minimum: zawsze ujawniajcie, **czego nie napisaliście sami**.
 :::
 
-## Dobre praktyki — minimum sanitarne
-
-Niezależnie od tego, jak głęboko wejdziesz w pracę z agentami, w nauce obowiązują nas zasady minimum:
-
-1. **Nie wymyślaj.** Każde twierdzenie agenta = cytat z konkretnego źródła. Skrypty walidujące (`verify_claims_against_sources.py`) są Twoją polisą.
-2. **Zostaw ślad pracy.** Agent zapisuje, co czytał, co uruchamiał i co wyprodukował — folder `agent_logs/`.
-3. **Chroń dane respondentów.** Anonimizacja *przed* chmurą. Ollama dla danych wrażliwych.
-4. **Oddzielaj cytat, streszczenie, interpretację.** To ogranicza ryzyko, że elegancko brzmiący tekst ukryje błąd.
-5. **Pracuj na kopiach.** Agent nie nadpisuje danych źródłowych.
-6. **Ujawniaj użycie AI** — w publikacjach, grantach, recenzjach, materiałach dydaktycznych.
-
-## AI Disclosure Statement
-
-::: {.callout-important title="Obowiązkowa formuła do artykułów"}
-> This manuscript was developed through a human-AI collaborative writing process. The conceptual framework, core arguments, theoretical choices, and analytical judgments are the sole intellectual contribution of the author. AI tools were used to assist with drafting, organization, and citation management. The author takes full responsibility for all claims and any errors.
-:::
-
-**Dlaczego to ważne:** Nature, journale APA i SAGE już *wymagają* takiej deklaracji. Tam, gdzie jeszcze nie wymagają, brak deklaracji jest dziś czytany jako **naukowa nieuczciwość**. Lepiej mieć formułę i z niej nie skorzystać niż na odwrót.
-
-## Zaawansowane — tylko zaglądamy przez szybę
-
-Na końcu kilka kierunków, w które *można* iść, ale dzisiaj tylko je sygnalizujemy:
-
-- **Orkiestracja agentów** — CrewAI, AutoGen. Zespół „socjolog-teoretyk" + „socjolog-analityk" + „krytyk metodologiczny", każdy z własną rolą.
-- **Pipeline'y** — LangChain, LangGraph, Prefect. Przepływ pracy jako graf z gałęziami i warunkami.
-- **Lokalne bazy wiedzy** — LlamaIndex, ChromaDB, FAISS, Qdrant. Wyszukiwanie semantyczne we własnych dokumentach.
-- **Fine-tuning małych modeli** — Unsloth, Hugging Face. Dostrajanie modelu do specyfiki *Twojej* dziedziny.
-
-::: {.callout-note}
-*Nie oczekuję, że będziesz to robić jutro. Chcę, żebyś wiedział, że istnieje.* Każde z tych narzędzi to osobny krok i osobna decyzja — żadne nie jest „dalej tym samym warsztatem".
-:::
+W ostatnim rozdziale zbieramy całość — od architektur wieloagentowych, przez **minimalną drogę startową**, po wezwanie do działania: pusty folder, poniedziałkowy poranek, pierwsze zadanie.
