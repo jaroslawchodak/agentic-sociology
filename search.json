@@ -424,7 +424,7 @@
     "href": "08-zamkniecie.html#linki-przydatne-na-start",
     "title": "Zamknięcie",
     "section": "Linki przydatne na start",
-    "text": "Linki przydatne na start\n\nRepozytorium tej książki: github.com/jaroslawchodak/agentic-sociology\nFolder demo ESS: ESS-demo/ — gotowy przykład projektu z AGENTS.md, CONTEXT.md, WORKFLOW.md\nClaude Code: anthropic.com/claude-code\nCodex (OpenAI): openai.com/codex\nOpenCode (open-source): github.com/opencode-ai/opencode\nOllama (modele lokalne): ollama.com\nDocling (PDF → Markdown): github.com/DS4SD/docling",
+    "text": "Linki przydatne na start\n\nRepozytorium tego przewodnika: github.com/jaroslawchodak/agentic-sociology\nClaude Code: anthropic.com/claude-code\nCodex (OpenAI): openai.com/codex\nOpenCode (open-source): github.com/opencode-ai/opencode\nOllama (modele lokalne): ollama.com\nDocling (PDF → Markdown): github.com/DS4SD/docling",
     "crumbs": [
       "Zamknięcie"
     ]
