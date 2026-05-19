@@ -30,7 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./03-krajobraz.html" rel="next">
+<link href="./03-projekt.html" rel="next">
 <link href="./01-wprowadzenie.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -71,10 +71,6 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
-<meta name="mermaid-theme" content="neutral">
-<script src="site_libs/quarto-diagram/mermaid.min.js"></script>
-<script src="site_libs/quarto-diagram/mermaid-init.js"></script>
-<link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 </head>
@@ -141,32 +137,32 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./03-krajobraz.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Krajobraz narzędzi</span></span></a>
+  <a href="./03-projekt.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Projekt jako warsztat</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./04-jak-rozmawiac.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Jak rozmawiać z agentem</span></span></a>
+  <a href="./04-krajobraz.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Krajobraz narzędzi i pierwsza decyzja etyczna</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./05-case-study-ess.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Case Study — European Social Survey</span></span></a>
+  <a href="./05-case-study.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Case study — sto streszczeń</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./06-zastosowania.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Zastosowania w socjologii</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Zastosowania i granica delegacji</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./07-friction.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Etyka i napięcia</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Refleksyjność, higiena, disclosure</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -185,10 +181,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Na tej stronie</h2>
    
   <ul>
-  <li><a href="#trzy-pojęcia-jedna-analogia" id="toc-trzy-pojęcia-jedna-analogia" class="nav-link active" data-scroll-target="#trzy-pojęcia-jedna-analogia"><span class="header-section-number">2.1</span> Trzy pojęcia, jedna analogia</a></li>
-  <li><a href="#agent-llm-pamięć-narzędzia-pętla" id="toc-agent-llm-pamięć-narzędzia-pętla" class="nav-link" data-scroll-target="#agent-llm-pamięć-narzędzia-pętla"><span class="header-section-number">2.2</span> Agent = LLM + pamięć + narzędzia + pętla</a></li>
-  <li><a href="#czat-vs-agent-różnica-która-zmienia-wszystko" id="toc-czat-vs-agent-różnica-która-zmienia-wszystko" class="nav-link" data-scroll-target="#czat-vs-agent-różnica-która-zmienia-wszystko"><span class="header-section-number">2.3</span> Czat vs Agent — różnica, która zmienia wszystko</a></li>
-  <li><a href="#zmiana-paradygmatu-od-rozmowy-do-projektu" id="toc-zmiana-paradygmatu-od-rozmowy-do-projektu" class="nav-link" data-scroll-target="#zmiana-paradygmatu-od-rozmowy-do-projektu"><span class="header-section-number">2.4</span> Zmiana paradygmatu: od rozmowy do projektu</a></li>
+  <li><a href="#llm-chatbot-i-agent-to-trzy-różne-poziomy-systemu" id="toc-llm-chatbot-i-agent-to-trzy-różne-poziomy-systemu" class="nav-link active" data-scroll-target="#llm-chatbot-i-agent-to-trzy-różne-poziomy-systemu"><span class="header-section-number">2.1</span> LLM, chatbot i agent to trzy różne poziomy systemu</a></li>
+  <li><a href="#agent-działa-w-pętli-a-nie-w-pojedynczym-wywołaniu" id="toc-agent-działa-w-pętli-a-nie-w-pojedynczym-wywołaniu" class="nav-link" data-scroll-target="#agent-działa-w-pętli-a-nie-w-pojedynczym-wywołaniu"><span class="header-section-number">2.2</span> Agent działa w pętli, a nie w pojedynczym wywołaniu</a></li>
   </ul>
 </nav>
     </div>
@@ -214,144 +208,58 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="trzy-pojęcia-jedna-analogia" class="level2" data-number="2.1">
-<h2 data-number="2.1" class="anchored" data-anchor-id="trzy-pojęcia-jedna-analogia"><span class="header-section-number">2.1</span> Trzy pojęcia, jedna analogia</h2>
-<p>Trzy pojęcia, które łatwo się mylą — i analogie, które pomagają je rozróżnić:</p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 50%">
-<col style="width: 50%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Pojęcie</th>
-<th>Analogia</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>LLM</strong> (model językowy)</td>
-<td>Mózg językowy bez rąk</td>
-</tr>
-<tr class="even">
-<td><strong>Czat w przeglądarce</strong></td>
-<td>Rozmówca przez telefon</td>
-</tr>
-<tr class="odd">
-<td><strong>System agentowy</strong></td>
-<td>Pracownik, który dostaje cel, planuje, działa, sprawdza</td>
-</tr>
-</tbody>
-</table>
-<p>Sam LLM (jak GPT czy Claude) to <em>zdolność generowania tekstu</em> — nic więcej. Czat to <em>interfejs</em> do tej zdolności. System agentowy to <em>organizacja pracy</em>, w której LLM jest jednym z elementów, ale nie jedynym.</p>
-</section>
-<section id="agent-llm-pamięć-narzędzia-pętla" class="level2" data-number="2.2">
-<h2 data-number="2.2" class="anchored" data-anchor-id="agent-llm-pamięć-narzędzia-pętla"><span class="header-section-number">2.2</span> Agent = LLM + pamięć + narzędzia + pętla</h2>
-<p>System agentowy ma cztery komponenty, które działają razem w pętli:</p>
-<div class="cell" data-layout-align="default">
-<div class="cell-output-display">
-<div>
-<p></p><figure class="figure"><p></p>
-<div>
-<pre class="mermaid mermaid-js">flowchart LR
-    A[Cel od badacza] --&gt; B[Mózg: LLM]
-    B --&gt; C{Plan}
-    C --&gt; D[Narzędzia:&lt;br/&gt;pliki, skrypty,&lt;br/&gt;wyszukiwarka]
-    D --&gt; E[Obserwacja wyniku]
-    E --&gt; F{Czy gotowe?}
-    F --&gt;|nie| C
-    F --&gt;|tak| G[Wynik + audit log]
-</pre>
-</div>
-<p></p></figure><p></p>
-</div>
-</div>
-</div>
+<section id="llm-chatbot-i-agent-to-trzy-różne-poziomy-systemu" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="llm-chatbot-i-agent-to-trzy-różne-poziomy-systemu"><span class="header-section-number">2.1</span> LLM, chatbot i agent to trzy różne poziomy systemu</h2>
 <ul>
-<li><strong>Cel</strong> — zlecenie badacza („zrób przegląd literatury”, „zanonimizuj wywiady”).</li>
-<li><strong>Mózg (LLM)</strong> — to, co rozumie język i planuje kolejny krok.</li>
-<li><strong>Narzędzia</strong> — pliki, skrypty, wyszukiwarki, bazy danych, API. To, co LLM może <em>uruchomić</em>.</li>
-<li><strong>Pętla</strong> — agent obserwuje wynik akcji i decyduje, co dalej. Jeśli skrypt się wywalił — naprawia. Jeśli wynik jest niepełny — szuka dalej.</li>
+<li><strong>LLM</strong> — przewiduje słowa</li>
+<li><strong>Chatbot</strong> — rozmawia</li>
+<li><strong>Agent</strong> — czyta pliki, używa narzędzi, zapisuje wyniki</li>
 </ul>
-<p>Bez tej pętli mamy „LLM, który tylko gada”. Z pętlą — agent, który <em>wykonuje</em>.</p>
-</section>
-<section id="czat-vs-agent-różnica-która-zmienia-wszystko" class="level2" data-number="2.3">
-<h2 data-number="2.3" class="anchored" data-anchor-id="czat-vs-agent-różnica-która-zmienia-wszystko"><span class="header-section-number">2.3</span> Czat vs Agent — różnica, która zmienia wszystko</h2>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th></th>
-<th><strong>Czat w przeglądarce</strong></th>
-<th><strong>System agentowy</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>Tryb pracy</strong></td>
-<td>Pytanie → odpowiedź</td>
-<td>Cel → plan → pętla</td>
-</tr>
-<tr class="even">
-<td><strong>Kontekst</strong></td>
-<td>Znika po sesji</td>
-<td>Pliki kontekstowe trwają</td>
-</tr>
-<tr class="odd">
-<td><strong>Pliki</strong></td>
-<td>Wklejasz fragmenty</td>
-<td>Agent widzi cały folder</td>
-</tr>
-<tr class="even">
-<td><strong>Wynik</strong></td>
-<td>Tekst w okienku</td>
-<td>Zapisane pliki + ślad pracy</td>
-</tr>
-<tr class="odd">
-<td><strong>Odpowiedzialność</strong></td>
-<td>Twoja</td>
-<td><strong>Wciąż Twoja</strong></td>
-</tr>
-</tbody>
-</table>
-<p>Ostatni wiersz jest kluczowy: zmienia się <em>sposób pracy</em>, ale <em>odpowiedzialność</em> — nie. Agent może pomylić się przekonująco. Bez wiedzy dziedzinowej trudno to wyłapać.</p>
-</section>
-<section id="zmiana-paradygmatu-od-rozmowy-do-projektu" class="level2" data-number="2.4">
-<h2 data-number="2.4" class="anchored" data-anchor-id="zmiana-paradygmatu-od-rozmowy-do-projektu"><span class="header-section-number">2.4</span> Zmiana paradygmatu: od rozmowy do projektu</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p><strong>Stara praca z AI</strong></p>
-<ul>
-<li>Otwieram okno czatu</li>
-<li>Wklejam fragment</li>
-<li>Kopiuję odpowiedź</li>
-<li>Zamykam okno</li>
-<li>Jutro: od zera</li>
-</ul>
-</div><div class="column" style="width:50%;">
-<p><strong>Nowa praca z agentem</strong></p>
-<ul>
-<li>Otwieram folder projektu</li>
-<li>Agent czyta <code>CLAUDE.md</code></li>
-<li>Wykonuje zadanie</li>
-<li>Zostawia pliki + log</li>
-<li>Jutro: kontynuujemy</li>
-</ul>
-</div>
-</div>
-<p>Najtrudniejsze w tej zmianie jest <strong>mentalne przesunięcie</strong>. Przestajesz myśleć „zadam pytanie i dostanę odpowiedź” — zaczynasz myśleć „mam folder badawczy, agent w nim pracuje, ja kontroluję wyniki”.</p>
-<div class="callout callout-style-default callout-tip callout-titled" title="Reguła trzech rozmów">
+<p>Model językowy sam w sobie nie widzi waszego folderu. To silnik probabilistyczny, który dostaje tekst i zwraca tekst. Chatbot daje mu <strong>interfejs rozmowy</strong> — okienko, historię, pamięć w obrębie sesji — ale wymaga ręcznego przenoszenia materiałów między oknami.</p>
+<p>Agent to coś jeszcze innego. To system, w którym model jest <strong>podłączony do plików projektu</strong>, do narzędzi (wyszukiwarka, baza, interpreter, system plików) i do <strong>mechanizmu sprawdzania własnej pracy</strong>. Różnica nie polega na „lepszej rozmowie”. Polega na tym, że agent może zrobić coś poza wygenerowaniem tekstu — może <em>coś zmienić w świecie</em> (zapisać plik, uruchomić skrypt, pobrać dane).</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Skrót mnemoniczny">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Reguła trzech rozmów
+Skrót mnemoniczny
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Jeśli wpisujesz to samo polecenie <strong>trzeci raz</strong> — to znak, że czas zrobić z tego <em>skill</em>. Skille omówimy w rozdziale „Jak rozmawiać z agentem”.</p>
+<p><strong>LLM</strong> to silnik. <strong>Chatbot</strong> to silnik w samochodzie z kierownicą. <strong>Agent</strong> to flota z dyspozytorem, który wie, dokąd jedzie i dlaczego.</p>
 </div>
 </div>
+</section>
+<section id="agent-działa-w-pętli-a-nie-w-pojedynczym-wywołaniu" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="agent-działa-w-pętli-a-nie-w-pojedynczym-wywołaniu"><span class="header-section-number">2.2</span> Agent działa w pętli, a nie w pojedynczym wywołaniu</h2>
+<blockquote class="blockquote">
+<p>rozpoznaj → zaplanuj → uruchom narzędzie → sprawdź → zdecyduj</p>
+</blockquote>
+<p>Tu zaczyna się prawdziwa różnica w sposobie myślenia. Klasyczne pytanie do chatbota jest jednorazowe: wpisujesz, dostajesz odpowiedź, koniec.</p>
+<p>Agent działa <strong>cyklicznie</strong>:</p>
+<ol type="1">
+<li><strong>Rozpoznaje kontekst</strong> — czyta pliki kontekstowe, sprawdza, w jakim folderze jest, jakie ma materiały.</li>
+<li><strong>Planuje kolejny krok</strong> — formułuje, co chce zrobić i dlaczego.</li>
+<li><strong>Sięga po narzędzie</strong> — uruchamia skrypt, otwiera plik, pyta bazę.</li>
+<li><strong>Sprawdza, co wyszło</strong> — porównuje wynik z oczekiwaniem.</li>
+<li><strong>Decyduje</strong> — iść dalej, cofnąć się, poprosić człowieka o decyzję.</li>
+</ol>
+<p>Ta pętla ma znaczenie <strong>metodologiczne</strong>. Wynik nie jest pojedynczą odpowiedzią modelu. Jest <strong>serią drobnych decyzji</strong>, które potem da się prześledzić. To właśnie z tej własności bierze się późniejszy „log pracy agenta” — najważniejszy artefakt całego warsztatu.</p>
+<div class="callout callout-style-default callout-important callout-titled" title="Konsekwencja dla badacza">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Konsekwencja dla badacza
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Skoro praca agenta to <strong>sekwencja decyzji</strong>, a nie pojedyncza odpowiedź, to <strong>kontrola jakości</strong> też przestaje być oceną jednego tekstu. Staje się audytem ścieżki. Tym audytem zajmiemy się w rozdziale <a href="./05-case-study.html">Case study</a>.</p>
+</div>
+</div>
+<p>W następnym rozdziale przejdziemy od ogólnej definicji do <strong>konkretnej architektury</strong> — pokażę, jak wygląda folder projektu agentowego i dlaczego jego struktura jest <em>formą metodologii</em>.</p>
 
 
 </section>
@@ -925,8 +833,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./03-krajobraz.html" class="pagination-link" aria-label="Krajobraz narzędzi">
-        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Krajobraz narzędzi</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./03-projekt.html" class="pagination-link" aria-label="Projekt jako warsztat">
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Projekt jako warsztat</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

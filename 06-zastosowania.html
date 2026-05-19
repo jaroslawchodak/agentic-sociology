@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>6&nbsp; Zastosowania w socjologii – Nowy warsztat socjologa</title>
+<title>6&nbsp; Zastosowania i granica delegacji – Nowy warsztat socjologa</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,7 +31,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./07-friction.html" rel="next">
-<link href="./05-case-study-ess.html" rel="prev">
+<link href="./05-case-study.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -71,6 +71,10 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
+<meta name="mermaid-theme" content="neutral">
+<script src="site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 </head>
@@ -84,7 +88,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Przełącz pasek boczny" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./06-zastosowania.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Zastosowania w socjologii</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./06-zastosowania.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Zastosowania i granica delegacji</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Przełącz pasek boczny" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Szukaj" onclick="window.quartoOpenSearch();">
@@ -137,32 +141,32 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./03-krajobraz.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Krajobraz narzędzi</span></span></a>
+  <a href="./03-projekt.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Projekt jako warsztat</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./04-jak-rozmawiac.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Jak rozmawiać z agentem</span></span></a>
+  <a href="./04-krajobraz.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Krajobraz narzędzi i pierwsza decyzja etyczna</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./05-case-study-ess.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Case Study — European Social Survey</span></span></a>
+  <a href="./05-case-study.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Case study — sto streszczeń</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./06-zastosowania.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Zastosowania w socjologii</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Zastosowania i granica delegacji</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./07-friction.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Etyka i napięcia</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Refleksyjność, higiena, disclosure</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -181,9 +185,15 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Na tej stronie</h2>
    
   <ul>
-  <li><a href="#galeria-zastosowań-od-pytania-do-publikacji" id="toc-galeria-zastosowań-od-pytania-do-publikacji" class="nav-link active" data-scroll-target="#galeria-zastosowań-od-pytania-do-publikacji"><span class="header-section-number">6.1</span> Galeria zastosowań — od pytania do publikacji</a></li>
-  <li><a href="#chmura-czy-lokalnie-szybki-przewodnik" id="toc-chmura-czy-lokalnie-szybki-przewodnik" class="nav-link" data-scroll-target="#chmura-czy-lokalnie-szybki-przewodnik"><span class="header-section-number">6.2</span> Chmura czy lokalnie — szybki przewodnik</a></li>
-  <li><a href="#czego-nie-delegujesz-agentowi" id="toc-czego-nie-delegujesz-agentowi" class="nav-link" data-scroll-target="#czego-nie-delegujesz-agentowi"><span class="header-section-number">6.3</span> Czego <em>nie</em> delegujesz agentowi</a></li>
+  <li><a href="#agent-może-wspierać-każdą-fazę-pracy-badawczej" id="toc-agent-może-wspierać-każdą-fazę-pracy-badawczej" class="nav-link active" data-scroll-target="#agent-może-wspierać-każdą-fazę-pracy-badawczej"><span class="header-section-number">6.1</span> Agent może wspierać każdą fazę pracy badawczej</a>
+  <ul class="collapse">
+  <li><a href="#koncepcja" id="toc-koncepcja" class="nav-link" data-scroll-target="#koncepcja">1. Koncepcja</a></li>
+  <li><a href="#przygotowanie-danych" id="toc-przygotowanie-danych" class="nav-link" data-scroll-target="#przygotowanie-danych">2. Przygotowanie danych</a></li>
+  <li><a href="#analiza" id="toc-analiza" class="nav-link" data-scroll-target="#analiza">3. Analiza</a></li>
+  <li><a href="#pisanie" id="toc-pisanie" class="nav-link" data-scroll-target="#pisanie">4. Pisanie</a></li>
+  <li><a href="#weryfikacja" id="toc-weryfikacja" class="nav-link" data-scroll-target="#weryfikacja">5. Weryfikacja</a></li>
+  </ul></li>
+  <li><a href="#granica-delegacji-nie-jest-techniczna-jest-metodologiczna" id="toc-granica-delegacji-nie-jest-techniczna-jest-metodologiczna" class="nav-link" data-scroll-target="#granica-delegacji-nie-jest-techniczna-jest-metodologiczna"><span class="header-section-number">6.2</span> Granica delegacji nie jest techniczna — jest metodologiczna</a></li>
   </ul>
 </nav>
     </div>
@@ -192,7 +202,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Zastosowania w socjologii</span></h1>
+<h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Zastosowania i granica delegacji</span></h1>
 </div>
 
 
@@ -209,122 +219,125 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Case study ESS to tylko jeden z wielu możliwych pipeline’ów. Poniżej galeria 360° — gdzie agent może realnie pomóc w warsztacie badacza społecznego.</p>
-<section id="galeria-zastosowań-od-pytania-do-publikacji" class="level2" data-number="6.1">
-<h2 data-number="6.1" class="anchored" data-anchor-id="galeria-zastosowań-od-pytania-do-publikacji"><span class="header-section-number">6.1</span> Galeria zastosowań — od pytania do publikacji</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<section id="faza-koncepcyjna" class="level3">
-<h3 class="anchored" data-anchor-id="faza-koncepcyjna">Faza koncepcyjna</h3>
+<section id="agent-może-wspierać-każdą-fazę-pracy-badawczej" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="agent-może-wspierać-każdą-fazę-pracy-badawczej"><span class="header-section-number">6.1</span> Agent może wspierać każdą fazę pracy badawczej</h2>
+<blockquote class="blockquote">
+<p>koncepcja → dane → analiza → pisanie → weryfikacja</p>
+</blockquote>
+<p>Przejdźmy przez fazy badania, w których agent <strong>realnie pomaga</strong>.</p>
+<section id="koncepcja" class="level3">
+<h3 class="anchored" data-anchor-id="koncepcja">1. Koncepcja</h3>
 <ul>
-<li><strong>Wyszukiwanie literatury</strong> — OpenAlex, Elicit, Grok DeepSearch, Semantic Scholar</li>
-<li><strong>Przegląd literatury</strong> — tabela: autor, metoda, ustalenia, luka</li>
-<li><strong>Pytania badawcze, hipotezy</strong> — operacjonalizacja, mapa pojęć</li>
-<li><strong>Research plan w <code>.md</code></strong> — strukturyzacja projektu</li>
+<li><strong>przegląd literatury</strong> według kryteriów zapisanych w <code>AGENTS.md</code>,</li>
+<li><strong>identyfikacja luk</strong> w istniejącym dorobku,</li>
+<li><strong>robocze pytania badawcze</strong> dla każdego klastra tematycznego,</li>
+<li><strong>operacjonalizacja</strong> pojęć — propozycje wskaźników empirycznych.</li>
 </ul>
 </section>
-<section id="faza-terenowa-analityczna" class="level3">
-<h3 class="anchored" data-anchor-id="faza-terenowa-analityczna">Faza terenowa / analityczna</h3>
+<section id="przygotowanie-danych" class="level3">
+<h3 class="anchored" data-anchor-id="przygotowanie-danych">2. Przygotowanie danych</h3>
 <ul>
-<li><strong>Transkrypcja</strong> — Whisper offline</li>
-<li><strong>Anonimizacja</strong> — Presidio, znaczniki <code>[OSOBA_001]</code></li>
-<li><strong>Propozycje kodów jakościowych</strong> — induktywne / dedukcyjne</li>
-<li><strong>Czyszczenie i analiza danych ilościowych</strong> — pandas, statsmodels</li>
-<li><strong>Modelowanie tematów</strong> — BERTopic, analiza dyskursu</li>
+<li><strong>konwersja PDF → Markdown</strong> (<code>docling</code>, <code>pymupdf</code>, Granite-Docling),</li>
+<li><strong>OCR</strong> materiałów archiwalnych,</li>
+<li><strong>transkrypcja</strong> nagrań (Whisper + post-processing),</li>
+<li><strong>anonimizacja</strong> transkrypcji wywiadów (lokalnie!),</li>
+<li><strong>czyszczenie tabel</strong> i deduplikacja źródeł.</li>
 </ul>
 </section>
-</div><div class="column" style="width:50%;">
-<section id="faza-pisania" class="level3">
-<h3 class="anchored" data-anchor-id="faza-pisania">Faza pisania</h3>
+<section id="analiza" class="level3">
+<h3 class="anchored" data-anchor-id="analiza">3. Analiza</h3>
 <ul>
-<li><strong>Draft artykułu</strong> — sekcja po sekcji</li>
-<li><strong>Sekcja metodologiczna</strong> — z respektem dla wymogów czasopisma</li>
-<li><strong>Bibliografia</strong> — automatyczne formatowanie przez Zotero MCP</li>
-<li><strong>Grant proposal</strong> — od streszczenia do harmonogramu</li>
-<li><strong>Slajdy do prezentacji</strong> — strukturyzacja narracji</li>
+<li><strong>propozycje kodów</strong> dla materiału jakościowego,</li>
+<li><strong>memo analityczne</strong> — robocze notatki teoretyczne agenta,</li>
+<li><strong>skrypty statystyczne</strong> (R, Python — agent sam je pisze),</li>
+<li><strong>wizualizacje</strong> — wykresy do raportu i prezentacji.</li>
 </ul>
 </section>
-<section id="faza-recenzji" class="level3">
-<h3 class="anchored" data-anchor-id="faza-recenzji">Faza recenzji</h3>
+<section id="pisanie" class="level3">
+<h3 class="anchored" data-anchor-id="pisanie">4. Pisanie</h3>
 <ul>
-<li><strong>Pseudo-recenzent</strong> przed publikacją — wykrywanie luk i niespójności</li>
-<li><strong>Wykrywanie luk i niespójności</strong> w argumentacji</li>
-<li><strong>Odpowiedzi dla recenzentów</strong> — strukturyzacja revision letter</li>
+<li><strong>konspekt</strong> rozdziału lub artykułu,</li>
+<li><strong>szkic sekcji metodologicznej</strong> na podstawie <code>WORKFLOW.md</code>,</li>
+<li><strong>kontrola spójności</strong> terminologii w długim tekście,</li>
+<li><strong>redakcja</strong> — drobne poprawki językowe i formatowanie.</li>
 </ul>
 </section>
+<section id="weryfikacja" class="level3">
+<h3 class="anchored" data-anchor-id="weryfikacja">5. Weryfikacja</h3>
+<ul>
+<li><strong>sprawdzanie cytatów</strong> — czy każdy znajduje się w pliku źródłowym,</li>
+<li><strong>kontrola zgodności</strong> twierdzeń ze źródłami,</li>
+<li><strong>sprawdzanie spójności</strong> wniosków z danymi.</li>
+</ul>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    K[Koncepcja] --&gt; D[Dane]
+    D --&gt; A[Analiza]
+    A --&gt; P[Pisanie]
+    P --&gt; W[Weryfikacja]
+    W -.-&gt;|iteracja| K
+</pre>
+</div>
+<p></p></figure><p></p>
 </div>
 </div>
-</section>
-<section id="chmura-czy-lokalnie-szybki-przewodnik" class="level2" data-number="6.2">
-<h2 data-number="6.2" class="anchored" data-anchor-id="chmura-czy-lokalnie-szybki-przewodnik"><span class="header-section-number">6.2</span> Chmura czy lokalnie — szybki przewodnik</h2>
-<p>Reguła kciuka, którą warto zapamiętać:</p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Etap</th>
-<th style="text-align: center;">Komercyjny (chmura)</th>
-<th style="text-align: center;">Lokalny (Ollama)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Przegląd literatury</td>
-<td style="text-align: center;">✅</td>
-<td style="text-align: center;">⚪</td>
-</tr>
-<tr class="even">
-<td>Draft grantu</td>
-<td style="text-align: center;">✅</td>
-<td style="text-align: center;">⚪</td>
-</tr>
-<tr class="odd">
-<td>Czyszczenie publicznych CSV</td>
-<td style="text-align: center;">✅</td>
-<td style="text-align: center;">⚪</td>
-</tr>
-<tr class="even">
-<td><strong>Transkrypcje wywiadów</strong></td>
-<td style="text-align: center;">❌</td>
-<td style="text-align: center;">✅</td>
-</tr>
-<tr class="odd">
-<td><strong>Kodowanie wywiadów z danymi wrażliwymi</strong></td>
-<td style="text-align: center;">❌</td>
-<td style="text-align: center;">✅</td>
-</tr>
-<tr class="even">
-<td>Recenzowanie cudzego draftu</td>
-<td style="text-align: center;">⚠️</td>
-<td style="text-align: center;">✅</td>
-</tr>
-</tbody>
-</table>
-<div class="callout callout-style-default callout-tip callout-titled" title="Zasada brzytwy">
+</div>
+<p>Agent <strong>przyspiesza czynności przygotowawcze i kontrolne</strong>. Warsztatu socjologa <strong>nie zastępuje</strong>.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Co dzieje się z czasem badacza">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Zasada brzytwy
+Co dzieje się z czasem badacza
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Jeśli plik, który dajesz agentowi, <strong>mógłby zostać wyciągnięty z chmury i pokazany na konferencji bez Twojej zgody</strong> — to znak, że tego pliku tam być nie powinno.</p>
-<p>Dla wszystkiego, co ma respondentów, dane osobowe albo niepublikowane wyniki — model lokalny.</p>
+<p>Im więcej czynności przygotowawczych przejmuje agent, tym więcej czasu zostaje na <strong>to, czego nie da się zlecić</strong> — na czytanie krytyczne, na decyzje metodologiczne, na pisanie, które jest myśleniem.</p>
 </div>
 </div>
 </section>
-<section id="czego-nie-delegujesz-agentowi" class="level2" data-number="6.3">
-<h2 data-number="6.3" class="anchored" data-anchor-id="czego-nie-delegujesz-agentowi"><span class="header-section-number">6.3</span> Czego <em>nie</em> delegujesz agentowi</h2>
-<p>Dla równowagi — lista rzeczy, których <strong>nie outsource’ujesz</strong>, nawet gdy agent to potrafi:</p>
-<ol type="1">
-<li><strong>Decyzję metodologiczną.</strong> Czy badanie jest etyczne? Czy próba jest reprezentatywna? Czy hipoteza jest <em>Twoja</em>? — to twoja odpowiedzialność.</li>
-<li><strong>Interpretację wyników.</strong> Statystycznie istotne ≠ socjologicznie ważne. To rozróżnienie wymaga <em>Twojej</em> wiedzy dziedzinowej.</li>
-<li><strong>Stanowisko autorskie.</strong> Jeśli artykuł nie ma <em>Twojego</em> głosu — po co go pisać?</li>
-<li><strong>Ocenę jakości danych.</strong> Czy dane są wiarygodne? Czy braki danych są systematyczne? Bez znajomości pola — agent może to przeoczyć.</li>
-<li><strong>Etyczną decyzję o ujawnieniu / ukryciu rezultatów.</strong> Decyzja należy do Ciebie i (czasem) komitetu etyki.</li>
-</ol>
-<p>Granica nie jest sztywna i będzie się przesuwać. Ale na 2026 rok — to <strong>bezpieczna baza</strong>.</p>
+</section>
+<section id="granica-delegacji-nie-jest-techniczna-jest-metodologiczna" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="granica-delegacji-nie-jest-techniczna-jest-metodologiczna"><span class="header-section-number">6.2</span> Granica delegacji nie jest techniczna — jest metodologiczna</h2>
+<blockquote class="blockquote">
+<p><em>„writing is thinking”</em></p>
+<p><strong>pisanie ≠ ostatni etap redakcji</strong></p>
+</blockquote>
+<p>To, że agent <strong>potrafi</strong> napisać akapit, nie znaczy, że <strong>powinien</strong>.</p>
+<p>W naukach społecznych <strong>pisanie jest częścią myślenia</strong>. Sformułowanie zdania zmusza do zajęcia stanowiska. Trzeba wybrać jedno słowo zamiast drugiego, podjąć decyzję interpretacyjną. <em>Czy nazwę to „opór” czy „strategią przetrwania”? Czy „klasa” czy „warstwa”?</em> To nie są decyzje stylistyczne. To są <strong>decyzje teoretyczne</strong>.</p>
+<p>Jeśli oddamy ten proces narzędziu, oddamy też <strong>część własnego namysłu</strong>. Tekst napisany przez agenta jest często gładki, ale <strong>nie zmusił nikogo do zajęcia stanowiska</strong>.</p>
+<p>Agent może zaproponować:</p>
+<ul>
+<li>kody do materiału jakościowego,</li>
+<li>streszczenia i parafrazy,</li>
+<li>porządki tematyczne,</li>
+<li>struktury argumentu.</li>
+</ul>
+<p>Badacz decyduje:</p>
+<ul>
+<li>czy mają sens w danym podejściu metodologicznym,</li>
+<li>co z tego wziąć, co odrzucić, co zmodyfikować,</li>
+<li>bierze <strong>odpowiedzialność za interpretację</strong>.</li>
+</ul>
+<div class="callout callout-style-default callout-important callout-titled" title="Robocza zasada">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Robocza zasada
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Delegujcie czynności, nie decyzje.</strong> Konwersja PDF → Markdown to czynność. Wybór, który tekst trafi do korpusu — to decyzja. Streszczenie artykułu to czynność. Wybór, jak go zaklasyfikować w argumentacji — to decyzja.</p>
+</div>
+</div>
+<p>W następnym rozdziale przejdziemy do trzech <strong>napięć etycznych</strong>, które wynikają wprost z tej granicy: refleksyjność, higiena badawcza i obowiązek ujawniania użycia AI.</p>
 
 
 </section>
@@ -893,13 +906,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./05-case-study-ess.html" class="pagination-link" aria-label="Case Study — European Social Survey">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Case Study — European Social Survey</span></span>
+      <a href="./05-case-study.html" class="pagination-link" aria-label="Case study — sto streszczeń">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Case study — sto streszczeń</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./07-friction.html" class="pagination-link" aria-label="Etyka i napięcia">
-        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Etyka i napięcia</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./07-friction.html" class="pagination-link" aria-label="Refleksyjność, higiena, disclosure">
+        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Refleksyjność, higiena, disclosure</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
